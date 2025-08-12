@@ -41,9 +41,12 @@
       .angled-top { border-top-left-radius: 2rem; border-top-right-radius: 2rem; }
       /* Clients marquee */
       .marquee { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
-      .marquee-track { display: flex; width: 200%; animation: marquee-left 28s linear infinite; }
+      .marquee-track { display: flex; width: 290%; animation: marquee-left 28s linear infinite; }
       .marquee-track.reverse { animation-name: marquee-right; }
-      .marquee-group { width: 50%; display: flex; align-items: center; gap: 3rem; }
+      .marquee-group { width: 50%;
+        display: flex;
+        align-items: center;
+        gap: 4rem; }
       .marquee:hover .marquee-track { animation-play-state: paused; }
       @keyframes marquee-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
       @keyframes marquee-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
@@ -52,11 +55,11 @@
   <body class="antialiased text-slate-900">
     <!-- Header -->
     <header class="absolute inset-x-0 top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between bg-white">
         <a href="#" class="inline-flex items-center gap-3" aria-label="ProSigmaka Home">
           <img src="assets/logo-prosigmaka.png" alt="ProSigmaka" class="h-8 w-auto" />
         </a>
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-white/90">
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-secondary-700">
           <a class="hover:text-white" href="#platform">Platform</a>
           <a class="hover:text-white" href="#solutions">Solutions</a>
           <a class="hover:text-white" href="#resources">Resources</a>
@@ -117,75 +120,169 @@
     <!-- Clients (animated logos) -->
     <section id="clients" class="py-12 sm:py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center relative">
-          <div class="absolute left-0 top-1/2 -translate-y-1/2 text-[12vw] font-extrabold leading-none text-primary-500/5 select-none pointer-events-none">CLIENTS</div>
-          <div class="">
+        <div class="grid grid-cols-5 items-center relative">
+          <!-- <div class="absolute left-0 top-1/2 -translate-y-1/2 text-[12vw] font-extrabold leading-none text-primary-500/5 select-none pointer-events-none">CLIENTS</div> -->
+          <div class="col-span-4">
             <!-- Row 1: right to left -->
             <div class="marquee">
               <div class="marquee-track">
                 <div class="marquee-group">
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/1-Astra.png" alt="Astra" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/2-Tmmin.png" alt="TMMIN" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/3-Jayaboard.png" alt="Jayaboard" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/4-BSI.png" alt="BSI" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/5-BMS.png" alt="BMS" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/6-Yokke.png" alt="Yokke" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/7-Dompet-Duafa.png" alt="Dompet Dhuafa" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/8-CT-Corp.png" alt="CT Corp" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/9-Mobbi.png" alt="Mobbi" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/10-BPJS.png" alt="BPJS" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/1-Astra.png" alt="Astra" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/2-Tmmin.png" alt="TMMIN" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/3-Jayaboard.png" alt="Jayaboard" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/4-BSI.png" alt="BSI" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/5-BMS.png" alt="BMS" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/6-Yokke.png" alt="Yokke" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/7-Dompet-Duafa.png" alt="Dompet Dhuafa" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/8-CT-Corp.png" alt="CT Corp" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/9-Mobbi.png" alt="Mobbi" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/10-BPJS.png" alt="BPJS" />
                 </div>
                 <div class="marquee-group" aria-hidden="true">
                   <!-- duplicate for seamless loop -->
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/1-Astra.png" alt="Astra" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/2-Tmmin.png" alt="TMMIN" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/3-Jayaboard.png" alt="Jayaboard" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/4-BSI.png" alt="BSI" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/5-BMS.png" alt="BMS" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/6-Yokke.png" alt="Yokke" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/7-Dompet-Duafa.png" alt="Dompet Dhuafa" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/8-CT-Corp.png" alt="CT Corp" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/9-Mobbi.png" alt="Mobbi" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/10-BPJS.png" alt="BPJS" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/1-Astra.png" alt="Astra" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/2-Tmmin.png" alt="TMMIN" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/3-Jayaboard.png" alt="Jayaboard" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/4-BSI.png" alt="BSI" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/5-BMS.png" alt="BMS" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/6-Yokke.png" alt="Yokke" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/7-Dompet-Duafa.png" alt="Dompet Dhuafa" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/8-CT-Corp.png" alt="CT Corp" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/9-Mobbi.png" alt="Mobbi" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/10-BPJS.png" alt="BPJS" />
                 </div>
               </div>
             </div>
     
             <!-- Row 2: left to right -->
-            <div class="mt-6 marquee">
+            <div class="mt-12 marquee">
               <div class="marquee-track reverse">
                 <div class="marquee-group">
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/11-Pam-jaya.png" alt="PAM Jaya" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/12-Xapiens.png" alt="Xapiens" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/13-SISI.png" alt="SISI" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/14-SCC.png" alt="SCC" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/15-MMI.png" alt="MMI" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/16-dOCOTEL.png" alt="Docotel" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/17-cELEES.png" alt="Celees" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/18-DEEPTECH.png" alt="DeepTech" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/19-Nutech.png" alt="Nutech" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/20-dot.png" alt="dot" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/11-Pam-jaya.png" alt="PAM Jaya" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/12-Xapiens.png" alt="Xapiens" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/13-SISI.png" alt="SISI" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/14-SCC.png" alt="SCC" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/15-MMI.png" alt="MMI" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/16-dOCOTEL.png" alt="Docotel" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/17-cELEES.png" alt="Celees" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/18-DEEPTECH.png" alt="DeepTech" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/19-Nutech.png" alt="Nutech" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/20-dot.png" alt="dot" />
                 </div>
                 <div class="marquee-group" aria-hidden="true">
                   <!-- duplicate for seamless loop -->
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/11-Pam-jaya.png" alt="PAM Jaya" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/12-Xapiens.png" alt="Xapiens" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/13-SISI.png" alt="SISI" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/14-SCC.png" alt="SCC" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/15-MMI.png" alt="MMI" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/16-dOCOTEL.png" alt="Docotel" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/17-cELEES.png" alt="Celees" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/18-DEEPTECH.png" alt="DeepTech" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/19-Nutech.png" alt="Nutech" />
-                  <img class="h-12 sm:h-14 w-auto opacity-80 grayscale" src="assets/client/20-dot.png" alt="dot" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/11-Pam-jaya.png" alt="PAM Jaya" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/12-Xapiens.png" alt="Xapiens" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/13-SISI.png" alt="SISI" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/14-SCC.png" alt="SCC" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/15-MMI.png" alt="MMI" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/16-dOCOTEL.png" alt="Docotel" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/17-cELEES.png" alt="Celees" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/18-DEEPTECH.png" alt="DeepTech" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/19-Nutech.png" alt="Nutech" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/20-dot.png" alt="dot" />
                 </div>
               </div>
             </div>
           </div>
   
-          <div class="bg-primary-500 text-white px-10 py-20 rounded-e-[32px]">
-            <h2 class="text-end text-2xl sm:text-3xl font-bold">Trusted by Our Clients</h2>
-            <p class="mt-2 text-end">Brands that work with us</p>
+          <div class="bg-primary-500 text-white px-10 py-16 rounded-e-[32px]">
+            <h2 class="text-end text-4xl font-bold">Trusted by Our 
+              <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:-skew-x-6 before:bg-secondary-500">
+                <span class="relative text-white">Clients</span>
+              </span>
+            </h2>
+            <p class="mt-2 text-end">Brands that work <br> with us</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our services -->
+    <section id="services" class="bg-secondary-400">
+    <!-- <section id="services" class="bg-gradient-to-b from-secondary-600 from-0% via-white via-50%"> -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-4 gap-8">
+          <div class="flex flex-col justify-between">
+            <h2 class="text-6xl text-white"><span class="italic">Our</span><br><span class="font-bold">Services</span></h2>
+            <p class="mb-2 text-white">We provide a range of <br> services to help you <br> leverage AI effectively.</p>
+          </div>
+          <div class="relative rounded-[32px] aspect-square p-6 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-white text-2xl font-semibold">Professional <br> <span class="font-bold text-primary-500">Services</span></p>
+              <!-- <img src="assets/animation-icon/artificial-intelligence.gif" alt="" style="width:48px;height:48px;"> -->
+            </div>
+            <div class="absolute z-10 -bottom-16 -left-10">
+              <p class="text-[180px] font-medium tracking-tight text-secondary-700">01.</p>
+            </div>
+            <div class="relative z-30 text-end">
+              <p class="text-white text-sm">Provision of professional <br> software engineers with <br> diverse technical skills</p>
+            </div>
+          </div>
+          <div class="relative rounded-[32px] aspect-square p-6 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-white text-2xl font-semibold">Professional <br> Service</p>
+              <!-- <img src="assets/animation-icon/artificial-intelligence.gif" alt="" style="width:48px;height:48px;"> -->
+            </div>
+            <div class="absolute z-10 -bottom-16 -left-10">
+              <p class="text-[180px] font-medium tracking-tight text-secondary-700">02.</p>
+            </div>
+            <div class="relative z-30 text-end">
+              <p class="text-white text-sm">Provision of professional <br> software engineers with <br> diverse technical skills</p>
+            </div>
+          </div>
+          <div class="flex items-end justify-end">
+            <p class="mt-2 text-white text-end">We provide a range of <br> services to help you <br> leverage AI effectively.</p>
+          </div>
+          <div class="relative rounded-[32px] aspect-square p-6 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-white text-2xl font-semibold">Professional <br> Service</p>
+              <!-- <img src="assets/animation-icon/artificial-intelligence.gif" alt="" style="width:48px;height:48px;"> -->
+            </div>
+            <div class="absolute z-10 -bottom-16 -left-10">
+              <p class="text-[180px] font-medium tracking-tight text-secondary-700">03.</p>
+            </div>
+            <div class="relative z-30 text-end">
+            </div>
+          </div>
+          <div class="relative rounded-[32px] aspect-square p-6 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-white text-2xl font-semibold">Professional <br> Service</p>
+              <!-- <img src="assets/animation-icon/artificial-intelligence.gif" alt="" style="width:48px;height:48px;"> -->
+            </div>
+            <div class="absolute z-10 -bottom-16 -left-10">
+              <p class="text-[180px] font-medium tracking-tight text-secondary-700">04.</p>
+            </div>
+            <div class="relative z-30 text-end">
+              <p class="text-white text-sm">Provision of professional <br> software engineers with <br> diverse technical skills</p>
+            </div>
+          </div>
+          <div class="col-span-2 row-span-2 relative rounded-[32px] aspect-square px-6 pt-6 pb-0 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex justify-between h-full">
+              <div class="flex flex-col justify-between">
+                <p class="text-white"><span class="font-medium italic text-2xl">Talk to our</span> <br> <span class="font-semibold text-4xl">AI AGENT</span></p>
+                <div class="flex flex-col gap-4 pb-6">
+                  <div class="bg-white rounded-full p-2">Haloooo!!!</div>
+                  <input type="text">
+                </div>
+              </div>
+              <div class="translate-x-16 flex items-end">
+                <img class="" src="assets/siapa.png" alt="">
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative rounded-[32px] aspect-square p-6 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-white text-2xl font-semibold">Corporate<br> <span class="text-primary-500">Training</span></p>
+              <!-- <img src="assets/animation-icon/artificial-intelligence.gif" alt="" style="width:48px;height:48px;"> -->
+            </div>
+            <div class="absolute z-10 -bottom-16 -left-10">
+              <p class="text-[180px] font-medium tracking-tight text-secondary-700">05.</p>
+            </div>
+            <div class="relative z-30 text-end">
+              <p class="text-white text-sm">Provision of professional <br> software engineers with <br> diverse technical skills</p>
+            </div>
           </div>
         </div>
       </div>
@@ -221,10 +318,10 @@
     <section id="solutions" class="px-16">
       <div class="bg-primary-500 py-14 sm:py-20 rounded-[32px]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
+          <div class="">
+            <div class="flex justify-between">
               <h2 class="text-7xl text-white font-extrabold">CASE <br> STUDY</h2>
-              <p class="mt-4 text-white">Streamline the full AI lifecycle and unlock business outcomes faster with ProSigmaka Platform — from data to production and beyond.</p>
+              <p class="mt-4 text-white text-end">Streamline the full AI lifecycle <br> and unlock business outcomes faster <br> with ProSigmaka Platform <br> from data to production and beyond.</p>
             </div>
           </div>
   
@@ -252,7 +349,7 @@
     <!-- Client Testimony -->
     <section id="client-testimony" class="py-16 sm:py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-7xl sm:text-7xl font-extrabold text-primary-600 text-right">"Client <br> Testimonials</div>
+        <div class="text-7xl sm:text-7xl font-extrabold text-primary-500 text-right"><span class="">"Client</span><br> <span class="italic text-6xl">Testimonials</span></div>
         <div class="mt-10 flex gap-10">
           <div class="flex gap-10 -mt-28">
             <!-- Left image with rounded bottom-right and quote badge -->
