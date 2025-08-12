@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ProSigmaka — AI Platform Landing</title>
+    <meta name="description" content="Platform AI terpadu untuk bisnis Anda. Dibangun dengan Tailwind dan palet warna khusus." />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+            colors: {
+              primary: { 50:'#FFF1E6',100:'#FFE3CC',200:'#FFC499',300:'#FFA666',400:'#FF8A3D',500:'#F27C20',600:'#DB6A0E',700:'#B9550A' },
+              secondary: { 50:'#E6F0FA',100:'#CCE1F5',200:'#99C3EB',300:'#66A5E1',400:'#2F87D6',500:'#0967B2',600:'#07579A',700:'#064781' },
+              brand: { 50:'#FFF8E6',100:'#FFF0BF',200:'#FFE48A',300:'#FDD36A',400:'#F6C552',500:'#E8B23A',600:'#C6921C' },
+              accent: { blue:'#54C0EB', yellow:'#FDD36A' },
+              textc: { muted:'#6B7280', strong:'#0B1220' }
+            },
+            boxShadow: {
+              soft: '0 20px 45px -20px rgba(0,0,0,0.25)',
+              glass: '0 10px 30px -10px rgba(2,6,23,0.35)'
+            },
+            backgroundImage: {
+              'hero-blue': 'radial-gradient(1200px 600px at 10% -20%, rgba(255,255,255,0.15), transparent), radial-gradient(900px 500px at 110% 10%, rgba(255,255,255,0.10), transparent), linear-gradient(180deg, #0C3F7A 0%, #0A3A71 20%, #07579A 85%)'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+      .angled-top { border-top-left-radius: 2rem; border-top-right-radius: 2rem; }
+      /* Clients marquee */
+      .marquee { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+      .marquee-track { display: flex; width: 290%; animation: marquee-left 28s linear infinite; }
+      .marquee-track.reverse { animation-name: marquee-right; }
+      .marquee-group { width: 50%;
+        display: flex;
+        align-items: center;
+        gap: 4rem; }
+      .marquee:hover .marquee-track { animation-play-state: paused; }
+      @keyframes marquee-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      @keyframes marquee-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+    </style>
+  </head>
+  <body class="antialiased text-slate-900">
+    <!-- Header -->
+    <header class="absolute inset-x-0 top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between bg-white">
+        <a href="#" class="inline-flex items-center gap-3" aria-label="ProSigmaka Home">
+          <img src="assets/logo-prosigmaka.png" alt="ProSigmaka" class="h-8 w-auto" />
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-secondary-700">
+          <a class="hover:text-white" href="#platform">Platform</a>
+          <a class="hover:text-white" href="#solutions">Solutions</a>
+          <a class="hover:text-white" href="#resources">Resources</a>
+          <a class="hover:text-white" href="#company">Company</a>
+        </nav>
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-full shadow-soft">Book a Demo</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-hero-blue relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <!-- Big heading and CTA -->
+          <div class="relative">
+            <h1 class="text-white font-extrabold leading-[0.9] tracking-tight text-[80px]">
+              Neque porro quisquam est qui dolorem
+            </h1>
+            <p class="mt-6 text-white/80 max-w-xl">The right machine learning system to provide fast production-ready models and trustworthy results. Built to accelerate value.</p>
+            <div class="mt-8 flex gap-3 items-center">
+              <a href="#discover" class="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-full shadow-soft">Discover More
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M3 12a1 1 0 0 1 1-1h12.586l-4.293-4.293a1 1 0 1 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1-1.414-1.414L16.586 13H4a1 1 0 0 1-1-1Z"/></svg>
+              </a>
+            </div>
+
+            <!-- Toggles -->
+            <div class="mt-8 flex flex-wrap gap-3">
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white text-xs border border-white/20">AI Platform</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white text-xs border border-white/20">AI Analytics</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-white text-xs border border-white/20">Query Search</span>
+            </div>
+          </div>
+
+          <!-- Visual stack -->
+          <div class="relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-glass glass bg-white/10 border border-white/20">
+              <img class="w-full h-[420px] object-cover" alt="3D Card" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop"/>
+            </div>
+            <!-- Floating cards right -->
+            <div class="hidden lg:flex flex-col gap-4 absolute right-0 top-6">
+              <div class="glass bg-white/15 text-white rounded-xl px-4 py-3 border border-white/20 shadow-glass w-64">
+                <div class="text-sm">75%</div>
+                <div class="text-xs text-white/70">Reduction in model risk across the org</div>
+              </div>
+              <div class="glass bg-white/15 text-white rounded-xl px-4 py-3 border border-white/20 shadow-glass w-64">
+                <div class="text-sm">4.6x</div>
+                <div class="text-xs text-white/70">Faster time-to-value with governance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- white curve separator -->
+      <!-- <div class="relative h-10 bg-gradient-to-b from-transparent to-white"></div> -->
+    </section>
+    
+    <!-- Clients (animated logos) -->
+    <section id="clients" class="py-12 sm:py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-5 items-center relative">
+          <!-- <div class="absolute left-0 top-1/2 -translate-y-1/2 text-[12vw] font-extrabold leading-none text-primary-500/5 select-none pointer-events-none">CLIENTS</div> -->
+          <div class="col-span-4">
+            <!-- Row 1: right to left -->
+            <div class="marquee">
+              <div class="marquee-track">
+                <div class="marquee-group">
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/1-Astra.png" alt="Astra" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/2-Tmmin.png" alt="TMMIN" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/3-Jayaboard.png" alt="Jayaboard" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/4-BSI.png" alt="BSI" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/5-BMS.png" alt="BMS" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/6-Yokke.png" alt="Yokke" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/7-Dompet-Duafa.png" alt="Dompet Dhuafa" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/8-CT-Corp.png" alt="CT Corp" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/9-Mobbi.png" alt="Mobbi" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/10-BPJS.png" alt="BPJS" />
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                  <!-- duplicate for seamless loop -->
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/1-Astra.png" alt="Astra" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/2-Tmmin.png" alt="TMMIN" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/3-Jayaboard.png" alt="Jayaboard" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/4-BSI.png" alt="BSI" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/5-BMS.png" alt="BMS" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/6-Yokke.png" alt="Yokke" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/7-Dompet-Duafa.png" alt="Dompet Dhuafa" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/8-CT-Corp.png" alt="CT Corp" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/9-Mobbi.png" alt="Mobbi" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/10-BPJS.png" alt="BPJS" />
+                </div>
+              </div>
+            </div>
+    
+            <!-- Row 2: left to right -->
+            <div class="mt-12 marquee">
+              <div class="marquee-track reverse">
+                <div class="marquee-group">
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/11-Pam-jaya.png" alt="PAM Jaya" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/12-Xapiens.png" alt="Xapiens" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/13-SISI.png" alt="SISI" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/14-SCC.png" alt="SCC" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/15-MMI.png" alt="MMI" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/16-dOCOTEL.png" alt="Docotel" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/17-cELEES.png" alt="Celees" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/18-DEEPTECH.png" alt="DeepTech" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/19-Nutech.png" alt="Nutech" />
+                  <img class="h-20 w-auto opacity-80 grayscale hover:grayscale-0 transition" src="assets/client/20-dot.png" alt="dot" />
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                  <!-- duplicate for seamless loop -->
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/11-Pam-jaya.png" alt="PAM Jaya" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/12-Xapiens.png" alt="Xapiens" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/13-SISI.png" alt="SISI" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/14-SCC.png" alt="SCC" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/15-MMI.png" alt="MMI" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/16-dOCOTEL.png" alt="Docotel" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/17-cELEES.png" alt="Celees" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/18-DEEPTECH.png" alt="DeepTech" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/19-Nutech.png" alt="Nutech" />
+                  <img class="h-20 w-auto opacity-80 grayscale" src="assets/client/20-dot.png" alt="dot" />
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="bg-primary-500 text-white px-10 py-16 rounded-e-[32px]">
+            <h2 class="text-end text-4xl font-bold">Trusted by Our 
+              <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:-skew-x-6 before:bg-secondary-500">
+                <span class="relative text-white">Clients</span>
+              </span>
+            </h2>
+            <p class="mt-2 text-end">Brands that work <br> with us</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our services -->
+    <section id="services" class="bg-secondary-400">
+    <!-- <section id="services" class="bg-gradient-to-b from-secondary-600 from-0% via-white via-50%"> -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-4 gap-8">
+          <div class="flex flex-col justify-between">
+            <h2 class="text-6xl text-white"><span class="italic">Our</span><br><span class="font-bold">Services</span></h2>
+            <p class="mb-2 text-white">We provide a range of <br> services to help you <br> leverage AI effectively.</p>
+          </div>
+          <div class="relative rounded-[32px] aspect-square p-6 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-white text-2xl font-semibold">Professional <br> <span class="font-bold text-primary-500">Services</span></p>
+              <!-- <img src="assets/animation-icon/artificial-intelligence.gif" alt="" style="width:48px;height:48px;"> -->
+            </div>
+            <div class="absolute z-10 -bottom-16 -left-10">
+              <p class="text-[180px] font-medium tracking-tight text-secondary-700">01.</p>
+            </div>
+            <div class="relative z-30 text-end">
+              <p class="text-white text-sm">Provision of professional <br> software engineers with <br> diverse technical skills</p>
+            </div>
+          </div>
+          <div class="relative rounded-[32px] aspect-square p-6 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-white text-2xl font-semibold">Professional <br> Service</p>
+              <!-- <img src="assets/animation-icon/artificial-intelligence.gif" alt="" style="width:48px;height:48px;"> -->
+            </div>
+            <div class="absolute z-10 -bottom-16 -left-10">
+              <p class="text-[180px] font-medium tracking-tight text-secondary-700">02.</p>
+            </div>
+            <div class="relative z-30 text-end">
+              <p class="text-white text-sm">Provision of professional <br> software engineers with <br> diverse technical skills</p>
+            </div>
+          </div>
+          <div class="flex items-end justify-end">
+            <p class="mt-2 text-white text-end">We provide a range of <br> services to help you <br> leverage AI effectively.</p>
+          </div>
+          <div class="relative rounded-[32px] aspect-square p-6 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-white text-2xl font-semibold">Professional <br> Service</p>
+              <!-- <img src="assets/animation-icon/artificial-intelligence.gif" alt="" style="width:48px;height:48px;"> -->
+            </div>
+            <div class="absolute z-10 -bottom-16 -left-10">
+              <p class="text-[180px] font-medium tracking-tight text-secondary-700">03.</p>
+            </div>
+            <div class="relative z-30 text-end">
+            </div>
+          </div>
+          <div class="relative rounded-[32px] aspect-square p-6 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-white text-2xl font-semibold">Professional <br> Service</p>
+              <!-- <img src="assets/animation-icon/artificial-intelligence.gif" alt="" style="width:48px;height:48px;"> -->
+            </div>
+            <div class="absolute z-10 -bottom-16 -left-10">
+              <p class="text-[180px] font-medium tracking-tight text-secondary-700">04.</p>
+            </div>
+            <div class="relative z-30 text-end">
+              <p class="text-white text-sm">Provision of professional <br> software engineers with <br> diverse technical skills</p>
+            </div>
+          </div>
+          <div class="col-span-2 row-span-2 relative rounded-[32px] aspect-square px-6 pt-6 pb-0 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex justify-between h-full">
+              <div class="flex flex-col justify-between">
+                <p class="text-white"><span class="font-medium italic text-2xl">Talk to our</span> <br> <span class="font-semibold text-4xl">AI AGENT</span></p>
+                <div class="flex flex-col gap-4 pb-6">
+                  <div class="bg-white rounded-full p-2">Haloooo!!!</div>
+                  <input type="text">
+                </div>
+              </div>
+              <div class="translate-x-16 flex items-end">
+                <img class="" src="assets/siapa.png" alt="">
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative rounded-[32px] aspect-square p-6 bg-secondary-600 overflow-hidden flex justify-between flex-col">
+            <div class="flex items-center justify-between">
+              <p class="text-white text-2xl font-semibold">Corporate<br> <span class="text-primary-500">Training</span></p>
+              <!-- <img src="assets/animation-icon/artificial-intelligence.gif" alt="" style="width:48px;height:48px;"> -->
+            </div>
+            <div class="absolute z-10 -bottom-16 -left-10">
+              <p class="text-[180px] font-medium tracking-tight text-secondary-700">05.</p>
+            </div>
+            <div class="relative z-30 text-end">
+              <p class="text-white text-sm">Provision of professional <br> software engineers with <br> diverse technical skills</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- One Unified Platform -->
+    <section id="platform" class="bg-white py-14 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <blockquote class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 italic">
+              When you look 
+              <span class="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:-skew-x-3 before:bg-primary-500">
+                <span class="relative text-white">annoyed</span>
+              </span>
+              all the time, people think that you're busy.
+            </blockquote>
+            <p class="mt-4 text-textc-muted">Digital-first modeling solution powered by ProSigmaka AI. Launch production-ready models faster while reducing risk, thanks to real-time monitoring, controls, and explainability.</p>
+            <a class="mt-6 inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-5 py-2.5 rounded-full shadow-soft" href="#discover">Discover More
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M3 12a1 1 0 0 1 1-1h12.586l-4.293-4.293a1 1 0 1 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 1 1-1.414-1.414L16.586 13H4a1 1 0 0 1-1-1Z"/></svg>
+            </a>
+          </div>
+          <div class="flex justify-center">
+            <div class="rounded-3xl border border-slate-200 shadow-soft overflow-hidden w-full max-w-md">
+              <img class="w-full h-72 object-cover" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop" alt="Glass doc icon"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unlocking AI for Your Work -->
+    <section id="solutions" class="px-16">
+      <div class="bg-primary-500 py-14 sm:py-20 rounded-[32px]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="">
+            <div class="flex justify-between">
+              <h2 class="text-7xl text-white font-extrabold">CASE <br> STUDY</h2>
+              <p class="mt-4 text-white text-end">Streamline the full AI lifecycle <br> and unlock business outcomes faster <br> with ProSigmaka Platform <br> from data to production and beyond.</p>
+            </div>
+          </div>
+  
+          <div class="mt-8 grid md:grid-cols-3 gap-6">
+            <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+              <div class="w-14 h-14 rounded-xl bg-brand-100 text-secondary-700 grid place-items-center text-xl">📱</div>
+              <h3 class="mt-4 font-semibold">Easy Operate</h3>
+              <p class="text-sm text-white mt-2">Deploy in minutes with intuitive UI and automation.</p>
+            </article>
+            <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+              <div class="w-14 h-14 rounded-xl bg-brand-100 text-secondary-700 grid place-items-center text-xl">🎯</div>
+              <h3 class="mt-4 font-semibold">Accurate Result</h3>
+              <p class="text-sm text-white mt-2">Robust validation and continuous monitoring for quality.</p>
+            </article>
+            <article class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+              <div class="w-14 h-14 rounded-xl bg-brand-100 text-secondary-700 grid place-items-center text-xl">🗂️</div>
+              <h3 class="mt-4 font-semibold">Content Organize</h3>
+              <p class="text-sm text-white mt-2">Centralize prompts, datasets, and artifacts with access controls.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Testimony -->
+    <section id="client-testimony" class="py-16 sm:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-7xl sm:text-7xl font-extrabold text-primary-500 text-right"><span class="">"Client</span><br> <span class="italic text-6xl">Testimonials</span></div>
+        <div class="mt-10 flex gap-10">
+          <div class="flex gap-10 -mt-28">
+            <!-- Left image with rounded bottom-right and quote badge -->
+            <div class="flex">
+              <div class="relative">
+                <div class="relative">
+                  <div class="relative z-40 rounded-br-[48px] rounded-tl-[48px] overflow-hidden shadow-soft border border-slate-100 w-[240px] h-[380px]">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1280&auto=format&fit=crop" alt="Happy client holding phone" class="h-full object-cover" />
+                    <div class="absolute bottom-2 text-white p-4">
+                      <p class="text-lg">Emily Richards</p>
+                      <p class="text-sm">CEO of Apex Innovations Inc.</p>
+                    </div>
+                  </div>
+                  <div class="absolute w-[240px] h-[380px] -bottom-4 -right-4 bg-secondary-600 rounded-br-[48px]"></div>
+                </div>
+                <div class="absolute z-50 -right-6 top-12 -translate-y-1/2 w-14 h-14 rounded-full bg-primary-500 grid place-items-center shadow-soft">
+                  <img src="assets/quote.svg" alt="Quote" class="w-6 h-6" />
+                </div>
+                <div class="absolute z-30 -right-8 top-16 -translate-y-1/2 w-14 h-14 rounded-full bg-secondary-600 grid place-items-center shadow-soft">
+                </div>
+              </div>
+            </div>
+            <!-- Right testimonial text -->
+            <div>
+              <p class="text-slate-700 text-lg leading-relaxed">Cras ut elementum nunc. Aliquam eros urna, rutrum nec massa porttitor, pellentesque vehicula lectus. Praesent lobortis nec nunc nec viverra. Aliquam feugiat mauris ut scelerisque dapibus.</p>
+              <div class="mt-6">
+                <div class="font-semibold text-[#0B1220]">Emily Richards</div>
+                <div class="text-sm text-slate-500">CEO of Apex Innovations Inc.</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-10 items-start mt-4">
+            <!-- Left image with rounded bottom-right and quote badge -->
+            <div class="flex">
+              <div class="relative">
+                <div class="relative">
+                  <div class="relative z-40 rounded-br-[48px] rounded-tl-[48px] overflow-hidden shadow-soft border border-slate-100 w-[240px] h-[380px]">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1280&auto=format&fit=crop" alt="Happy client holding phone" class="h-full object-cover" />
+                    <div class="absolute bottom-2 text-white p-4">
+                      <p class="text-lg">Emily Richards</p>
+                      <p class="text-sm">CEO of Apex Innovations Inc.</p>
+                    </div>
+                  </div>
+                  <div class="absolute w-[240px] h-[380px] -bottom-4 -right-4 bg-secondary-600 rounded-br-[48px]"></div>
+                </div>
+                <div class="absolute z-50 -right-6 top-12 -translate-y-1/2 w-14 h-14 rounded-full bg-primary-500 grid place-items-center shadow-soft">
+                  <img src="assets/quote.svg" alt="Quote" class="w-6 h-6" />
+                </div>
+                <div class="absolute z-30 -right-8 top-16 -translate-y-1/2 w-14 h-14 rounded-full bg-secondary-600 grid place-items-center shadow-soft">
+                </div>
+              </div>
+            </div>
+            <!-- Right testimonial text -->
+            <div>
+              <p class="text-slate-700 text-lg leading-relaxed">Cras ut elementum nunc. Aliquam eros urna, rutrum nec massa porttitor, pellentesque vehicula lectus. Praesent lobortis nec nunc nec viverra. Aliquam feugiat mauris ut scelerisque dapibus.</p>
+              <div class="mt-6">
+                <div class="font-semibold text-[#0B1220]">Emily Richards</div>
+                <div class="text-sm text-slate-500">CEO of Apex Innovations Inc.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-14 flex gap-10">
+          <div class="flex gap-10 -mt-28">
+            <!-- Left image with rounded bottom-right and quote badge -->
+            <div class="flex">
+              <div class="relative">
+                <div class="relative">
+                  <div class="relative z-40 rounded-br-[48px] rounded-tl-[48px] overflow-hidden shadow-soft border border-slate-100 w-[240px] h-[380px]">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1280&auto=format&fit=crop" alt="Happy client holding phone" class="h-full object-cover" />
+                    <div class="absolute bottom-2 text-white p-4">
+                      <p class="text-lg">Emily Richards</p>
+                      <p class="text-sm">CEO of Apex Innovations Inc.</p>
+                    </div>
+                  </div>
+                  <div class="absolute w-[240px] h-[380px] -bottom-4 -right-4 bg-secondary-600 rounded-br-[48px]"></div>
+                </div>
+                <div class="absolute z-50 -right-6 top-12 -translate-y-1/2 w-14 h-14 rounded-full bg-primary-500 grid place-items-center shadow-soft">
+                  <img src="assets/quote.svg" alt="Quote" class="w-6 h-6" />
+                </div>
+                <div class="absolute z-30 -right-8 top-16 -translate-y-1/2 w-14 h-14 rounded-full bg-secondary-600 grid place-items-center shadow-soft">
+                </div>
+              </div>
+            </div>
+            <!-- Right testimonial text -->
+            <div>
+              <p class="text-slate-700 text-lg leading-relaxed">Cras ut elementum nunc. Aliquam eros urna, rutrum nec massa porttitor, pellentesque vehicula lectus. Praesent lobortis nec nunc nec viverra. Aliquam feugiat mauris ut scelerisque dapibus.</p>
+              <div class="mt-6">
+                <div class="font-semibold text-[#0B1220]">Emily Richards</div>
+                <div class="text-sm text-slate-500">CEO of Apex Innovations Inc.</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-10 items-start mt-4">
+            <!-- Left image with rounded bottom-right and quote badge -->
+            <div class="flex">
+              <div class="relative">
+                <div class="relative">
+                  <div class="relative z-40 rounded-br-[48px] rounded-tl-[48px] overflow-hidden shadow-soft border border-slate-100 w-[240px] h-[380px]">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1280&auto=format&fit=crop" alt="Happy client holding phone" class="h-full object-cover" />
+                    <div class="absolute bottom-2 text-white p-4">
+                      <p class="text-lg">Emily Richards</p>
+                      <p class="text-sm">CEO of Apex Innovations Inc.</p>
+                    </div>
+                  </div>
+                  <div class="absolute w-[240px] h-[380px] -bottom-4 -right-4 bg-secondary-600 rounded-br-[48px]"></div>
+                </div>
+                <div class="absolute z-50 -right-6 top-12 -translate-y-1/2 w-14 h-14 rounded-full bg-primary-500 grid place-items-center shadow-soft">
+                  <img src="assets/quote.svg" alt="Quote" class="w-6 h-6" />
+                </div>
+                <div class="absolute z-30 -right-8 top-16 -translate-y-1/2 w-14 h-14 rounded-full bg-secondary-600 grid place-items-center shadow-soft">
+                </div>
+              </div>
+            </div>
+            <!-- Right testimonial text -->
+            <div>
+              <p class="text-slate-700 text-lg leading-relaxed">Cras ut elementum nunc. Aliquam eros urna, rutrum nec massa porttitor, pellentesque vehicula lectus. Praesent lobortis nec nunc nec viverra. Aliquam feugiat mauris ut scelerisque dapibus.</p>
+              <div class="mt-6">
+                <div class="font-semibold text-[#0B1220]">Emily Richards</div>
+                <div class="text-sm text-slate-500">CEO of Apex Innovations Inc.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get In Touch banner + form -->
+    <section id="contact" class="relative">
+      <div class="bg-secondary-600 angled-top">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-8xl text-secondary-50 font-medium tracking-tight sm:px-6 lg:px-8">Get</div>
+        </div>
+        <div class="bg-secondary-50 text-secondary-700 angled-top -mb-12">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-20">
+            <div class="text-8xl font-medium tracking-tight">In Touch:</div>
+            <div class="mt-6 bg-white rounded-3xl p-6 sm:p-8 text-slate-900">
+              <form class="grid md:grid-cols-2 gap-4">
+                <input type="text" placeholder="Name" class="w-full border border-slate-300 rounded-lg px-4 py-3"/>
+                <input type="text" placeholder="Phone Number" class="w-full border border-slate-300 rounded-lg px-4 py-3"/>
+                <input type="email" placeholder="Email" class="w-full border border-slate-300 rounded-lg px-4 py-3 md:col-span-2"/>
+                <input type="text" placeholder="Description" class="w-full border border-slate-300 rounded-lg px-4 py-3 md:col-span-2"/>
+                <div class="md:col-span-2 flex justify-center">
+                  <button type="submit" class="inline-flex items-center rounded-full gap-2 bg-primary-500 hover:bg-primary-600 relative before:absolute before:border-primary-600 before:border before:-end-2 text-white px-6 py-3 shadow-soft">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-[#0B1220] text-white pt-20 pb-12 overflow-hidden angled-top">
+      <div class="absolute -left-20 right-0 -top-16 text-[22vw] sm:text-[16vw] font-extrabold leading-none text-white/5 select-none pointer-events-none">PROSIGMAKA</div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
+        <div>
+          <img src="assets/logo-prosigmaka.png" alt="ProSigmaka" class="h-12 w-auto" />
+        </div>
+        <div class="text-2xl font-extrabold text-right">Realize <span class="text-primary-500">Value</span> from AI. Fast.<br/>Get Started <span class="text-secondary-400">Today</span>.</div>
+        <div>
+          <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm text-white/80">
+            <div>
+              <div>+62 812 0000 6785</div>
+              <div>care@prosigmaka.com</div>
+            </div>
+            <div>
+              <div>Trio Building, Jl. Mampang Prpt. Raya No.17 Lt.3, Mampang Prpt., Kec. Mampang Prpt., Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 1279</div>
+              <div>prosigmaka.com</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-4 gap-8 text-sm">
+          <div>
+          </div>
+          <div>
+            <div class="font-semibold text-white/90">Platform</div>
+            <ul class="mt-3 space-y-2 text-white/70">
+              <li><a href="#platform" class="hover:text-white">Overview</a></li>
+              <li><a href="#solutions" class="hover:text-white">Solutions</a></li>
+              <li><a href="#resources" class="hover:text-white">Resources</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-semibold text-white/90">Solution</div>
+            <ul class="mt-3 space-y-2 text-white/70">
+              <li>Predictive AI</li>
+              <li>Generative AI</li>
+              <li>Automation</li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-semibold text-white/90">Company</div>
+            <ul class="mt-3 space-y-2 text-white/70">
+              <li>About</li>
+              <li>Careers</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 text-xs text-white/50 flex flex-wrap gap-4 justify-between items-end">
+        <div class="flex items-center gap-3 text-xl">
+          <a class="hover:text-brand-300" href="#"><img class="w-8" src="assets/social-media/facebook.png" alt="Facebook"></a>
+          <a class="hover:text-brand-300" href="#"><img class="w-8" src="assets/social-media/linkedin.png" alt="LinkedIn"></a>
+          <a class="hover:text-brand-300" href="#"><img class="w-8" src="assets/social-media/instagram.png" alt="Instagram"></a>
+          <a class="hover:text-brand-300" href="#"><img class="w-8" src="assets/social-media/tik-tok.png" alt="Twitter"></a>
+        </div>
+        <div>© 2025 PROSIGMAKA. ALL RIGHTS RESERVED</div>
+      </div>
+    </footer>
+  </body>
+</html>
