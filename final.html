@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosigmaka - Digital Solutions</title>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Vanta.js Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark-bg': '#1B1B1B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-dark-bg text-white">
+    
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-dark-bg">
+        <div class="text-center">
+            <!-- Loading Animation -->
+            <div class="relative mb-8">
+                <div class="w-16 h-16 border-4 border-gray-600 border-t-blue-500 rounded-full animate-spin mx-auto"></div>
+                <div class="absolute inset-0 w-16 h-16 border-4 border-transparent border-r-purple-500 rounded-full animate-spin mx-auto" style="animation-delay: 0.5s; animation-direction: reverse;"></div>
+            </div>
+            
+            <!-- Loading Text -->
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 tracking-widest">
+                <span class="inline-block animate-pulse">L</span>
+                <span class="inline-block animate-pulse" style="animation-delay: 0.1s;">O</span>
+                <span class="inline-block animate-pulse" style="animation-delay: 0.2s;">A</span>
+                <span class="inline-block animate-pulse" style="animation-delay: 0.3s;">D</span>
+                <span class="inline-block animate-pulse" style="animation-delay: 0.4s;">I</span>
+                <span class="inline-block animate-pulse" style="animation-delay: 0.5s;">N</span>
+                <span class="inline-block animate-pulse" style="animation-delay: 0.6s;">G</span>
+            </h2>
+            
+            <!-- Progress Bar -->
+            <div class="w-64 h-1 bg-gray-700 rounded-full mx-auto overflow-hidden">
+                <div id="progress-bar" class="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transform -translate-x-full animate-progress"></div>
+            </div>
+            
+            <!-- Loading Percentage -->
+            <p id="loading-percentage" class="text-gray-400 mt-4 text-sm">0%</p>
+        </div>
+    </div>
+    
+    <!-- Main Content (Hidden during preload) -->
+    <div id="main-content" class="hidden">
+        <!-- Navigation -->
+        <nav id="navbar" class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-sm border-b border-gray-800/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="assets/LOGO PUTIH.png" alt="Prosigmaka" class="h-8 w-auto filter drop-shadow-md">
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white font-medium hover:text-gray-300 transition-colors duration-200" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">Home</a>
+                    <a href="#clients" class="text-white font-medium hover:text-gray-300 transition-colors duration-200" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">Clients</a>
+                    <a href="#services" class="text-white font-medium hover:text-gray-300 transition-colors duration-200" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">Services</a>
+                    <a href="#ai-agent" class="text-white font-medium hover:text-gray-300 transition-colors duration-200" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">AI Agents</a>
+                    <a href="#contact" class="text-white font-medium hover:text-gray-300 transition-colors duration-200" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-300 hover:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="fullpage-section flex items-center justify-center relative overflow-hidden">
+        <!-- Base Gradient Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/30 z-0"></div>
+        
+        <!-- Animated Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-transparent to-purple-600/10 animate-pulse z-0"></div>
+        
+        <!-- Geometric Pattern Background -->
+        <div class="absolute inset-0 opacity-5 z-0">
+            <div class="absolute inset-0" style="background-image: 
+                radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 40% 60%, rgba(236, 72, 153, 0.2) 1px, transparent 1px);
+                background-size: 50px 50px, 75px 75px, 100px 100px;"></div>
+        </div>
+        
+        <!-- Moving Gradient Orbs -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-10 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float-slow"></div>
+            <div class="absolute top-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-medium"></div>
+            <div class="absolute bottom-20 left-1/3 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-float-fast"></div>
+        </div>
+        
+        <!-- Grid Pattern Overlay -->
+        <div class="absolute inset-0 opacity-[0.02] z-0">
+            <div class="absolute inset-0" style="background-image: 
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+                background-size: 30px 30px;"></div>
+        </div>
+        
+        <!-- Light Rays -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-blue-400/20 via-transparent to-transparent"></div>
+            <div class="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-purple-400/20 via-transparent to-transparent"></div>
+            <div class="absolute left-0 top-1/3 w-full h-px bg-gradient-to-r from-transparent via-blue-400/10 to-transparent"></div>
+        </div>
+        
+        <!-- Vanta.js NET Background -->
+        <div id="vanta-bg" class="absolute inset-0 z-10"></div>
+        
+        <!-- Content Overlay -->
+        <div class="absolute inset-0 bg-black/10 z-10"></div>
+        
+        <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+          <div class="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+            <!-- Left Column - Main Content -->
+            <div class="text-left">
+                <!-- Main Heading -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    <span class="block text-white">Transforming Ideas</span>
+                    <span class="block bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                        Into Digital Reality
+                    </span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                    We are a technology company that specializes in creating innovative digital solutions 
+                    to help businesses grow and succeed in the digital age.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <button class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Get Started
+                    </button>
+                    <button class="border-2 border-gray-500 text-gray-300 hover:border-white hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+          </div>
+                
+                <!-- Features Icons -->
+                <!-- <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mt-16">
+                    <div class="flex flex-col items-start">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Innovation</h3>
+                        <p class="text-gray-400">Cutting-edge solutions for modern challenges</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-start">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Performance</h3>
+                        <p class="text-gray-400">Fast, reliable, and scalable solutions</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-start">
+                        <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Security</h3>
+                        <p class="text-gray-400">Enterprise-grade security and protection</p>
+                    </div>
+                </div> -->
+            </div>
+          </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Our Clients Section -->
+    <section id="clients" class="fullpage-section flex items-center bg-gray-900/50 relative">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, #fff 1px, transparent 1px); background-size: 50px 50px;"></div>
+        </div>
+        
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+			<div class="flex gap-12">
+				<div class="flex flex-col justify-between">
+					<!-- Section Header -->
+					<div class="mb-16 text-right">
+						<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+							Trusted by <span class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Leading Companies</span>
+						</h2>
+						<p class="text-lg text-gray-300 max-w-2xl mx-auto">
+							We are proud to work with some of the most innovative companies across various industries
+						</p>
+					</div>
+					
+					<!-- Statistics -->
+					<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 text-center">
+						<div class="group">
+							<div class="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+								<span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">50+</span>
+							</div>
+							<p class="text-gray-400">Happy Clients</p>
+						</div>
+						<div class="group">
+							<div class="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+								<span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">200+</span>
+							</div>
+							<p class="text-gray-400">Projects Completed</p>
+						</div>
+						<div class="group">
+							<div class="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+								<span class="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent">5+</span>
+							</div>
+							<p class="text-gray-400">Years Experience</p>
+						</div>
+						<div class="group">
+							<div class="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+								<span class="bg-gradient-to-r from-blue-400 to-green-500 bg-clip-text text-transparent">99%</span>
+							</div>
+							<p class="text-gray-400">Client Satisfaction</p>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Clients Grid -->
+				<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
+					<!-- Client 1 - Astra -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/1-Astra.png" alt="Astra" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 2 - TMMIN -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/2-Tmmin.png" alt="TMMIN" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 3 - Jayaboard -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/3-Jayaboard.png" alt="Jayaboard" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 4 - BSI -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/4-BSI.png" alt="BSI" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 5 - BMS -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/5-BMS.png" alt="BMS" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 6 - Yokke -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/6-Yokke.png" alt="Yokke" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 7 - Dompet Duafa -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/7-Dompet-Duafa.png" alt="Dompet Duafa" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 8 - CT Corp -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/8-CT-Corp.png" alt="CT Corp" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 9 - Mobbi -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/9-Mobbi.png" alt="Mobbi" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 10 - BPJS -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/10-BPJS.png" alt="BPJS" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 11 - Pam Jaya -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/11-Pam-jaya.png" alt="Pam Jaya" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 12 - Xapiens -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/12-Xapiens.png" alt="Xapiens" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 13 - SISI -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/13-SISI.png" alt="SISI" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 14 - SCC -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/14-SCC.png" alt="SCC" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 15 - MMI -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/15-MMI.png" alt="MMI" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 16 - dOCOTEL -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/16-dOCOTEL.png" alt="dOCOTEL" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 17 - cELEES -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/17-cELEES.png" alt="cELEES" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 18 - DEEPTECH -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/18-DEEPTECH.png" alt="DEEPTECH" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 19 - Nutech -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/19-Nutech.png" alt="Nutech" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+
+					<!-- Client 20 - dot -->
+					<div class="flex justify-center items-center p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group">
+						<img src="assets/client/20-dot.png" alt="dot" class="max-h-16 w-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0">
+					</div>
+				</div>
+			</div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="fullpage-section flex items-center relative overflow-hidden">
+        <!-- Dark Background with Texture -->
+        <div class="absolute inset-0 bg-gray-950"></div>
+        
+        <!-- Animated Circuit Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: 
+                linear-gradient(90deg, #3b82f6 1px, transparent 1px),
+                linear-gradient(180deg, #3b82f6 1px, transparent 1px),
+                linear-gradient(45deg, #8b5cf6 1px, transparent 1px);
+                background-size: 40px 40px, 40px 40px, 80px 80px;
+                animation: circuitMove 20s linear infinite;"></div>
+        </div>
+        
+        <!-- Glowing Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-purple-900/20 to-pink-900/10"></div>
+        
+        <!-- Floating Particles -->
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 left-1/6 w-2 h-2 bg-blue-400/30 rounded-full animate-ping"></div>
+            <div class="absolute top-3/4 right-1/4 w-3 h-3 bg-purple-400/30 rounded-full animate-ping" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-3/4 w-1 h-1 bg-pink-400/30 rounded-full animate-ping" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/6 right-1/6 w-2 h-2 bg-green-400/30 rounded-full animate-ping" style="animation-delay: 3s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Our <span class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Services</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Comprehensive solutions designed to accelerate your digital transformation journey and drive sustainable growth
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Service 1: Professional Service -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">Professional Service</h3>
+                        <p class="text-gray-400 leading-relaxed">Expert consulting and implementation services to optimize your business processes and technology infrastructure.</p>
+                        <div class="mt-6">
+                            <button class="text-blue-400 hover:text-blue-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Headcount Hours -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300">Headcount Hours</h3>
+                        <p class="text-gray-400 leading-relaxed">Flexible resource allocation model to scale your team efficiently with skilled professionals on-demand.</p>
+                        <div class="mt-6">
+                            <button class="text-purple-400 hover:text-purple-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Managed Services -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-pink-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-pink-300 transition-colors duration-300">Managed Services</h3>
+                        <p class="text-gray-400 leading-relaxed">Complete end-to-end management of your IT infrastructure and applications with 24/7 monitoring and support.</p>
+                        <div class="mt-6">
+                            <button class="text-pink-400 hover:text-pink-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: AI Solution -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-green-300 transition-colors duration-300">AI Solution</h3>
+                        <p class="text-gray-400 leading-relaxed">Advanced artificial intelligence and machine learning solutions to automate processes and gain intelligent insights.</p>
+                        <div class="mt-6">
+                            <button class="text-green-400 hover:text-green-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: LXP Solution -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-indigo-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-indigo-300 transition-colors duration-300">LXP Solution</h3>
+                        <p class="text-gray-400 leading-relaxed">Modern Learning Experience Platform to enhance employee skills and drive continuous learning culture.</p>
+                        <div class="mt-6">
+                            <button class="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Corporate Training -->
+                <div class="group relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-orange-300 transition-colors duration-300">Corporate Training</h3>
+                        <p class="text-gray-400 leading-relaxed">Comprehensive training programs to upskill your workforce and ensure successful technology adoption.</p>
+                        <div class="mt-6">
+                            <button class="text-orange-400 hover:text-orange-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Agent Section -->
+    <section id="ai-agent" class="fullpage-section relative overflow-hidden">
+        <!-- Futuristic Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-900"></div>
+        
+        <!-- Neural Network Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: 
+                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 60% 10%, rgba(168, 85, 247, 0.3) 1px, transparent 1px);
+                background-size: 60px 60px, 80px 80px, 100px 100px, 120px 120px;
+                animation: neuralPulse 15s ease-in-out infinite;"></div>
+        </div>
+        
+        <!-- Floating AI Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-4 h-4 bg-cyan-400/20 rounded-full animate-ping"></div>
+            <div class="absolute top-1/2 right-20 w-6 h-6 bg-blue-400/20 rounded-full animate-ping" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 left-1/4 w-3 h-3 bg-purple-400/20 rounded-full animate-ping" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/4 right-1/3 w-5 h-5 bg-indigo-400/20 rounded-full animate-ping" style="animation-delay: 3s;"></div>
+        </div>
+        
+        <!-- Matrix Effect Lines -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-1/6 w-px h-full bg-gradient-to-b from-cyan-400 via-transparent to-transparent animate-pulse"></div>
+            <div class="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-blue-400 via-transparent to-transparent animate-pulse" style="animation-delay: 1s;"></div>
+            <div class="absolute left-0 top-1/4 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Talk with our <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">AI Agents</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+                    Choose your specialized AI assistant to get instant answers and personalized recommendations
+                </p>
+            </div>
+
+            <!-- AI Agents Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Agent 1: Technical Consultant -->
+                <div class="group relative agent-card cursor-pointer p-2">
+                    <div class="absolute inset-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-500">
+                        <!-- Agent Avatar -->
+                        <div class="relative mb-6 overflow-visible">
+                            <div class="w-24 h-24 mx-auto bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:rotate-12 relative z-10">
+                                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <!-- Status Indicator -->
+                            <div class="absolute top-0 right-1/2 transform translate-x-8 w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">Alex Tech</h3>
+                        <p class="text-sm text-cyan-400 mb-3 font-semibold">Technical Consultant</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Expert in software architecture, system design, and technical implementation strategies.</p>
+                        
+                        <!-- Skills -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full">Architecture</span>
+                            <span class="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">DevOps</span>
+                        </div>
+                        
+                        <!-- Chat Button -->
+                        <button class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100">
+                            Start Chat
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Agent 2: Business Strategist -->
+                <div class="group relative agent-card cursor-pointer p-2">
+                    <div class="absolute inset-2 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500">
+                        <!-- Agent Avatar -->
+                        <div class="relative mb-6 overflow-visible">
+                            <div class="w-24 h-24 mx-auto bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:-rotate-12 relative z-10">
+                                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <!-- Status Indicator -->
+                            <div class="absolute top-0 right-1/2 transform translate-x-8 w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">Sarah Business</h3>
+                        <p class="text-sm text-purple-400 mb-3 font-semibold">Business Strategist</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Specialized in digital transformation, process optimization, and growth strategies.</p>
+                        
+                        <!-- Skills -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">Strategy</span>
+                            <span class="px-2 py-1 bg-pink-500/20 text-pink-300 text-xs rounded-full">Growth</span>
+                        </div>
+                        
+                        <!-- Chat Button -->
+                        <button class="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100">
+                            Start Chat
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Agent 3: Training Specialist -->
+                <div class="group relative agent-card cursor-pointer p-2">
+                    <div class="absolute inset-2 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-500">
+                        <!-- Agent Avatar -->
+                        <div class="relative mb-6 overflow-visible">
+                            <div class="w-24 h-24 mx-auto bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:rotate-12 relative z-10">
+                                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <!-- Status Indicator -->
+                            <div class="absolute top-0 right-1/2 transform translate-x-8 w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors duration-300">Mike Learning</h3>
+                        <p class="text-sm text-green-400 mb-3 font-semibold">Training Specialist</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Expert in corporate training programs, LXP solutions, and skill development strategies.</p>
+                        
+                        <!-- Skills -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-full">Training</span>
+                            <span class="px-2 py-1 bg-emerald-500/20 text-emerald-300 text-xs rounded-full">LXP</span>
+                        </div>
+                        
+                        <!-- Chat Button -->
+                        <button class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100">
+                            Start Chat
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Agent 4: AI Innovation -->
+                <div class="group relative agent-card cursor-pointer p-2">
+                    <div class="absolute inset-2 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-500">
+                        <!-- Agent Avatar -->
+                        <div class="relative mb-6 overflow-visible">
+                            <div class="w-24 h-24 mx-auto bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:-rotate-12 relative z-10">
+                                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <!-- Status Indicator -->
+                            <div class="absolute top-0 right-1/2 transform translate-x-8 w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors duration-300">Emma AI</h3>
+                        <p class="text-sm text-orange-400 mb-3 font-semibold">AI Innovation Expert</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Specialist in artificial intelligence implementation, machine learning, and automation solutions.</p>
+                        
+                        <!-- Skills -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">AI/ML</span>
+                            <span class="px-2 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">Innovation</span>
+                        </div>
+                        
+                        <!-- Chat Button -->
+                        <button class="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100">
+                            Start Chat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Fixed Section Navigation Menu -->
+    <div class="section-nav-menu">
+        <!-- Home/Hero -->
+        <div class="section-nav-item active" onclick="scrollToSection('home')" data-section="home">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+            <div class="nav-label">Home</div>
+        </div>
+        
+        <!-- Clients -->
+        <div class="section-nav-item" onclick="scrollToSection('clients')" data-section="clients">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <div class="nav-label">Clients</div>
+        </div>
+        
+        <!-- Services -->
+        <div class="section-nav-item" onclick="scrollToSection('services')" data-section="services">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6z"></path>
+            </svg>
+            <div class="nav-label">Services</div>
+        </div>
+        
+        <!-- AI Agents -->
+        <div class="section-nav-item" onclick="scrollToSection('ai-agent')" data-section="ai-agent">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+            <div class="nav-label">AI Agents</div>
+        </div>
+        
+        <!-- Testimonials -->
+        <div class="section-nav-item" onclick="scrollToSection('testimonials')" data-section="testimonials">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+            </svg>
+            <div class="nav-label">Testimonials</div>
+        </div>
+    </div>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="fullpage-section relative overflow-hidden">
+        <!-- Elegant Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-slate-900 to-gray-900"></div>
+        
+        <!-- Floating Quote Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: 
+                radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.3) 2px, transparent 2px),
+                radial-gradient(circle at 70% 70%, rgba(59, 130, 246, 0.3) 2px, transparent 2px),
+                radial-gradient(circle at 50% 20%, rgba(168, 85, 247, 0.3) 2px, transparent 2px);
+                background-size: 120px 120px, 150px 150px, 100px 100px;
+                animation: floatPattern 25s ease-in-out infinite;"></div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/5 rounded-full blur-2xl animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-10 w-24 h-24 bg-green-500/5 rounded-full blur-2xl animate-pulse" style="animation-delay: 4s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    What Our <span class="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Clients Say</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Trusted by industry leaders who have experienced the transformative power of our digital solutions
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Testimonial 1 -->
+                <div class="group relative testimonial-card">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-600/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-green-400/50 transition-all duration-500 hover:transform hover:scale-105">
+                        <!-- Quote Icon -->
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg class="w-12 h-12 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Quote Text -->
+                        <blockquote class="text-gray-300 text-lg leading-relaxed mb-6 italic">
+                            "Prosigmaka transformed our entire digital infrastructure. Their AI solutions increased our operational efficiency by 40% and significantly improved our customer experience."
+                        </blockquote>
+                        
+                        <!-- Client Info -->
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                                    AS
+                                </div>
+                                <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-green-400 rounded-full border-2 border-gray-900"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">Ahmad Sutanto</h4>
+                                <p class="text-green-400 font-medium">Chief Technology Officer</p>
+                                <p class="text-gray-400 text-sm">PT Astra International</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="group relative testimonial-card">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-blue-400/50 transition-all duration-500 hover:transform hover:scale-105">
+                        <!-- Quote Icon -->
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg class="w-12 h-12 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Quote Text -->
+                        <blockquote class="text-gray-300 text-lg leading-relaxed mb-6 italic">
+                            "The corporate training program from Prosigmaka helped us upskill our entire team. Their LXP solution made learning engaging and measurable."
+                        </blockquote>
+                        
+                        <!-- Client Info -->
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                                    SR
+                                </div>
+                                <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-blue-400 rounded-full border-2 border-gray-900"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">Sari Rahayu</h4>
+                                <p class="text-blue-400 font-medium">Head of Human Resources</p>
+                                <p class="text-gray-400 text-sm">Bank Syariah Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="group relative testimonial-card">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-600/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-500 hover:transform hover:scale-105">
+                        <!-- Quote Icon -->
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg class="w-12 h-12 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Quote Text -->
+                        <blockquote class="text-gray-300 text-lg leading-relaxed mb-6 italic">
+                            "Professional service and technical expertise that exceeded our expectations. Their managed services keep our systems running smoothly 24/7."
+                        </blockquote>
+                        
+                        <!-- Client Info -->
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                                    DW
+                                </div>
+                                <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-purple-400 rounded-full border-2 border-gray-900"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">Dian Wijaya</h4>
+                                <p class="text-purple-400 font-medium">IT Director</p>
+                                <p class="text-gray-400 text-sm">CT Corp Digital</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="group relative testimonial-card">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-orange-400/50 transition-all duration-500 hover:transform hover:scale-105">
+                        <!-- Quote Icon -->
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg class="w-12 h-12 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Quote Text -->
+                        <blockquote class="text-gray-300 text-lg leading-relaxed mb-6 italic">
+                            "Incredible ROI from their digital transformation strategy. Prosigmaka helped us modernize our legacy systems and improve customer satisfaction significantly."
+                        </blockquote>
+                        
+                        <!-- Client Info -->
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                                    RM
+                                </div>
+                                <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-orange-400 rounded-full border-2 border-gray-900"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">Rizki Maulana</h4>
+                                <p class="text-orange-400 font-medium">Digital Transformation Lead</p>
+                                <p class="text-gray-400 text-sm">BPJS Kesehatan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="group relative testimonial-card">
+                    <div class="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-cyan-600/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-teal-400/50 transition-all duration-500 hover:transform hover:scale-105">
+                        <!-- Quote Icon -->
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg class="w-12 h-12 text-teal-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Quote Text -->
+                        <blockquote class="text-gray-300 text-lg leading-relaxed mb-6 italic">
+                            "Outstanding partnership in implementing our automation solutions. Their team's expertise in AI and machine learning is truly world-class."
+                        </blockquote>
+                        
+                        <!-- Client Info -->
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                                    LP
+                                </div>
+                                <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-teal-400 rounded-full border-2 border-gray-900"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">Linda Pratiwi</h4>
+                                <p class="text-teal-400 font-medium">Innovation Manager</p>
+                                <p class="text-gray-400 text-sm">Xapiens Teknologi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="group relative testimonial-card">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-blue-600/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-indigo-400/50 transition-all duration-500 hover:transform hover:scale-105">
+                        <!-- Quote Icon -->
+                        <div class="absolute top-6 right-6 opacity-20">
+                            <svg class="w-12 h-12 text-indigo-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Quote Text -->
+                        <blockquote class="text-gray-300 text-lg leading-relaxed mb-6 italic">
+                            "Prosigmaka's headcount model allowed us to scale our development team quickly. Their skilled professionals integrated seamlessly with our existing team."
+                        </blockquote>
+                        
+                        <!-- Client Info -->
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                                    AB
+                                </div>
+                                <div class="absolute -bottom-1 -right-1 w-6 h-6 bg-indigo-400 rounded-full border-2 border-gray-900"></div>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-lg">Arif Budiman</h4>
+                                <p class="text-indigo-400 font-medium">Engineering Manager</p>
+                                <p class="text-gray-400 text-sm">Dompet Dhuafa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="text-center mt-16">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="flex items-center justify-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-2xl font-bold text-white">98%</p>
+                            <p class="text-gray-400">Client Satisfaction</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-2xl font-bold text-white">5+ Years</p>
+                            <p class="text-gray-400">Average Partnership</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-2xl font-bold text-white">50+</p>
+                            <p class="text-gray-400">Enterprise Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    </div> <!-- End of main-content -->
+
+    <!-- Custom Styles -->
+    <style>
+        /* Preloader Animations */
+        @keyframes progress {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+        
+        .animate-progress {
+            animation: progress 3s ease-in-out forwards;
+        }
+        
+        /* Preloader fade out */
+        .preloader-fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        /* Letter animation for LOADING text */
+        @keyframes letterPulse {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+        
+        .animate-pulse {
+            animation: letterPulse 1.5s ease-in-out infinite;
+        }
+        
+        /* Navbar fade-in animation */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInDown {
+            animation: fadeInDown 0.6s ease-out;
+        }
+        
+        /* Main content fade-in animation */
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Ensure consistent background from start */
+        body {
+            background-color: #1B1B1B !important;
+        }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Services Animation */
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(147, 51, 234, 0.6);
+            }
+        }
+        
+        .service-card {
+            animation: slideInRight 0.6s ease-out;
+            max-width: 20vw;
+        }
+        
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+        .service-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        .service-card:hover {
+            animation: pulseGlow 2s infinite;
+        }
+
+        /* AI Agent Animations */
+        @keyframes neuralPulse {
+            0%, 100% { 
+                opacity: 0.1; 
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.3; 
+                transform: scale(1.05);
+            }
+        }
+
+        .agent-card {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 1rem;
+            padding: 0.5rem; /* Space for glow effect */
+            overflow: hidden; /* Ensure shimmer effect stays inside */
+        }
+
+        .agent-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            filter: brightness(1.1);
+        }
+
+        /* Glow effect positioning fix */
+        .agent-card .absolute.inset-2 {
+            border-radius: 1rem;
+            z-index: 0;
+        }
+
+        /* Card content positioning */
+        .agent-card .relative.bg-gray-900\/80 {
+            z-index: 1;
+            border-radius: 1rem;
+            overflow: hidden; /* Ensure content doesn't overflow */
+        }
+        
+        /* Avatar glow effect */
+        .agent-card .bg-gradient-to-br.rounded-full::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            background: inherit;
+            border-radius: inherit;
+            filter: blur(12px);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+        
+        .agent-card:hover .bg-gradient-to-br.rounded-full::after {
+            opacity: 0.7;
+        }
+
+        .agent-card::before {
+            content: '';
+            position: absolute;
+            inset: 0.5rem; /* Match the padding to stay within card bounds */
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            border-radius: 1rem;
+            z-index: 2; /* Above card content but below text */
+        }
+
+        .agent-card:hover::before {
+            opacity: 1;
+            /* animation: shimmer 1.5s ease-in-out; */ /* Disabled moving animation */
+        }
+
+        .agent-card:hover::before {
+            opacity: 1;
+            animation: shimmer 1.5s ease-in-out;
+        }
+
+        /* @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        } */
+
+        /* Floating Animation for AI Elements */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(2deg); }
+            66% { transform: translateY(5px) rotate(-1deg); }
+        }
+
+        .agent-card:nth-child(1) { animation: float 6s ease-in-out infinite; }
+        .agent-card:nth-child(2) { animation: float 6s ease-in-out infinite 1s; }
+        .agent-card:nth-child(3) { animation: float 6s ease-in-out infinite 2s; }
+        .agent-card:nth-child(4) { animation: float 6s ease-in-out infinite 3s; }
+        
+        /* Floating Orbs Animation */
+        @keyframes floatSlow {
+            0%, 100% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px) rotate(90deg);
+            }
+            50% {
+                transform: translateY(-40px) translateX(-10px) rotate(180deg);
+            }
+            75% {
+                transform: translateY(-20px) translateX(-15px) rotate(270deg);
+            }
+        }
+        
+        @keyframes floatMedium {
+            0%, 100% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-30px) translateX(-20px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(-15px) translateX(15px) rotate(240deg);
+            }
+        }
+        
+        @keyframes floatFast {
+            0%, 100% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-25px) translateX(20px) rotate(180deg);
+            }
+        }
+        
+        .animate-float-slow {
+            animation: floatSlow 20s ease-in-out infinite;
+        }
+        
+        .animate-float-medium {
+            animation: floatMedium 15s ease-in-out infinite;
+        }
+        
+        .animate-float-fast {
+            animation: floatFast 10s ease-in-out infinite;
+        }
+        
+        /* Circuit Animation */
+        @keyframes circuitMove {
+            0% {
+                background-position: 0% 0%, 0% 0%, 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%, 100% 100%, 100% 100%;
+            }
+        }
+        
+        /* Smooth scrolling & Snap - DISABLED */
+        html {
+            scroll-behavior: smooth;
+            /* scroll-snap-type: y mandatory; */
+            overflow-x: hidden;
+        }
+        
+        body {
+            /* scroll-snap-type: y mandatory; */
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        
+        /* Section layout - FIXED */
+        .fullpage-section {
+            min-height: 100vh; /* Restore minimum height for proper layout */
+            /* height: 100vh; */ /* Keep this disabled for flexible height */
+            /* scroll-snap-align: start; */
+            /* scroll-snap-stop: always; */
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 2rem 0; /* Reduce padding for better spacing */
+        }
+        
+        /* Hero section specific styling */
+        #home.fullpage-section {
+            min-height: 100vh;
+            padding: 0; /* No extra padding for hero */
+            padding-top: 4rem; /* Account for fixed navbar */
+        }
+        
+        /* Ensure content is properly centered */
+        .fullpage-section > .max-w-7xl,
+        .fullpage-section > div:not(.absolute) {
+            z-index: 10;
+            position: relative;
+        }
+        
+        /* Testimonial Section Styles */
+        @keyframes floatPattern {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+            }
+            33% { 
+                transform: translateY(-10px) rotate(1deg); 
+            }
+            66% { 
+                transform: translateY(5px) rotate(-0.5deg); 
+            }
+        }
+        
+        .testimonial-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+        .testimonial-card:nth-child(4) { animation-delay: 0.4s; }
+        .testimonial-card:nth-child(5) { animation-delay: 0.5s; }
+        .testimonial-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* AI Agent section needs special handling */
+        #ai-agent.fullpage-section {
+            min-height: auto; /* Allow natural height */
+            padding: 4rem 0; /* More padding for content */
+        }
+        
+        #ai-agent .max-w-7xl {
+            flex: none; /* Don't stretch */
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .fullpage-section {
+                min-height: auto;
+                padding: 3rem 0;
+            }
+            
+            #home.fullpage-section {
+                min-height: 100vh;
+                padding: 2rem 0;
+            }
+            
+            #ai-agent.fullpage-section {
+                padding: 3rem 0;
+            }
+        }
+        
+        /* Better spacing for sections */
+        .section-spacing {
+            padding: 4rem 0;
+        }
+        
+        .section-spacing-large {
+            padding: 6rem 0;
+        }
+        
+        /* Custom gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Navbar visibility control */
+        #navbar {
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: all 0.5s ease-in-out;
+        }
+        
+        #navbar.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Section Navigation Menu */
+        .section-nav-menu {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 60;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .section-nav-item {
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .section-nav-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section-nav-item.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .section-nav-item .nav-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        
+        .section-nav-item:hover .nav-icon {
+            transform: scale(1.2);
+        }
+        
+        .section-nav-item .nav-label {
+            position: absolute;
+            right: 100%;
+            margin-right: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .section-nav-item:hover .nav-label {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Hide section nav on mobile */
+        @media (max-width: 768px) {
+            .section-nav-menu {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- JavaScript for interactions -->
+    <script>
+        // Initialize Vanta.js NET background
+        function initVantaBackground() {
+            VANTA.NET({
+                el: "#vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: 0x3b82f6, // Blue color
+                backgroundColor: 0x000000, // Pure black for transparency
+                backgroundAlpha: 0.3, // Reduced background opacity
+                points: 8.00, // Reduced points for less visual clutter
+                maxDistance: 25.00, // Increased max distance
+                spacing: 18.00 // Increased spacing
+            });
+        }
+        
+        // Preloader functionality
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('main-content');
+            const navbar = document.getElementById('navbar');
+            const progressBar = document.getElementById('progress-bar');
+            const loadingPercentage = document.getElementById('loading-percentage');
+            
+            // Simulate loading progress
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress > 100) progress = 100;
+                
+                loadingPercentage.textContent = Math.round(progress) + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    
+                    // Hide preloader and show main content after a short delay
+                    setTimeout(() => {
+                        preloader.classList.add('preloader-fade-out');
+                        setTimeout(() => {
+                            preloader.style.display = 'none';
+                            // Show main content with fade-in effect
+                            mainContent.classList.remove('hidden');
+                            mainContent.classList.add('animate-fadeInUp');
+                            
+                            // Initialize Vanta.js NET background after content is shown
+                            initVantaBackground();
+                        }, 300);
+                    }, 300);
+                }
+            }, 100);
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('h1, p, button, .flex');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+        // Fullpage scroll functionality
+        let isScrolling = false;
+        let currentSection = 0;
+        const sections = document.querySelectorAll('.fullpage-section');
+        
+        // Smooth scroll to section
+        function scrollToSection(index) {
+            if (index >= 0 && index < sections.length) {
+                sections[index].scrollIntoView({ behavior: 'smooth' });
+                currentSection = index;
+            }
+        }
+        
+        // Wheel event handler for section navigation
+        function handleWheel(e) {
+            if (isScrolling) return;
+            
+            isScrolling = true;
+            
+            if (e.deltaY > 0) {
+                // Scroll down
+                if (currentSection < sections.length - 1) {
+                    scrollToSection(currentSection + 1);
+                }
+            } else {
+                // Scroll up
+                if (currentSection > 0) {
+                    scrollToSection(currentSection - 1);
+                }
+            }
+            
+            setTimeout(() => {
+                isScrolling = false;
+            }, 1000); // Prevent rapid scrolling
+        }
+        
+        // Touch events for mobile
+        let touchStartY = 0;
+        let touchEndY = 0;
+        
+        function handleTouchStart(e) {
+            touchStartY = e.changedTouches[0].screenY;
+        }
+        
+        function handleTouchEnd(e) {
+            if (isScrolling) return;
+            
+            touchEndY = e.changedTouches[0].screenY;
+            const deltaY = touchStartY - touchEndY;
+            
+            if (Math.abs(deltaY) > 50) { // Minimum swipe distance
+                isScrolling = true;
+                
+                if (deltaY > 0) {
+                    // Swipe up (scroll down)
+                    if (currentSection < sections.length - 1) {
+                        scrollToSection(currentSection + 1);
+                    }
+                } else {
+                    // Swipe down (scroll up)
+                    if (currentSection > 0) {
+                        scrollToSection(currentSection - 1);
+                    }
+                }
+                
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 1000);
+            }
+        }
+        
+        // Keyboard navigation
+        function handleKeydown(e) {
+            if (isScrolling) return;
+            
+            switch(e.key) {
+                case 'ArrowDown':
+                case 'PageDown':
+                    e.preventDefault();
+                    if (currentSection < sections.length - 1) {
+                        scrollToSection(currentSection + 1);
+                    }
+                    break;
+                case 'ArrowUp':
+                case 'PageUp':
+                    e.preventDefault();
+                    if (currentSection > 0) {
+                        scrollToSection(currentSection - 1);
+                    }
+                    break;
+                case 'Home':
+                    e.preventDefault();
+                    scrollToSection(0);
+                    break;
+                case 'End':
+                    e.preventDefault();
+                    scrollToSection(sections.length - 1);
+                    break;
+            }
+        }
+        
+        // Intersection Observer to track current section
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionIndex = Array.from(sections).indexOf(entry.target);
+                    currentSection = sectionIndex;
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+        
+        // AI Agent Interaction Functions
+        function initAIAgentInteractions() {
+            // Add click handlers for AI agent cards
+            const agentCards = document.querySelectorAll('.agent-card');
+            const chatButtons = document.querySelectorAll('.agent-card button');
+            
+            agentCards.forEach((card, index) => {
+                // Add hover sound effect (optional)
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px) scale(1.05)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = '';
+                });
+                
+                // Add click to card effect
+                card.addEventListener('click', (e) => {
+                    if (!e.target.closest('button')) {
+                        // Simulate button click if not clicking the button directly
+                        const button = card.querySelector('button');
+                        if (button) {
+                            button.click();
+                        }
+                    }
+                });
+            });
+            
+            // Chat button handlers
+            chatButtons.forEach((button, index) => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const agentNames = ['Alex Tech', 'Sarah Business', 'Mike Learning', 'Emma AI'];
+                    const agentName = agentNames[index] || 'AI Agent';
+                    
+                    // Show confirmation with modern alert
+                    showAIAgentModal(agentName, index);
+                });
+            });
+            
+            // "Talk to All Agents" button
+            const allAgentsButton = document.querySelector('#ai-agent button:last-child');
+            if (allAgentsButton) {
+                allAgentsButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    showAIAgentModal('All AI Agents', 'all');
+                });
+            }
+        }
+        
+        // Modern AI Agent Modal
+        function showAIAgentModal(agentName, agentIndex) {
+            // Create modal backdrop
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4';
+            modal.style.animation = 'fadeIn 0.3s ease-out';
+            
+            // Create modal content
+            const modalContent = document.createElement('div');
+            modalContent.className = 'bg-gray-900 border border-gray-700 rounded-2xl p-8 max-w-md w-full text-center transform';
+            modalContent.style.animation = 'slideInUp 0.3s ease-out';
+            
+            // Modal HTML
+            modalContent.innerHTML = `
+                <div class="mb-6">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Connect with ${agentName}</h3>
+                    <p class="text-gray-400">You're about to start a conversation with our AI agent</p>
+                </div>
+                
+                <div class="flex gap-4">
+                    <button onclick="startAIChat('${agentName}', '${agentIndex}')" class="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+                        Start Chat
+                    </button>
+                    <button onclick="closeAIModal()" class="flex-1 bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+                        Cancel
+                    </button>
+                </div>
+            `;
+            
+            modal.appendChild(modalContent);
+            document.body.appendChild(modal);
+            
+            // Close on backdrop click
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeAIModal();
+                }
+            });
+            
+            // Store modal reference
+            window.currentAIModal = modal;
+        }
+        
+        // Close AI Modal
+        function closeAIModal() {
+            const modal = window.currentAIModal;
+            if (modal) {
+                modal.style.animation = 'fadeOut 0.3s ease-out';
+                setTimeout(() => {
+                    document.body.removeChild(modal);
+                    window.currentAIModal = null;
+                }, 300);
+            }
+        }
+        
+        // Start AI Chat (placeholder - can be integrated with actual chat system)
+        function startAIChat(agentName, agentIndex) {
+            closeAIModal();
+            
+            // Show chat starting notification
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-300';
+            notification.innerHTML = `
+                <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    <span class="font-semibold">Connecting to ${agentName}...</span>
+                </div>
+            `;
+            notification.style.transform = 'translateX(100%)';
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Auto remove notification
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+            
+            // Here you can integrate with actual chat widget or redirect to chat page
+            console.log(`Starting chat with ${agentName} (Index: ${agentIndex})`);
+        }
+        
+        // Add CSS animations for modal
+        const modalStyles = document.createElement('style');
+        modalStyles.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
+            
+            @keyframes slideInUp {
+                from { 
+                    opacity: 0; 
+                    transform: translateY(30px) scale(0.95); 
+                }
+                to { 
+                    opacity: 1; 
+                    transform: translateY(0) scale(1); 
+                }
+            }
+        `;
+        document.head.appendChild(modalStyles);
+        
+        // Global functions for modal (accessible from onclick handlers)
+        window.startAIChat = startAIChat;
+        window.closeAIModal = closeAIModal;
+        
+        // Initialize fullpage functionality after preloader
+        function initFullpageScroll() {
+            // Add event listeners
+            window.addEventListener('wheel', handleWheel, { passive: false });
+            window.addEventListener('touchstart', handleTouchStart, { passive: false });
+            window.addEventListener('touchend', handleTouchEnd, { passive: false });
+            window.addEventListener('keydown', handleKeydown);
+            
+            // Observe sections
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+            
+            // Update navbar links to use section navigation
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        const sectionIndex = Array.from(sections).indexOf(targetSection);
+                        if (sectionIndex !== -1) {
+                            scrollToSection(sectionIndex);
+                        }
+                    }
+                });
+            });
+        }
+        
+        // Navbar and Section Navigation Control
+        function initNavbarControl() {
+            const navbar = document.getElementById('navbar');
+            const sectionNavItems = document.querySelectorAll('.section-nav-item');
+            
+            // Hide navbar initially when on hero section
+            function updateNavbarVisibility() {
+                const homeSection = document.getElementById('home');
+                const homeRect = homeSection.getBoundingClientRect();
+                
+                // Show navbar when scrolled past hero section
+                if (homeRect.bottom <= 100) {
+                    navbar.classList.add('show');
+                } else {
+                    navbar.classList.remove('show');
+                }
+            }
+            
+            // Update active section in navigation menu
+            function updateActiveSection() {
+                const sections = ['home', 'clients', 'services', 'ai-agent'];
+                let activeSection = 'home';
+                
+                sections.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        const rect = section.getBoundingClientRect();
+                        // Check if section is in viewport (at least 50% visible)
+                        if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
+                            activeSection = sectionId;
+                        }
+                    }
+                });
+                
+                // Update active state in navigation
+                sectionNavItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.dataset.section === activeSection) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+            
+            // Scroll event listener
+            window.addEventListener('scroll', () => {
+                updateNavbarVisibility();
+                updateActiveSection();
+            });
+            
+            // Initial check
+            updateNavbarVisibility();
+            updateActiveSection();
+        }
+        
+        // Global scroll to section function
+        window.scrollToSection = function(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+        
+        // Initialize after preloader is done
+        setTimeout(() => {
+            // initFullpageScroll(); // DISABLED - causing layout issues
+            initAIAgentInteractions();
+            initNavbarControl();
+        }, 4000); // Wait for preloader to finish
+    </script>
+</body>
+</html>

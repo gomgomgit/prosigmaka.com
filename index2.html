@@ -13,6 +13,7 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="prosigmaka_theme.css">
     <script>
       tailwind.config = {
         theme: {
@@ -37,22 +38,73 @@
       }
     </script>
     <style>
+      .preloader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--background);
+          z-index: 9999;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .progress-bar {
+          width: 70vw;
+          height: 80px;
+          transform: skewX(-20deg);
+          background: var(--card);
+          border-radius: var(--radius);
+          overflow: hidden;
+          position: relative;
+      }
+
+      .progress-fill {
+          position: absolute;
+          height: 100%;
+          background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+          animation: progressFill 30s ease-out forwards;
+      }
+
+      .service-text {
+          font-family: var(--font-sans);
+          opacity: 0;
+          animation: fadeInOut 2s ease-in-out infinite;
+      }
+
+      @keyframes progressFill {
+          from { width: 0; }
+          to { width: 100%; }
+      }
+
+      @keyframes fadeInOut {
+          0%, 100% { opacity: 0; transform: translateY(10px); }
+          50% { opacity: 1; transform: translateY(0); }
+      }
+
       .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
       .angled-top { border-top-left-radius: 2rem; border-top-right-radius: 2rem; }
       /* Clients marquee */
       .marquee { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
-      .marquee-track { display: flex; width: 290%; animation: marquee-left 28s linear infinite; }
+      .marquee-track { display: flex; width: 200%; animation: marquee-left 28s linear infinite; }
       .marquee-track.reverse { animation-name: marquee-right; }
-      .marquee-group { width: 50%;
-        display: flex;
-        align-items: center;
-        gap: 4rem; }
+      .marquee-group { width: 50%; display: flex; align-items: center; gap: 3rem; }
       .marquee:hover .marquee-track { animation-play-state: paused; }
       @keyframes marquee-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
       @keyframes marquee-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
     </style>
   </head>
   <body class="antialiased text-slate-900">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="mt-10 font-bold text-4xl service-text" id="serviceText"></div>
+    </div>
     <!-- Header -->
     <header class="absolute inset-x-0 top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between bg-white">
@@ -561,5 +613,80 @@
         <div>© 2025 PROSIGMAKA. ALL RIGHTS RESERVED</div>
       </div>
     </footer>
+    
+    <script>
+      const services = [
+            'Professional Service',
+            'HH',
+            'MS?',
+            'AI Solution',
+            'LXP Solution',
+            'Corporate Training'
+        ];
+
+        let currentService = 0;
+        const serviceText = document.getElementById('serviceText');
+        const preloader = document.getElementById('preloader');
+
+        function fadeOutCurrentService() {
+            const chars = serviceText.querySelectorAll('span');
+            chars.forEach((char, index) => {
+                setTimeout(() => {
+                    char.style.opacity = '0';
+                    char.style.transform = 'translateY(20px)';
+                }, index * 30);
+            });
+        }
+
+        function updateService() {
+            // Fade out current service first
+            if (serviceText.children.length > 0) {
+                fadeOutCurrentService();
+                setTimeout(() => {
+                    showNewService();
+                }, serviceText.children.length * 30 + 200);
+            } else {
+                showNewService();
+            }
+        }
+
+        function showNewService() {
+            const service = services[currentService];
+            serviceText.innerHTML = '';
+            
+            // Create spans for each character
+            service.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                span.style.opacity = '0';
+                span.style.transform = 'translateY(20px)';
+                span.style.transition = 'all 0.3s ease';
+                span.style.display = 'inline-block';
+                serviceText.appendChild(span);
+                
+                // Animate each character with delay
+                setTimeout(() => {
+                    span.style.opacity = '1';
+                    span.style.transform = 'translateY(0)';
+                }, index * 50);
+            });
+            
+            currentService = (currentService + 1) % services.length;
+        }
+
+        // Start service rotation
+        updateService();
+        const serviceInterval = setInterval(updateService, 2000);
+
+        // Hide preloader after 3 seconds
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            preloader.style.transition = 'opacity 0.5s ease-out';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                clearInterval(serviceInterval);
+            }, 500);
+        }, 30000);
+    </script>
   </body>
 </html>
