@@ -1048,6 +1048,93 @@
 
     <!-- Custom Styles -->
     <style>
+        /* Custom Futuristic Cursor */
+        * {
+            cursor: none !important;
+        }
+        
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #00f5ff, #0080ff);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+        }
+        
+        .cursor::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: 30px;
+            height: 30px;
+            border: 2px solid rgba(0, 245, 255, 0.3);
+            border-radius: 50%;
+            animation: cursorPulse 2s infinite;
+        }
+        
+        .cursor.hover {
+            transform: scale(1.5);
+            background: linear-gradient(45deg, #ff6600, #ff9500);
+            box-shadow: 0 0 20px rgba(255, 102, 0, 0.8), 0 0 40px rgba(255, 149, 0, 0.4);
+        }
+        
+        .cursor.hover::before {
+            border-color: rgba(255, 102, 0, 0.6);
+            animation: cursorPulseOrange 1.5s infinite;
+        }
+        
+        @keyframes cursorPulseOrange {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+                border-color: rgba(255, 102, 0, 0.6);
+            }
+            50% {
+                transform: scale(1.3);
+                opacity: 0.7;
+                border-color: rgba(255, 149, 0, 0.8);
+            }
+        }
+        
+        .cursor.click {
+            transform: scale(0.8);
+            background: linear-gradient(45deg, #00ff00, #00ff80);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+        }
+        
+        @keyframes cursorPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.5;
+            }
+        }
+        
+        /* Cursor trail effect */
+        .cursor-trail {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: rgba(0, 245, 255, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transition: all 0.2s ease;
+        }
+        
+        /* Interactive elements cursor styles */
+        a, button, .cursor-pointer {
+            cursor: none !important;
+        }
+        
         /* Preloader Animations */
         @keyframes progress {
             0% {
@@ -1994,7 +2081,99 @@
             // initFullpageScroll(); // DISABLED - causing layout issues
             initAIAgentInteractions();
             initNavbarControl();
+            initCustomCursor();
         }, 4000); // Wait for preloader to finish
+    </script>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    
+    <!-- Custom Cursor JavaScript -->
+    <script>
+        function initCustomCursor() {
+            const cursor = document.querySelector('.cursor');
+            const trailElements = [];
+            const trailLength = 8;
+            
+            // Create cursor trail elements
+            for (let i = 0; i < trailLength; i++) {
+                const trail = document.createElement('div');
+                trail.className = 'cursor-trail';
+                trail.style.opacity = (1 - i / trailLength) * 0.8;
+                trail.style.transform = `scale(${1 - i / trailLength * 0.8})`;
+                document.body.appendChild(trail);
+                trailElements.push(trail);
+            }
+            
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            
+            // Track mouse movement
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+            
+            // Smooth cursor animation
+            function animateCursor() {
+                // Smooth follow effect
+                cursorX += (mouseX - cursorX) * 0.2;
+                cursorY += (mouseY - cursorY) * 0.2;
+                
+                cursor.style.left = cursorX - 10 + 'px';
+                cursor.style.top = cursorY - 10 + 'px';
+                
+                // Update trail
+                trailElements.forEach((trail, index) => {
+                    const trailX = cursorX + (mouseX - cursorX) * (index + 1) / trailLength;
+                    const trailY = cursorY + (mouseY - cursorY) * (index + 1) / trailLength;
+                    
+                    trail.style.left = trailX - 3 + 'px';
+                    trail.style.top = trailY - 3 + 'px';
+                });
+                
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+            
+            // Hover effects for interactive elements
+            const interactiveElements = document.querySelectorAll('a, button, .cursor-pointer, [onclick]');
+            
+            interactiveElements.forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hover');
+                });
+                
+                element.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hover');
+                });
+                
+                element.addEventListener('mousedown', () => {
+                    cursor.classList.add('click');
+                });
+                
+                element.addEventListener('mouseup', () => {
+                    cursor.classList.remove('click');
+                });
+            });
+            
+            // Hide default cursor on mobile
+            if (window.innerWidth <= 768) {
+                cursor.style.display = 'none';
+                trailElements.forEach(trail => trail.style.display = 'none');
+            }
+            
+            // Show/hide cursor when entering/leaving window
+            document.addEventListener('mouseenter', () => {
+                cursor.style.opacity = '1';
+                trailElements.forEach(trail => trail.style.opacity = trail.style.opacity);
+            });
+            
+            document.addEventListener('mouseleave', () => {
+                cursor.style.opacity = '0';
+                trailElements.forEach(trail => trail.style.opacity = '0');
+            });
+        }
     </script>
 </body>
 </html>
