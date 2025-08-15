@@ -36,32 +36,93 @@
 <body class="font-inter bg-dark-bg text-white">
     
     <!-- Preloader -->
-    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-dark-bg">
-        <div class="text-center">
-            <!-- Loading Animation -->
-            <div class="relative mb-8">
-                <div class="w-16 h-16 border-4 border-gray-600 border-t-blue-500 rounded-full animate-spin mx-auto"></div>
-                <div class="absolute inset-0 w-16 h-16 border-4 border-transparent border-r-purple-500 rounded-full animate-spin mx-auto" style="animation-delay: 0.5s; animation-direction: reverse;"></div>
+    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-dark-bg overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <!-- Matrix Grid Lines -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="grid-pattern"></div>
             </div>
             
-            <!-- Loading Text -->
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 tracking-widest">
-                <span class="inline-block animate-pulse">L</span>
-                <span class="inline-block animate-pulse" style="animation-delay: 0.1s;">O</span>
-                <span class="inline-block animate-pulse" style="animation-delay: 0.2s;">A</span>
-                <span class="inline-block animate-pulse" style="animation-delay: 0.3s;">D</span>
-                <span class="inline-block animate-pulse" style="animation-delay: 0.4s;">I</span>
-                <span class="inline-block animate-pulse" style="animation-delay: 0.5s;">N</span>
-                <span class="inline-block animate-pulse" style="animation-delay: 0.6s;">G</span>
-            </h2>
+            <!-- Floating Particles -->
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+            <div class="particle particle-6"></div>
             
-            <!-- Progress Bar -->
-            <div class="w-64 h-1 bg-gray-700 rounded-full mx-auto overflow-hidden">
-                <div id="progress-bar" class="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transform -translate-x-full animate-progress"></div>
+            <!-- Scanning Lines -->
+            <div class="scan-line scan-line-1"></div>
+            <div class="scan-line scan-line-2"></div>
+        </div>
+        
+        <div class="text-center relative z-10">
+            <!-- Main Loading Circle -->
+            <div class="relative mb-12">
+                <!-- Outer Ring -->
+                <div class="w-48 h-48 mx-auto relative">
+                    <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background Circle -->
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(75, 85, 99, 0.3)" stroke-width="2"/>
+                        <!-- Progress Circle -->
+                        <circle id="progress-circle" cx="50" cy="50" r="45" fill="none" 
+                                stroke="url(#gradient)" stroke-width="3" stroke-linecap="round"
+                                stroke-dasharray="283" stroke-dashoffset="283"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f5ff;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#0080ff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    
+                    <!-- Inner Rings -->
+                    <div class="absolute inset-4 border-2 border-cyan-500/30 rounded-full animate-pulse"></div>
+                    <div class="absolute inset-8 border border-blue-500/20 rounded-full animate-ping"></div>
+                    
+                    <!-- Center Loading Icon -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-16 h-16 relative">
+                            <div class="absolute inset-0 border-4 border-cyan-400/30 rounded-full animate-spin"></div>
+                            <div class="absolute inset-2 border-4 border-blue-500/40 rounded-full animate-spin" style="animation-direction: reverse; animation-duration: 2s;"></div>
+                            <div class="absolute inset-4 border-4 border-purple-500/50 rounded-full animate-spin" style="animation-duration: 3s;"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <!-- Loading Percentage -->
-            <p id="loading-percentage" class="text-gray-400 mt-4 text-sm">0%</p>
+            <!-- Loading Percentage - Large Display -->
+            <div class="mb-8">
+                <div id="loading-percentage" class="text-8xl md:text-9xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text font-inter tracking-tighter leading-none glow-text">
+                    0%
+                </div>
+                <div class="text-xl text-gray-400 mt-4 tracking-[0.3em] uppercase font-medium">
+                    <span class="inline-block animate-pulse">I</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 0.1s;">N</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 0.2s;">I</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 0.3s;">T</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 0.4s;">I</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 0.5s;">A</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 0.6s;">L</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 0.7s;">I</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 0.8s;">Z</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 0.9s;">I</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 1.0s;">N</span>
+                    <span class="inline-block animate-pulse" style="animation-delay: 1.1s;">G</span>
+                </div>
+            </div>
+            
+            <!-- Status Text -->
+            <div class="text-sm text-gray-500 space-y-2">
+                <div id="loading-status" class="font-mono tracking-wider">Preparing digital environment...</div>
+                <div class="flex justify-center space-x-1">
+                    <div class="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
+                    <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style="animation-delay: 0.1s;"></div>
+                    <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -1135,7 +1196,110 @@
             cursor: none !important;
         }
         
-        /* Preloader Animations */
+        /* Futuristic Preloader Animations */
+        .glow-text {
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.5), 0 0 40px rgba(0, 128, 255, 0.3), 0 0 60px rgba(139, 92, 246, 0.2);
+            animation: textGlowPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes textGlowPulse {
+            0%, 100% {
+                text-shadow: 0 0 20px rgba(0, 245, 255, 0.5), 0 0 40px rgba(0, 128, 255, 0.3), 0 0 60px rgba(139, 92, 246, 0.2);
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(0, 245, 255, 0.8), 0 0 60px rgba(0, 128, 255, 0.5), 0 0 90px rgba(139, 92, 246, 0.4);
+            }
+        }
+        
+        /* Grid Pattern */
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(0, 245, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 245, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, #00f5ff, #8b5cf6);
+            border-radius: 50%;
+            animation: floatParticle 6s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(0, 245, 255, 0.6);
+        }
+        
+        .particle-1 { top: 20%; left: 10%; animation-delay: 0s; animation-duration: 8s; }
+        .particle-2 { top: 60%; left: 80%; animation-delay: 1s; animation-duration: 7s; }
+        .particle-3 { top: 80%; left: 20%; animation-delay: 2s; animation-duration: 9s; }
+        .particle-4 { top: 30%; left: 70%; animation-delay: 3s; animation-duration: 6s; }
+        .particle-5 { top: 10%; right: 15%; animation-delay: 4s; animation-duration: 8s; }
+        .particle-6 { bottom: 20%; left: 60%; animation-delay: 5s; animation-duration: 7s; }
+        
+        @keyframes floatParticle {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px) scale(1);
+                opacity: 0.7;
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px) scale(1.2);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10px) translateX(-15px) scale(0.8);
+                opacity: 0.5;
+            }
+            75% {
+                transform: translateY(15px) translateX(5px) scale(1.1);
+                opacity: 0.9;
+            }
+        }
+        
+        /* Scanning Lines */
+        .scan-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.8), transparent);
+            animation: scanLine 4s ease-in-out infinite;
+        }
+        
+        .scan-line-1 {
+            top: 30%;
+            width: 100%;
+            animation-delay: 0s;
+        }
+        
+        .scan-line-2 {
+            top: 70%;
+            width: 100%;
+            animation-delay: 2s;
+        }
+        
+        @keyframes scanLine {
+            0%, 100% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(100%);
+            }
+        }
+        
+        /* Progress Circle Animation */
+        #progress-circle {
+            transition: stroke-dashoffset 0.3s ease;
+            filter: drop-shadow(0 0 8px rgba(0, 245, 255, 0.6));
+        }
+        
+        /* Original Progress Animation (keeping for compatibility) */
         @keyframes progress {
             0% {
                 transform: translateX(-100%);
@@ -1635,26 +1799,71 @@
             });
         }
         
-        // Preloader functionality
+        // Futuristic Preloader functionality
         window.addEventListener('load', function() {
             const preloader = document.getElementById('preloader');
             const mainContent = document.getElementById('main-content');
             const navbar = document.getElementById('navbar');
-            const progressBar = document.getElementById('progress-bar');
             const loadingPercentage = document.getElementById('loading-percentage');
+            const progressCircle = document.getElementById('progress-circle');
+            const loadingStatus = document.getElementById('loading-status');
             
-            // Simulate loading progress
+            // Loading status messages
+            const statusMessages = [
+                'Initializing quantum processors...',
+                'Loading AI neural networks...',
+                'Establishing secure connections...',
+                'Optimizing digital pathways...',
+                'Calibrating user interface...',
+                'Finalizing system protocols...',
+                'Ready to transform reality...'
+            ];
+            
+            let currentStatus = 0;
+            const circumference = 2 * Math.PI * 45; // radius = 45
+            progressCircle.style.strokeDasharray = circumference;
+            progressCircle.style.strokeDashoffset = circumference;
+            
+            // Simulate loading progress with realistic phases
             let progress = 0;
-            const interval = setInterval(() => {
-                progress += Math.random() * 15;
+            let phase = 0;
+            const phases = [
+                { speed: 8, duration: 1000 },   // Fast initial load
+                { speed: 3, duration: 1500 },   // Slower middle phase
+                { speed: 6, duration: 800 },    // Speed up again
+                { speed: 1, duration: 700 }     // Final slow phase
+            ];
+            
+            function updateProgress() {
+                const currentPhase = phases[phase] || phases[phases.length - 1];
+                progress += Math.random() * currentPhase.speed;
+                
                 if (progress > 100) progress = 100;
                 
+                // Update percentage display
                 loadingPercentage.textContent = Math.round(progress) + '%';
                 
+                // Update progress circle
+                const offset = circumference - (progress / 100) * circumference;
+                progressCircle.style.strokeDashoffset = offset;
+                
+                // Update status message based on progress
+                const statusIndex = Math.floor((progress / 100) * statusMessages.length);
+                if (statusIndex !== currentStatus && statusIndex < statusMessages.length) {
+                    currentStatus = statusIndex;
+                    loadingStatus.textContent = statusMessages[statusIndex];
+                }
+                
+                // Check if we should move to next phase
+                if (progress >= (phase + 1) * 25 && phase < phases.length - 1) {
+                    phase++;
+                }
+                
                 if (progress >= 100) {
-                    clearInterval(interval);
+                    // Final status
+                    loadingStatus.textContent = 'Welcome to the future!';
                     
-                    // Hide preloader and show main content after a short delay
+                    // Hide preloader and show main content after a dramatic pause
                     setTimeout(() => {
                         preloader.classList.add('preloader-fade-out');
                         setTimeout(() => {
@@ -1665,10 +1874,16 @@
                             
                             // Initialize Vanta.js NET background after content is shown
                             initVantaBackground();
-                        }, 300);
-                    }, 300);
+                        }, 500);
+                    }, 800);
+                } else {
+                    // Continue loading
+                    setTimeout(updateProgress, currentPhase.duration / 20);
                 }
-            }, 100);
+            }
+            
+            // Start the loading process
+            setTimeout(updateProgress, 200);
         });
         
         // Add animation on scroll
