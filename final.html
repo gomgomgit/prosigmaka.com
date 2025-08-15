@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prosigmaka - Digital Solutions</title>
     
-    <!-- Google Fonts - Inter -->
+    <!-- Google Fonts - Inter & Orbitron -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,6 +24,8 @@
                 extend: {
                     fontFamily: {
                         'inter': ['Inter', 'sans-serif'],
+                        'orbitron': ['Orbitron', 'monospace'],
+                        'space': ['Space Grotesk', 'sans-serif'],
                     },
                     colors: {
                         'dark-bg': '#1B1B1B',
@@ -78,11 +80,11 @@
                 
                 <!-- Navigation Links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-white font-medium hover:text-gray-300 transition-colors duration-200" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">Home</a>
-                    <a href="#clients" class="text-white font-medium hover:text-gray-300 transition-colors duration-200" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">Clients</a>
-                    <a href="#services" class="text-white font-medium hover:text-gray-300 transition-colors duration-200" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">Services</a>
-                    <a href="#ai-agent" class="text-white font-medium hover:text-gray-300 transition-colors duration-200" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">AI Agents</a>
-                    <a href="#contact" class="text-white font-medium hover:text-gray-300 transition-colors duration-200" style="text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">Contact</a>
+                    <a href="#home" class="nav-text text-white hover:text-cyan-400 transition-all duration-300 hover:tracking-wider" style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">Home</a>
+                    <a href="#clients" class="nav-text text-white hover:text-cyan-400 transition-all duration-300 hover:tracking-wider" style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">Clients</a>
+                    <a href="#services" class="nav-text text-white hover:text-cyan-400 transition-all duration-300 hover:tracking-wider" style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">Services</a>
+                    <a href="#ai-agent" class="nav-text text-white hover:text-cyan-400 transition-all duration-300 hover:tracking-wider" style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">AI Agents</a>
+                    <a href="#contact" class="nav-text text-white hover:text-cyan-400 transition-all duration-300 hover:tracking-wider" style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">Contact</a>
                 </div>
                 
                 <!-- Mobile menu button -->
@@ -147,26 +149,28 @@
             <!-- Left Column - Main Content -->
             <div class="text-left">
                 <!-- Main Heading -->
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                    <span class="block text-white">Transforming Ideas</span>
-                    <span class="block bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                        Into Digital Reality
+                <h1 class="hero-title text-mega text-ultra-bold mb-6 leading-tight text-glow">
+                    <span class="block text-white text-bold-shadow">TRANSFORMING</span>
+                    <span class="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                        IDEAS INTO
                     </span>
+                    <span class="block text-gradient-fire">DIGITAL REALITY</span>
                 </h1>
                 
                 <!-- Subtitle -->
-                <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                    We are a technology company that specializes in creating innovative digital solutions 
+                <p class="font-inter text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-medium tracking-wide">
+                    We are a <span class="text-gradient-bold font-bold">technology company</span> that specializes in creating 
+                    <span class="text-cyan-400 font-semibold">innovative digital solutions</span> 
                     to help businesses grow and succeed in the digital age.
                 </p>
                 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                    <button class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                        Get Started
+                    <button class="font-inter bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25 text-lg tracking-wider uppercase">
+                        GET STARTED
                     </button>
-                    <button class="border-2 border-gray-500 text-gray-300 hover:border-white hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-                        Learn More
+                    <button class="font-inter border-3 border-gray-400 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 font-bold py-5 px-10 rounded-xl transition-all duration-300 text-lg tracking-wider uppercase hover:bg-cyan-400/10">
+                        LEARN MORE
                     </button>
                 </div>
             </div>
@@ -232,11 +236,11 @@
 				<div class="flex flex-col justify-between">
 					<!-- Section Header -->
 					<div class="mb-16 text-right">
-						<h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-							Trusted by <span class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Leading Companies</span>
+						<h2 class="section-title text-5xl md:text-6xl text-ultra-bold text-white mb-4 tracking-tight">
+							TRUSTED BY <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-glow">LEADING COMPANIES</span>
 						</h2>
-						<p class="text-lg text-gray-300 max-w-2xl mx-auto">
-							We are proud to work with some of the most innovative companies across various industries
+						<p class="font-inter text-xl text-gray-300 max-w-2xl mx-auto font-medium">
+							We are proud to work with some of the most <span class="text-cyan-400">innovative companies</span> across various industries
 						</p>
 					</div>
 					
@@ -405,11 +409,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Our <span class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Services</span>
+                <h2 class="section-title text-6xl md:text-7xl text-ultra-bold text-white mb-6 tracking-tighter">
+                    OUR <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-glow">SERVICES</span>
                 </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                    Comprehensive solutions designed to accelerate your digital transformation journey and drive sustainable growth
+                <p class="font-inter text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium">
+                    Comprehensive solutions designed to <span class="text-cyan-400 font-semibold">accelerate your digital transformation</span> journey and drive <span class="text-gradient-bold">sustainable growth</span>
                 </p>
             </div>
 
@@ -424,7 +428,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">Professional Service</h3>
+                            <h3 class="card-title text-3xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300 tracking-tight">PROFESSIONAL SERVICE</h3>
                         <p class="text-gray-400 leading-relaxed">Expert consulting and implementation services to optimize your business processes and technology infrastructure.</p>
                         <div class="mt-6">
                             <button class="text-blue-400 hover:text-blue-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
@@ -446,7 +450,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300">Headcount Hours</h3>
+                            <h3 class="card-title text-3xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300 tracking-tight">HEADCOUNT HOURS</h3>
                         <p class="text-gray-400 leading-relaxed">Flexible resource allocation model to scale your team efficiently with skilled professionals on-demand.</p>
                         <div class="mt-6">
                             <button class="text-purple-400 hover:text-purple-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
@@ -468,7 +472,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-pink-300 transition-colors duration-300">Managed Services</h3>
+                            <h3 class="card-title text-3xl font-bold text-white mb-4 group-hover:text-pink-300 transition-colors duration-300 tracking-tight">MANAGED SERVICES</h3>
                         <p class="text-gray-400 leading-relaxed">Complete end-to-end management of your IT infrastructure and applications with 24/7 monitoring and support.</p>
                         <div class="mt-6">
                             <button class="text-pink-400 hover:text-pink-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
@@ -490,7 +494,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-green-300 transition-colors duration-300">AI Solution</h3>
+                            <h3 class="card-title text-3xl font-bold text-white mb-4 group-hover:text-green-300 transition-colors duration-300 tracking-tight">AI SOLUTION</h3>
                         <p class="text-gray-400 leading-relaxed">Advanced artificial intelligence and machine learning solutions to automate processes and gain intelligent insights.</p>
                         <div class="mt-6">
                             <button class="text-green-400 hover:text-green-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
@@ -512,7 +516,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-indigo-300 transition-colors duration-300">LXP Solution</h3>
+                            <h3 class="card-title text-3xl font-bold text-white mb-4 group-hover:text-indigo-300 transition-colors duration-300 tracking-tight">LXP SOLUTION</h3>
                         <p class="text-gray-400 leading-relaxed">Modern Learning Experience Platform to enhance employee skills and drive continuous learning culture.</p>
                         <div class="mt-6">
                             <button class="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
@@ -534,7 +538,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-orange-300 transition-colors duration-300">Corporate Training</h3>
+                            <h3 class="card-title text-3xl font-bold text-white mb-4 group-hover:text-orange-300 transition-colors duration-300 tracking-tight">CORPORATE TRAINING</h3>
                         <p class="text-gray-400 leading-relaxed">Comprehensive training programs to upskill your workforce and ensure successful technology adoption.</p>
                         <div class="mt-6">
                             <button class="text-orange-400 hover:text-orange-300 font-semibold flex items-center group-hover:translate-x-2 transition-transform duration-300">
@@ -583,11 +587,11 @@
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Talk with our <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">AI Agents</span>
+                <h2 class="section-title text-6xl md:text-7xl text-ultra-bold text-white mb-6 tracking-tighter">
+                    TALK WITH OUR <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-glow">AI AGENTS</span>
                 </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-                    Choose your specialized AI assistant to get instant answers and personalized recommendations
+                <p class="font-inter text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8 font-medium">
+                    Choose your specialized <span class="text-cyan-400 font-semibold">AI assistant</span> to get instant answers and <span class="text-gradient-bold">personalized recommendations</span>
                 </p>
             </div>
 
@@ -1329,6 +1333,84 @@
 
     <!-- Custom Styles -->
     <style>
+        /* Bold & Modern Typography */
+        .hero-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+            line-height: 0.9;
+        }
+        
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            text-shadow: 0 0 20px rgba(147, 51, 234, 0.2);
+        }
+        
+        .card-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+        }
+        
+        .nav-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+        
+        /* Typography animations */
+        .text-glow {
+            animation: textGlow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 30px rgba(147, 51, 234, 0.2);
+            }
+            to {
+                text-shadow: 0 0 40px rgba(59, 130, 246, 0.6), 0 0 60px rgba(147, 51, 234, 0.4);
+            }
+        }
+        
+        .text-bold-shadow {
+            text-shadow: 
+                2px 2px 0px rgba(0, 0, 0, 0.8),
+                4px 4px 0px rgba(0, 0, 0, 0.6),
+                6px 6px 0px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Gradient text effects */
+        .text-gradient-bold {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+        }
+        
+        .text-gradient-fire {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 50%, #ff1744 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Custom font weights and sizes for better hierarchy */
+        .text-ultra-bold {
+            font-weight: 900;
+            font-stretch: expanded;
+        }
+        
+        .text-mega {
+            font-size: clamp(3rem, 8vw, 8rem);
+            line-height: 0.85;
+        }
+        
         /* Custom Futuristic Cursor */
         * {
             cursor: none !important;
