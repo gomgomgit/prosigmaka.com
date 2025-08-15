@@ -1107,6 +1107,24 @@
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
         }
         
+        .cursor.click::before {
+            border-color: rgba(0, 255, 0, 0.8);
+            animation: cursorPulseGreen 1s infinite;
+        }
+        
+        @keyframes cursorPulseGreen {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+                border-color: rgba(0, 255, 0, 0.8);
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.6;
+                border-color: rgba(0, 255, 128, 1);
+            }
+        }
+        
         @keyframes cursorPulse {
             0%, 100% {
                 transform: scale(1);
