@@ -765,7 +765,7 @@
                 <!-- Testimonial 1 -->
                 <div class="group relative testimonial-card testimonial-1 h-96 overflow-hidden cursor-pointer">
                     <!-- Futuristic Border -->
-                    <div class="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600" style="animation: borderGlow 2s ease-in-out infinite;">
+                    <div class="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600" style="animation: borderGlow 4s ease-in-out infinite;">
                         <div class="relative w-full h-full rounded-3xl bg-gray-900/95 backdrop-blur-sm overflow-hidden">
                             <!-- Background Photo -->
                             <div class="absolute inset-0 bg-gradient-to-br from-green-600/30 to-blue-700/30">
@@ -790,7 +790,7 @@
                                         <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
                                             AS
                                         </div>
-                                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-gray-900" style="animation: statusPulse 2s ease-in-out infinite;"></div>
+                                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-gray-900" style="animation: statusPulse 3s ease-in-out infinite;"></div>
                                     </div>
                                     <div>
                                         <h4 class="text-white font-bold text-lg">Ahmad Sutanto</h4>
@@ -818,7 +818,7 @@
                 <!-- Testimonial 2 -->
                 <div class="group relative testimonial-card testimonial-2 h-96 overflow-hidden cursor-pointer">
                     <!-- Futuristic Border -->
-                    <div class="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600" style="animation: borderGlow 3s ease-in-out infinite;">
+                    <div class="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600" style="animation: borderGlow 4s ease-in-out infinite;">
                         <div class="relative w-full h-full rounded-3xl bg-gray-900/95 backdrop-blur-sm overflow-hidden">
                             <!-- Background Photo -->
                             <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-purple-700/30">
@@ -924,7 +924,7 @@
                 <!-- Testimonial 4 -->
                 <div class="group relative testimonial-card testimonial-4 h-96 overflow-hidden cursor-pointer">
                     <!-- Futuristic Border -->
-                    <div class="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-orange-400 via-red-500 to-yellow-600" style="animation: borderGlow 2.5s ease-in-out infinite;">
+                    <div class="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-orange-400 via-red-500 to-yellow-600" style="animation: borderGlow 4s ease-in-out infinite;">
                         <div class="relative w-full h-full rounded-3xl bg-gray-900/95 backdrop-blur-sm overflow-hidden">
                             <!-- Background Photo -->
                             <div class="absolute inset-0 bg-gradient-to-br from-orange-600/30 to-red-700/30">
@@ -977,7 +977,7 @@
                 <!-- Testimonial 5 -->
                 <div class="group relative testimonial-card testimonial-5 h-96 overflow-hidden cursor-pointer">
                     <!-- Futuristic Border -->
-                    <div class="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600" style="animation: borderGlow 3.5s ease-in-out infinite;">
+                    <div class="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600" style="animation: borderGlow 4s ease-in-out infinite;">
                         <div class="relative w-full h-full rounded-3xl bg-gray-900/95 backdrop-blur-sm overflow-hidden">
                             <!-- Background Photo -->
                             <div class="absolute inset-0 bg-gradient-to-br from-teal-600/30 to-cyan-700/30">
@@ -1030,7 +1030,7 @@
                 <!-- Testimonial 6 -->
                 <div class="group relative testimonial-card testimonial-6 h-96 overflow-hidden cursor-pointer">
                     <!-- Futuristic Border -->
-                    <div class="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-indigo-400 via-blue-500 to-cyan-600" style="animation: borderGlow 4.5s ease-in-out infinite;">
+                    <div class="absolute inset-0 rounded-3xl p-[2px] bg-gradient-to-r from-indigo-400 via-blue-500 to-cyan-600" style="animation: borderGlow 4s ease-in-out infinite;">
                         <div class="relative w-full h-full rounded-3xl bg-gray-900/95 backdrop-blur-sm overflow-hidden">
                             <!-- Background Photo -->
                             <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/30 to-blue-700/30">
@@ -1892,31 +1892,19 @@
         
         @keyframes borderGlow {
             0%, 100% {
-                opacity: 0.6;
-                filter: brightness(1) hue-rotate(0deg);
-            }
-            25% {
-                opacity: 1;
-                filter: brightness(1.2) hue-rotate(30deg);
+                opacity: 0.7;
             }
             50% {
-                opacity: 0.8;
-                filter: brightness(0.9) hue-rotate(60deg);
-            }
-            75% {
                 opacity: 1;
-                filter: brightness(1.1) hue-rotate(90deg);
             }
         }
         
         @keyframes statusPulse {
             0%, 100% {
                 opacity: 0.8;
-                transform: scale(1);
             }
             50% {
                 opacity: 1;
-                transform: scale(1.1);
             }
         }
         
@@ -1926,16 +1914,15 @@
         }
         
         .testimonial-card:hover {
-            transform: translateY(-5px);
             transition: all 0.3s ease;
         }
         
-        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
-        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
-        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
-        .testimonial-card:nth-child(4) { animation-delay: 0.4s; }
-        .testimonial-card:nth-child(5) { animation-delay: 0.5s; }
-        .testimonial-card:nth-child(6) { animation-delay: 0.6s; }
+        .testimonial-card:nth-child(1) { animation-delay: 0.05s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.1s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.15s; }
+        .testimonial-card:nth-child(4) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(5) { animation-delay: 0.25s; }
+        .testimonial-card:nth-child(6) { animation-delay: 0.3s; }
         
         @keyframes fadeInUp {
             from {
