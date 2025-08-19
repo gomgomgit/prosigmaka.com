@@ -618,7 +618,7 @@
                         <div class="services-grid-large relative">
                             <!-- First row - 3 columns -->
                             <div class="services-row flex justify-center gap-6 mb-8">
-                                <div class="service-card-large professional-card" data-service="professional">
+                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-cyan-400 to-blue-500" data-service="professional">
                                     <div class="card-content-large">
                                         <div class="card-bg-icon">
                                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -629,7 +629,7 @@
                                         <p class="card-desc-large">Strategic consulting & digital implementation</p>
                                     </div>
                                 </div>
-                                <div class="service-card-large headcount-card" data-service="headcount">
+                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-purple-400 to-pink-500" data-service="headcount">
                                     <div class="card-content-large">
                                         <div class="card-bg-icon">
                                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -640,7 +640,7 @@
                                         <p class="card-desc-large">Flexible talent & time allocation</p>
                                     </div>
                                 </div>
-                                <div class="service-card-large managed-card" data-service="managed">
+                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-green-400 to-emerald-500" data-service="managed">
                                     <div class="card-content-large">
                                         <div class="card-bg-icon">
                                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -655,7 +655,7 @@
                             
                             <!-- Second row - 3 columns -->
                             <div class="services-row flex justify-center gap-6">
-                                <div class="service-card-large ai-card" data-service="ai">
+                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-orange-400 to-red-500" data-service="ai">
                                     <div class="card-content-large">
                                         <div class="card-bg-icon">
                                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -666,7 +666,7 @@
                                         <p class="card-desc-large">Intelligent automation & analytics</p>
                                     </div>
                                 </div>
-                                <div class="service-card-large lxp-card" data-service="lxp">
+                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-indigo-400 to-purple-500" data-service="lxp">
                                     <div class="card-content-large">
                                         <div class="card-bg-icon">
                                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -677,7 +677,7 @@
                                         <p class="card-desc-large">Modern digital learning ecosystem</p>
                                     </div>
                                 </div>
-                                <div class="service-card-large training-card" data-service="training">
+                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-yellow-400 to-orange-500" data-service="training">
                                     <div class="card-content-large">
                                         <div class="card-bg-icon">
                                             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -2511,8 +2511,8 @@
         
         .service-card-large {
             position: relative;
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border-radius: 20px;
@@ -2536,8 +2536,6 @@
             border: 2px solid transparent;
             position: relative;
             overflow: hidden;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
             border-radius: 20px;
         }
         
@@ -2548,7 +2546,7 @@
             transform: translate(-50%, -50%);
             width: 90px;
             height: 90px;
-            opacity: 0.1;
+            opacity: 0.5;
             z-index: 1;
             color: white;
         }
