@@ -127,36 +127,6 @@
     
     <!-- Main Content -->
     <div id="main-content" class="opacity-0">
-        <!-- Navigation -->
-        <nav id="navbar" class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-sm border-b border-gray-800/20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <img src="assets/LOGO PUTIH.png" alt="Prosigmaka" class="h-8 w-auto filter drop-shadow-md">
-                </div>
-                
-                <!-- Navigation Links -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-text text-white hover:text-cyan-400 transition-all duration-300 hover:tracking-wider" style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">Home</a>
-                    <a href="#clients" class="nav-text text-white hover:text-cyan-400 transition-all duration-300 hover:tracking-wider" style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">Clients</a>
-                    <a href="#services" class="nav-text text-white hover:text-cyan-400 transition-all duration-300 hover:tracking-wider" style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">Services</a>
-                    <a href="#ai-agent" class="nav-text text-white hover:text-cyan-400 transition-all duration-300 hover:tracking-wider" style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">AI Agents</a>
-                    <a href="#contact" class="nav-text text-white hover:text-cyan-400 transition-all duration-300 hover:tracking-wider" style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);">Contact</a>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button type="button" class="text-gray-300 hover:text-white">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        </nav>
-
         <!-- Hero Section -->
         <section id="home" class="fullpage-section flex items-center justify-center relative overflow-hidden">
             <!-- Enhanced Background Layers -->
@@ -1973,14 +1943,6 @@
             letter-spacing: -0.005em;
         }
         
-        .nav-text {
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            font-size: 0.875rem;
-        }
-        
         /* Typography animations */
         .text-glow {
             animation: textGlow 3s ease-in-out infinite alternate;
@@ -2277,7 +2239,6 @@
             animation: letterPulse 1.5s ease-in-out infinite;
         }
         
-        /* Navbar fade-in animation */
         @keyframes fadeInDown {
             from {
                 opacity: 0;
@@ -3779,18 +3740,6 @@
             -webkit-text-fill-color: transparent;
         }
         
-        /* Navbar visibility control */
-        #navbar {
-            opacity: 0;
-            transform: translateY(-100%);
-            transition: all 0.5s ease-in-out;
-        }
-        
-        #navbar.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
         /* Section Navigation Menu */
         .section-nav-menu {
             position: fixed;
@@ -4014,7 +3963,6 @@
         window.addEventListener('load', function() {
             const preloader = document.getElementById('preloader');
             const mainContent = document.getElementById('main-content');
-            const navbar = document.getElementById('navbar');
             const loadingPercentage = document.getElementById('loading-percentage');
             const progressCircle = document.getElementById('progress-circle');
             const loadingStatus = document.getElementById('loading-status');
@@ -4425,41 +4373,11 @@
             sections.forEach(section => {
                 sectionObserver.observe(section);
             });
-            
-            // Update navbar links to use section navigation
-            const navLinks = document.querySelectorAll('nav a[href^="#"]');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href').substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    if (targetSection) {
-                        const sectionIndex = Array.from(sections).indexOf(targetSection);
-                        if (sectionIndex !== -1) {
-                            scrollToSection(sectionIndex);
-                        }
-                    }
-                });
-            });
         }
         
-        // Navbar and Section Navigation Control
-        function initNavbarControl() {
-            const navbar = document.getElementById('navbar');
+        // Section Navigation Control
+        function initSectionNavigation() {
             const sectionNavItems = document.querySelectorAll('.section-nav-item');
-            
-            // Hide navbar initially when on hero section
-            function updateNavbarVisibility() {
-                const homeSection = document.getElementById('home');
-                const homeRect = homeSection.getBoundingClientRect();
-                
-                // Show navbar when scrolled past hero section
-                if (homeRect.bottom <= 100) {
-                    navbar.classList.add('show');
-                } else {
-                    navbar.classList.remove('show');
-                }
-            }
             
             // Update active section in navigation menu
             function updateActiveSection() {
@@ -4488,12 +4406,10 @@
             
             // Scroll event listener
             window.addEventListener('scroll', () => {
-                updateNavbarVisibility();
                 updateActiveSection();
             });
             
             // Initial check
-            updateNavbarVisibility();
             updateActiveSection();
         }
         
@@ -4512,7 +4428,7 @@
         setTimeout(() => {
             // initFullpageScroll(); // DISABLED - causing layout issues
             initAIAgentInteractions();
-            initNavbarControl();
+            initSectionNavigation();
             // initCustomCursor(); // DISABLED - Custom cursor hidden
             initHeroEnhancements(); // Add hero enhancements
         }, 4000); // Wait for preloader to finish
