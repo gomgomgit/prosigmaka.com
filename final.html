@@ -501,11 +501,38 @@
 
         <!-- Our Services Section -->
         <section id="services" class="fullpage-section relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <!-- Background Elements -->
-            <div class="absolute inset-0 opacity-20">
-                <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full blur-xl"></div>
-                <div class="absolute bottom-20 right-10 w-40 h-40 bg-purple-500 rounded-full blur-xl"></div>
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-cyan-500 rounded-full blur-2xl opacity-30"></div>
+            <!-- Subtle Background Elements -->
+            <div class="absolute inset-0 opacity-8">
+                <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full blur-xl animate-pulse"></div>
+                <div class="absolute bottom-20 right-10 w-40 h-40 bg-purple-500 rounded-full blur-xl animate-pulse" style="animation-delay: 2s;"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-cyan-500 rounded-full blur-2xl opacity-15 animate-pulse" style="animation-delay: 4s;"></div>
+            </div>
+
+            <!-- Refined Tech Circuit Pattern -->
+            <div class="absolute inset-0 opacity-4">
+                <div class="absolute inset-0" style="background-image: 
+                    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.2) 1px, transparent 1px),
+                    radial-gradient(circle at 70% 70%, rgba(147, 51, 234, 0.15) 1px, transparent 1px),
+                    radial-gradient(circle at 40% 90%, rgba(6, 182, 212, 0.2) 1px, transparent 1px),
+                    radial-gradient(circle at 90% 10%, rgba(168, 85, 247, 0.15) 1px, transparent 1px);
+                    background-size: 120px 120px, 160px 160px, 140px 140px, 180px 180px;
+                    animation: techPulse 15s ease-in-out infinite;"></div>
+            </div>
+
+            <!-- Simplified Geometric Grid Lines -->
+            <div class="absolute inset-0 opacity-2">
+                <div class="absolute inset-0" style="background-image: 
+                    linear-gradient(rgba(0,245,255,0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0,245,255,0.1) 1px, transparent 1px);
+                    background-size: 100px 100px;
+                    animation: gridShift 18s linear infinite;"></div>
+            </div>
+
+            <!-- Minimal Floating Matrix Lines -->
+            <div class="absolute inset-0 opacity-3">
+                <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-cyan-400/20 via-transparent to-transparent animate-pulse"></div>
+                <div class="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-blue-400/20 via-transparent to-transparent animate-pulse" style="animation-delay: 2s;"></div>
+                <div class="absolute left-0 top-1/3 w-full h-px bg-gradient-to-r from-transparent via-purple-400/20 to-transparent animate-pulse" style="animation-delay: 4s;"></div>
             </div>
 
             <div class="mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full">
@@ -515,74 +542,312 @@
                         <div class="services-grid-large relative">
                             <!-- First row - 3 columns -->
                             <div class="services-row flex justify-center gap-6 mb-8">
-                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-cyan-400 to-blue-500" data-service="professional">
-                                    <div class="card-content-large">
-                                        <div class="card-bg-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6z"></path>
+                                <!-- Professional Services Card -->
+                                <div class="service-card-futuristic group cursor-pointer" data-service="professional">
+                                    <!-- Glow Border -->
+                                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4s ease-in-out infinite;"></div>
+                                    
+                                    <!-- Main Card -->
+                                    <div class="relative bg-gray-900/90 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-80 flex flex-col justify-between overflow-hidden group-hover:border-cyan-500/50 transition-all duration-500">
+                                        <!-- Background Pattern -->
+                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 30% 40%, rgba(6, 182, 212, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
+                                        </div>
+                                        
+                                        <!-- Floating Elements with idle animation -->
+                                        <div class="absolute top-4 right-4 w-2 h-2 bg-cyan-400/60 rounded-full" style="animation: floatingDot 3s ease-in-out infinite;"></div>
+                                        <div class="absolute bottom-6 left-6 w-1 h-1 bg-blue-400/40 rounded-full" style="animation: floatingDot 2.5s ease-in-out infinite; animation-delay: 1s;"></div>
+                                        
+                                        <!-- Content -->
+                                        <div class="relative z-10">
+                                            <!-- Icon Section with idle animation -->
+                                            <div class="mb-6">
+                                                <div class="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 8s ease-in-out infinite;">
+                                                    <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="h-px w-12 bg-gradient-to-r from-cyan-400 to-transparent mb-4"></div>
+                                            </div>
+                                            
+                                            <!-- Title -->
+                                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">PROFESSIONAL<br><span class="text-cyan-400">SERVICES</span></h3>
+                                            
+                                            <!-- Description -->
+                                            <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Strategic consulting & digital implementation solutions</p>
+                                        </div>
+                                        
+                                        <!-- Bottom Action -->
+                                        <div class="relative z-10 flex items-center justify-between pt-4">
+                                            <div class="flex items-center space-x-2">
+                                                <div class="w-2 h-2 bg-cyan-400 rounded-full" style="animation: floatingDot 2s ease-in-out infinite;"></div>
+                                                <span class="text-xs text-cyan-400 font-semibold">ACTIVE</span>
+                                            </div>
+                                            <svg class="w-5 h-5 text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </div>
-                                        <h3 class="card-title-large">PROFESSIONAL<br>SERVICES</h3>
-                                        <p class="card-desc-large">Strategic consulting & digital implementation</p>
+                                        
+                                        <!-- Hover Overlay -->
+                                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
-                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-purple-400 to-pink-500" data-service="headcount">
-                                    <div class="card-content-large">
-                                        <div class="card-bg-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+
+                                <!-- Dedicated Resources Card -->
+                                <div class="service-card-futuristic group cursor-pointer" data-service="headcount">
+                                    <!-- Glow Border -->
+                                    <div class="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 5s ease-in-out infinite;"></div>
+                                    
+                                    <!-- Main Card -->
+                                    <div class="relative bg-gray-900/90 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-80 flex flex-col justify-between overflow-hidden group-hover:border-purple-500/50 transition-all duration-500">
+                                        <!-- Background Pattern -->
+                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
+                                        </div>
+                                        
+                                        <!-- Floating Elements with idle animation -->
+                                        <div class="absolute top-4 right-4 w-2 h-2 bg-purple-400/60 rounded-full" style="animation: floatingDot 3.2s ease-in-out infinite;"></div>
+                                        <div class="absolute bottom-6 left-6 w-1 h-1 bg-pink-400/40 rounded-full" style="animation: floatingDot 2.8s ease-in-out infinite; animation-delay: 1.5s;"></div>
+                                        
+                                        <!-- Content -->
+                                        <div class="relative z-10">
+                                            <!-- Icon Section with idle animation -->
+                                            <div class="mb-6">
+                                                <div class="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 7s ease-in-out infinite; animation-delay: -1s;">
+                                                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="h-px w-12 bg-gradient-to-r from-purple-400 to-transparent mb-4"></div>
+                                            </div>
+                                            
+                                            <!-- Title -->
+                                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-300">DEDICATED<br><span class="text-purple-400">RESOURCES</span></h3>
+                                            
+                                            <!-- Description -->
+                                            <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Flexible talent & time allocation for your projects</p>
+                                        </div>
+                                        
+                                        <!-- Bottom Action -->
+                                        <div class="relative z-10 flex items-center justify-between pt-4">
+                                            <div class="flex items-center space-x-2">
+                                                <div class="w-2 h-2 bg-purple-400 rounded-full" style="animation: floatingDot 2.3s ease-in-out infinite;"></div>
+                                                <span class="text-xs text-purple-400 font-semibold">ACTIVE</span>
+                                            </div>
+                                            <svg class="w-5 h-5 text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </div>
-                                        <h3 class="card-title-large">DEDICATED<br>RESOURCES</h3>
-                                        <p class="card-desc-large">Flexible talent & time allocation</p>
+                                        
+                                        <!-- Hover Overlay -->
+                                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
-                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-green-400 to-emerald-500" data-service="managed">
-                                    <div class="card-content-large">
-                                        <div class="card-bg-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+
+                                <!-- Managed Services Card -->
+                                <div class="service-card-futuristic group cursor-pointer" data-service="managed">
+                                    <!-- Glow Border -->
+                                    <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4.5s ease-in-out infinite;"></div>
+                                    
+                                    <!-- Main Card -->
+                                    <div class="relative bg-gray-900/90 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-80 flex flex-col justify-between overflow-hidden group-hover:border-green-500/50 transition-all duration-500">
+                                        <!-- Background Pattern -->
+                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 50% 60%, rgba(16, 185, 129, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
+                                        </div>
+                                        
+                                        <!-- Floating Elements with idle animation -->
+                                        <div class="absolute top-4 right-4 w-2 h-2 bg-green-400/60 rounded-full" style="animation: floatingDot 2.7s ease-in-out infinite;"></div>
+                                        <div class="absolute bottom-6 left-6 w-1 h-1 bg-emerald-400/40 rounded-full" style="animation: floatingDot 3.1s ease-in-out infinite; animation-delay: 0.8s;"></div>
+                                        
+                                        <!-- Content -->
+                                        <div class="relative z-10">
+                                            <!-- Icon Section with idle animation -->
+                                            <div class="mb-6">
+                                                <div class="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-green-400/40 group-hover:to-emerald-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 8.5s ease-in-out infinite; animation-delay: -2s;">
+                                                    <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="h-px w-12 bg-gradient-to-r from-green-400 to-transparent mb-4"></div>
+                                            </div>
+                                            
+                                            <!-- Title -->
+                                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors duration-300">MANAGED<br><span class="text-green-400">SERVICES</span></h3>
+                                            
+                                            <!-- Description -->
+                                            <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">End-to-end infrastructure management solutions</p>
+                                        </div>
+                                        
+                                        <!-- Bottom Action -->
+                                        <div class="relative z-10 flex items-center justify-between pt-4">
+                                            <div class="flex items-center space-x-2">
+                                                <div class="w-2 h-2 bg-green-400 rounded-full" style="animation: floatingDot 2.4s ease-in-out infinite;"></div>
+                                                <span class="text-xs text-green-400 font-semibold">ACTIVE</span>
+                                            </div>
+                                            <svg class="w-5 h-5 text-gray-500 group-hover:text-green-400 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </div>
-                                        <h3 class="card-title-large">MANAGED<br>SERVICES</h3>
-                                        <p class="card-desc-large">End-to-end infrastructure management</p>
+                                        
+                                        <!-- Hover Overlay -->
+                                        <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
                             </div>
                             
                             <!-- Second row - 3 columns -->
                             <div class="services-row flex justify-center gap-6">
-                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-orange-400 to-red-500" data-service="ai">
-                                    <div class="card-content-large">
-                                        <div class="card-bg-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                <!-- AI Solutions Card -->
+                                <div class="service-card-futuristic group cursor-pointer" data-service="ai">
+                                    <!-- Glow Border -->
+                                    <div class="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4.2s ease-in-out infinite;"></div>
+                                    
+                                    <!-- Main Card -->
+                                    <div class="relative bg-gray-900/90 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-80 flex flex-col justify-between overflow-hidden group-hover:border-orange-500/50 transition-all duration-500">
+                                        <!-- Background Pattern -->
+                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 40% 30%, rgba(251, 146, 60, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
+                                        </div>
+                                        
+                                        <!-- Floating Elements with idle animation -->
+                                        <div class="absolute top-4 right-4 w-2 h-2 bg-orange-400/60 rounded-full" style="animation: floatingDot 2.9s ease-in-out infinite;"></div>
+                                        <div class="absolute bottom-6 left-6 w-1 h-1 bg-red-400/40 rounded-full" style="animation: floatingDot 3.4s ease-in-out infinite; animation-delay: 1.2s;"></div>
+                                        
+                                        <!-- Content -->
+                                        <div class="relative z-10">
+                                            <!-- Icon Section with idle animation -->
+                                            <div class="mb-6">
+                                                <div class="w-16 h-16 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 7.5s ease-in-out infinite; animation-delay: -0.5s;">
+                                                    <svg class="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="h-px w-12 bg-gradient-to-r from-orange-400 to-transparent mb-4"></div>
+                                            </div>
+                                            
+                                            <!-- Title -->
+                                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-orange-300 transition-colors duration-300">AI<br><span class="text-orange-400">SOLUTIONS</span></h3>
+                                            
+                                            <!-- Description -->
+                                            <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Intelligent automation & analytics solutions</p>
+                                        </div>
+                                        
+                                        <!-- Bottom Action -->
+                                        <div class="relative z-10 flex items-center justify-between pt-4">
+                                            <div class="flex items-center space-x-2">
+                                                <div class="w-2 h-2 bg-orange-400 rounded-full" style="animation: floatingDot 2.1s ease-in-out infinite;"></div>
+                                                <span class="text-xs text-orange-400 font-semibold">ACTIVE</span>
+                                            </div>
+                                            <svg class="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </div>
-                                        <h3 class="card-title-large">AI<br>SOLUTIONS</h3>
-                                        <p class="card-desc-large">Intelligent automation & analytics</p>
+                                        
+                                        <!-- Hover Overlay -->
+                                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
-                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-indigo-400 to-purple-500" data-service="lxp">
-                                    <div class="card-content-large">
-                                        <div class="card-bg-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+
+                                <!-- Learning Platform Card -->
+                                <div class="service-card-futuristic group cursor-pointer" data-service="lxp">
+                                    <!-- Glow Border -->
+                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-500 to-violet-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4.8s ease-in-out infinite;"></div>
+                                    
+                                    <!-- Main Card -->
+                                    <div class="relative bg-gray-900/90 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-80 flex flex-col justify-between overflow-hidden group-hover:border-indigo-500/50 transition-all duration-500">
+                                        <!-- Background Pattern -->
+                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 60% 50%, rgba(99, 102, 241, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
+                                        </div>
+                                        
+                                        <!-- Floating Elements with idle animation -->
+                                        <div class="absolute top-4 right-4 w-2 h-2 bg-indigo-400/60 rounded-full" style="animation: floatingDot 3.3s ease-in-out infinite;"></div>
+                                        <div class="absolute bottom-6 left-6 w-1 h-1 bg-purple-400/40 rounded-full" style="animation: floatingDot 2.6s ease-in-out infinite; animation-delay: 0.7s;"></div>
+                                        
+                                        <!-- Content -->
+                                        <div class="relative z-10">
+                                            <!-- Icon Section with idle animation -->
+                                            <div class="mb-6">
+                                                <div class="w-16 h-16 bg-gradient-to-br from-indigo-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-indigo-400/40 group-hover:to-purple-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 9s ease-in-out infinite; animation-delay: -1.5s;">
+                                                    <svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="h-px w-12 bg-gradient-to-r from-indigo-400 to-transparent mb-4"></div>
+                                            </div>
+                                            
+                                            <!-- Title -->
+                                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors duration-300">LEARNING<br><span class="text-indigo-400">PLATFORM</span></h3>
+                                            
+                                            <!-- Description -->
+                                            <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Modern digital learning ecosystem platform</p>
+                                        </div>
+                                        
+                                        <!-- Bottom Action -->
+                                        <div class="relative z-10 flex items-center justify-between pt-4">
+                                            <div class="flex items-center space-x-2">
+                                                <div class="w-2 h-2 bg-indigo-400 rounded-full" style="animation: floatingDot 2.7s ease-in-out infinite;"></div>
+                                                <span class="text-xs text-indigo-400 font-semibold">ACTIVE</span>
+                                            </div>
+                                            <svg class="w-5 h-5 text-gray-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </div>
-                                        <h3 class="card-title-large">LEARNING<br>PLATFORM</h3>
-                                        <p class="card-desc-large">Modern digital learning ecosystem</p>
+                                        
+                                        <!-- Hover Overlay -->
+                                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
-                                <div class="service-card-large transition-transform duration-300 hover:scale-110 hover:rotate-12 bg-gradient-to-br from-yellow-400 to-orange-500" data-service="training">
-                                    <div class="card-content-large">
-                                        <div class="card-bg-icon">
-                                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+
+                                <!-- Corporate Training Card -->
+                                <div class="service-card-futuristic group cursor-pointer" data-service="training">
+                                    <!-- Glow Border -->
+                                    <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-amber-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 5.2s ease-in-out infinite;"></div>
+                                    
+                                    <!-- Main Card -->
+                                    <div class="relative bg-gray-900/90 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-80 flex flex-col justify-between overflow-hidden group-hover:border-yellow-500/50 transition-all duration-500">
+                                        <!-- Background Pattern -->
+                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 30% 70%, rgba(245, 158, 11, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
+                                        </div>
+                                        
+                                        <!-- Floating Elements with idle animation -->
+                                        <div class="absolute top-4 right-4 w-2 h-2 bg-yellow-400/60 rounded-full" style="animation: floatingDot 2.4s ease-in-out infinite;"></div>
+                                        <div class="absolute bottom-6 left-6 w-1 h-1 bg-orange-400/40 rounded-full" style="animation: floatingDot 3.6s ease-in-out infinite; animation-delay: 1.8s;"></div>
+                                        
+                                        <!-- Content -->
+                                        <div class="relative z-10">
+                                            <!-- Icon Section with idle animation -->
+                                            <div class="mb-6">
+                                                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-yellow-400/40 group-hover:to-orange-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 6.5s ease-in-out infinite; animation-delay: -2.5s;">
+                                                    <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="h-px w-12 bg-gradient-to-r from-yellow-400 to-transparent mb-4"></div>
+                                            </div>
+                                            
+                                            <!-- Title -->
+                                            <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-yellow-300 transition-colors duration-300">CORPORATE<br><span class="text-yellow-400">TRAINING</span></h3>
+                                            
+                                            <!-- Description -->
+                                            <p class="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Enterprise skill development programs</p>
+                                        </div>
+                                        
+                                        <!-- Bottom Action -->
+                                        <div class="relative z-10 flex items-center justify-between pt-4">
+                                            <div class="flex items-center space-x-2">
+                                                <div class="w-2 h-2 bg-yellow-400 rounded-full" style="animation: floatingDot 2.8s ease-in-out infinite;"></div>
+                                                <span class="text-xs text-yellow-400 font-semibold">ACTIVE</span>
+                                            </div>
+                                            <svg class="w-5 h-5 text-gray-500 group-hover:text-yellow-400 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                             </svg>
                                         </div>
-                                        <h3 class="card-title-large">CORPORATE<br>TRAINING</h3>
-                                        <p class="card-desc-large">Enterprise skill development programs</p>
+                                        
+                                        <!-- Hover Overlay -->
+                                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-orange-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
                             </div>
@@ -664,7 +929,7 @@
                     <!-- Agent 1: Technical Consultant -->
                     <div class="group relative agent-card cursor-pointer p-2">
                         <div class="absolute inset-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                        <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-500">
+                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-500">
                             <!-- Agent Avatar -->
                             <div class="relative mb-6 overflow-visible">
                                 <div class="w-24 h-24 mx-auto bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:rotate-12 relative z-10">
@@ -696,7 +961,7 @@
                     <!-- Agent 2: Business Strategist -->
                     <div class="group relative agent-card cursor-pointer p-2">
                         <div class="absolute inset-2 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                        <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500">
+                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500">
                             <!-- Agent Avatar -->
                             <div class="relative mb-6 overflow-visible">
                                 <div class="w-24 h-24 mx-auto bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:-rotate-12 relative z-10">
@@ -728,7 +993,7 @@
                     <!-- Agent 3: Training Specialist -->
                     <div class="group relative agent-card cursor-pointer p-2">
                         <div class="absolute inset-2 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                        <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-500">
+                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-500">
                             <!-- Agent Avatar -->
                             <div class="relative mb-6 overflow-visible">
                                 <div class="w-24 h-24 mx-auto bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:rotate-12 relative z-10">
@@ -761,7 +1026,7 @@
                     <!-- Agent 4: AI Innovation -->
                     <div class="group relative agent-card cursor-pointer p-2">
                         <div class="absolute inset-2 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                        <div class="relative bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-500">
+                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-500">
                             <!-- Agent Avatar -->
                             <div class="relative mb-6 overflow-visible">
                                 <div class="w-24 h-24 mx-auto bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:-rotate-12 relative z-10">
@@ -3698,7 +3963,6 @@
         
         /* AI Agent section needs special handling */
         #ai-agent.fullpage-section {
-            min-height: auto; /* Allow natural height */
             padding: 4rem 0; /* More padding for content */
         }
         
@@ -3934,6 +4198,110 @@
         /* Bounce slow animation class */
         .animate-bounce-slow {
             animation: bounce-slow 2s ease-in-out infinite;
+        }
+        
+        /* New keyframes for Services section */
+        @keyframes techPulse {
+            0%, 100% { 
+                opacity: 0.3; 
+                transform: scale(1); 
+                filter: hue-rotate(0deg);
+            }
+            50% { 
+                opacity: 0.8; 
+                transform: scale(1.02); 
+                filter: hue-rotate(30deg);
+            }
+        }
+        
+        @keyframes gridShift {
+            0% { 
+                transform: translateX(0) translateY(0); 
+                opacity: 0.1;
+            }
+            33% { 
+                transform: translateX(-5px) translateY(-3px); 
+                opacity: 0.3;
+            }
+            66% { 
+                transform: translateX(5px) translateY(3px); 
+                opacity: 0.2;
+            }
+            100% { 
+                transform: translateX(0) translateY(0); 
+                opacity: 0.1;
+            }
+        }
+        
+        /* Service Card Futuristic Styles */
+        .service-card-futuristic {
+            position: relative;
+            width: 320px;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: cardFloat 6s ease-in-out infinite;
+        }
+        
+        .service-card-futuristic:hover {
+            transform: translateY(-10px) scale(1.02);
+            animation-play-state: paused;
+        }
+        
+        /* Individual card idle animations with different timings */
+        .service-card-futuristic:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .service-card-futuristic:nth-child(2) {
+            animation-delay: -2s;
+        }
+        
+        .service-card-futuristic:nth-child(3) {
+            animation-delay: -4s;
+        }
+        
+        /* Idle animations for card elements */
+        @keyframes cardFloat {
+            0%, 100% { 
+                transform: translateY(0px) rotateX(0deg); 
+            }
+            33% { 
+                transform: translateY(-8px) rotateX(2deg); 
+            }
+            66% { 
+                transform: translateY(-4px) rotateX(-1deg); 
+            }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { 
+                opacity: 0.4; 
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.8; 
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes floatingDot {
+            0%, 100% { 
+                transform: translateY(0px); 
+                opacity: 0.6;
+            }
+            50% { 
+                transform: translateY(-3px); 
+                opacity: 1;
+            }
+        }
+        
+        @keyframes iconPulse {
+            0%, 100% { 
+                transform: scale(1) rotate(0deg); 
+            }
+            50% { 
+                transform: scale(1.1) rotate(5deg); 
+            }
         }
     </style>
 
