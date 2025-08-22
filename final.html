@@ -169,10 +169,10 @@
             
             <!-- Enhanced Moving Gradient Orbs -->
             <div class="absolute inset-0 z-0">
-                <div class="absolute top-10 left-10 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl animate-float-slow"></div>
-                <div class="absolute top-20 right-20 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl animate-float-medium"></div>
-                <div class="absolute bottom-20 left-1/3 w-64 h-64 bg-blue-500/15 rounded-full blur-3xl animate-float-fast"></div>
-                <div class="absolute top-1/3 right-1/4 w-48 h-48 bg-pink-500/10 rounded-full blur-2xl animate-float-medium" style="animation-delay: 2s;"></div>
+                <div class="absolute top-10 left-10 w-48 sm:w-64 lg:w-72 h-48 sm:h-64 lg:h-72 bg-cyan-500/15 rounded-full blur-3xl animate-float-slow"></div>
+                <div class="absolute top-20 right-20 w-56 sm:w-72 lg:w-96 h-56 sm:h-72 lg:h-96 bg-purple-500/15 rounded-full blur-3xl animate-float-medium"></div>
+                <div class="absolute bottom-20 left-1/3 w-40 sm:w-52 lg:w-64 h-40 sm:h-52 lg:h-64 bg-blue-500/15 rounded-full blur-3xl animate-float-fast"></div>
+                <div class="absolute top-1/3 right-1/4 w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 bg-pink-500/10 rounded-full blur-2xl animate-float-medium" style="animation-delay: 2s;"></div>
             </div>
             
             <!-- Interactive Grid Pattern -->
@@ -202,7 +202,7 @@
                 <img 
                     src="assets/photos/robot-normal.png" 
                     alt="AI Robot - Advanced Technology" 
-                    class="absolute z-10 w-auto h-full max-w-auto mx-auto -right-[10vh] bottom-0"
+                    class="absolute z-10 w-auto h-full max-w-[40vw] sm:max-w-[35vw] lg:max-w-auto mx-auto -right-[5vw] sm:-right-[8vh] lg:-right-[10vh] bottom-0 hidden sm:block"
                     style="filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.3));"
                 >
                 <div class="flex items-center min-h-screen relative z-20">
@@ -221,7 +221,7 @@
                                 IDEAS INTO
                             </span>
                             <span class="block text-gradient-fire">
-                                <span id="typed-text" class="inline-block whitespace-nowrap min-w-0" style="min-width: 300px;"></span>
+                                <span id="typed-text" class="inline-block whitespace-nowrap min-w-0"></span>
                                 <span class="typing-cursor">|</span>
                             </span>
                         </h1>
@@ -1235,133 +1235,133 @@
             </div>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center mb-16">
-                    <h2 class="section-title text-6xl md:text-7xl text-ultra-bold text-white mb-6 tracking-tighter">
+                <div class="text-center mb-8 sm:mb-12 lg:mb-16">
+                    <h2 class="section-title text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-ultra-bold text-white mb-4 sm:mb-6 tracking-tighter leading-tight px-2">
                         TALK WITH OUR <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-glow">AI AGENTS</span>
                     </h2>
-                    <p class="font-inter text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8 font-medium">
+                    <p class="font-inter text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 font-medium px-4">
                         Choose your specialized <span class="text-cyan-400 font-semibold">AI assistant</span> to get instant answers and <span class="text-gradient-bold">personalized recommendations</span>
                     </p>
                 </div>
 
                 <!-- AI Agents Grid -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-sm sm:max-w-none mx-auto">
                     <!-- Agent 1: Technical Consultant -->
-                    <div class="group relative agent-card cursor-pointer p-2">
-                        <div class="absolute inset-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-500">
+                    <div class="group relative agent-card cursor-pointer mx-auto p-1 sm:p-2">
+                        <div class="absolute inset-1 sm:inset-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl sm:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 hover:border-cyan-500/50 transition-all duration-500">
                             <!-- Agent Avatar -->
-                            <div class="relative mb-6 overflow-visible">
-                                <div class="w-24 h-24 mx-auto bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:rotate-12 relative z-10">
-                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="relative mb-4 sm:mb-6 overflow-visible">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:rotate-12 relative z-10">
+                                    <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                     </svg>
                                 </div>
                             </div>
                             
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">Alex Tech</h3>
-                            <p class="text-sm text-cyan-400 mb-3 font-semibold">Technical Consultant</p>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-4">Expert in software architecture, system design, and technical implementation strategies.</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-cyan-300 transition-colors duration-300">Alex Tech</h3>
+                            <p class="text-xs sm:text-sm text-cyan-400 mb-2 sm:mb-3 font-semibold">Technical Consultant</p>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">Expert in software architecture, system design, and technical implementation strategies.</p>
                             
                             <!-- Skills -->
-                            <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
                                 <span class="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full">Architecture</span>
                                 <span class="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">DevOps</span>
                             </div>
                             
                             <!-- Chat Button -->
-                            <button class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100">
+                            <button class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-2 sm:py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100 text-sm">
                                 Start Chat
                             </button>
                         </div>
                     </div>
 
                     <!-- Agent 2: Business Strategist -->
-                    <div class="group relative agent-card cursor-pointer p-2">
-                        <div class="absolute inset-2 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500">
+                    <div class="group relative agent-card cursor-pointer mx-auto p-1 sm:p-2">
+                        <div class="absolute inset-1 sm:inset-2 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl sm:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 hover:border-purple-500/50 transition-all duration-500">
                             <!-- Agent Avatar -->
-                            <div class="relative mb-6 overflow-visible">
-                                <div class="w-24 h-24 mx-auto bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:-rotate-12 relative z-10">
-                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="relative mb-4 sm:mb-6 overflow-visible">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:-rotate-12 relative z-10">
+                                    <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                                     </svg>
                                 </div>
                             </div>
                             
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">Sarah Business</h3>
-                            <p class="text-sm text-purple-400 mb-3 font-semibold">Business Strategist</p>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-4">Specialized in digital transformation, process optimization, and growth strategies.</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-purple-300 transition-colors duration-300">Sarah Business</h3>
+                            <p class="text-xs sm:text-sm text-purple-400 mb-2 sm:mb-3 font-semibold">Business Strategist</p>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">Specialized in digital transformation, process optimization, and growth strategies.</p>
                             
                             <!-- Skills -->
-                            <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
                                 <span class="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">Strategy</span>
                                 <span class="px-2 py-1 bg-pink-500/20 text-pink-300 text-xs rounded-full">Growth</span>
                             </div>
                             
                             <!-- Chat Button -->
-                            <button class="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100">
+                            <button class="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-2 sm:py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100 text-sm">
                                 Start Chat
                             </button>
                         </div>
                     </div>
 
                     <!-- Agent 3: Training Specialist -->
-                    <div class="group relative agent-card cursor-pointer p-2">
-                        <div class="absolute inset-2 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-500">
+                    <div class="group relative agent-card cursor-pointer mx-auto p-1 sm:p-2">
+                        <div class="absolute inset-1 sm:inset-2 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl sm:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 hover:border-green-500/50 transition-all duration-500">
                             <!-- Agent Avatar -->
-                            <div class="relative mb-6 overflow-visible">
-                                <div class="w-24 h-24 mx-auto bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:rotate-12 relative z-10">
-                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="relative mb-4 sm:mb-6 overflow-visible">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:rotate-12 relative z-10">
+                                    <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
                                         </path>
                                     </svg>
                                 </div>
                             </div>
                             
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors duration-300">Mike Learning</h3>
-                            <p class="text-sm text-green-400 mb-3 font-semibold">Training Specialist</p>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-4">Expert in corporate training programs, LXP solutions, and skill development strategies.</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-green-300 transition-colors duration-300">Mike Learning</h3>
+                            <p class="text-xs sm:text-sm text-green-400 mb-2 sm:mb-3 font-semibold">Training Specialist</p>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">Expert in corporate training programs, LXP solutions, and skill development strategies.</p>
                             
                             <!-- Skills -->
-                            <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
                                 <span class="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-full">Training</span>
                                 <span class="px-2 py-1 bg-emerald-500/20 text-emerald-300 text-xs rounded-full">LXP</span>
                             </div>
                             
                             <!-- Chat Button -->
-                            <button class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100">
+                            <button class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-2 sm:py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100 text-sm">
                                 Start Chat
                             </button>
                         </div>
                     </div>
 
                     <!-- Agent 4: AI Innovation -->
-                    <div class="group relative agent-card cursor-pointer p-2">
-                        <div class="absolute inset-2 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-orange-500/50 transition-all duration-500">
+                    <div class="group relative agent-card cursor-pointer mx-auto p-1 sm:p-2">
+                        <div class="absolute inset-1 sm:inset-2 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl sm:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                        <div class="relative h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 hover:border-orange-500/50 transition-all duration-500">
                             <!-- Agent Avatar -->
-                            <div class="relative mb-6 overflow-visible">
-                                <div class="w-24 h-24 mx-auto bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:-rotate-12 relative z-10">
-                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="relative mb-4 sm:mb-6 overflow-visible">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-500 group-hover:-rotate-12 relative z-10">
+                                    <svg class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                                     </svg>
                                 </div>
                             </div>
                             
-                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors duration-300">Emma AI</h3>
-                            <p class="text-sm text-orange-400 mb-3 font-semibold">AI Innovation Expert</p>
-                            <p class="text-gray-400 text-sm leading-relaxed mb-4">Specialist in artificial intelligence implementation, machine learning, and automation solutions.</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-orange-300 transition-colors duration-300">Emma AI</h3>
+                            <p class="text-xs sm:text-sm text-orange-400 mb-2 sm:mb-3 font-semibold">AI Innovation Expert</p>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">Specialist in artificial intelligence implementation, machine learning, and automation solutions.</p>
                             
                             <!-- Skills -->
-                            <div class="flex flex-wrap gap-2 mb-4">
+                            <div class="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
                                 <span class="px-2 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full">AI/ML</span>
                                 <span class="px-2 py-1 bg-red-500/20 text-red-300 text-xs rounded-full">Innovation</span>
                             </div>
                             
                             <!-- Chat Button -->
-                            <button class="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100">
+                            <button class="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold py-2 sm:py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 opacity-0 group-hover:opacity-100 text-sm">
                                 Start Chat
                             </button>
                         </div>
@@ -1519,15 +1519,15 @@
                     <!-- Enhanced Scroll Container -->
                     <div class="relative overflow-x-auto scrollbar-hide pb-8 scroll-smooth">
                         <!-- Timeline Container -->
-                        <div class="relative min-w-max px-16">
+                        <div class="relative min-w-max px-4 sm:px-8 lg:px-16">
                             <!-- Enhanced Horizontal Timeline Line with Progress -->
                             <div class="absolute top-24 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-gray-700 to-transparent rounded-full opacity-20"></div>
                             <div class="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-indigo-700 rounded-full opacity-50 timeline-progress"></div>
                         
                         <!-- Timeline Items Container -->
-                        <div class="flex space-x-16 pt-8">
+                        <div class="flex space-x-6 sm:space-x-12 lg:space-x-16 pt-8">
                             <!-- Case Study 1: Astra International -->
-                            <div class="relative flex-shrink-0 w-80 group">
+                            <div class="relative flex-shrink-0 w-72 sm:w-80 group">
                                 <!-- Timeline Node -->
                                 <div class="absolute left-1/2 transform -translate-x-1/2 -top-3 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-4 border-gray-900 z-10 group-hover:scale-125 transition-transform duration-500">
                                     <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-ping opacity-30"></div>
@@ -1842,10 +1842,10 @@
                 <!-- Testimonials Horizontal Carousel -->
                 <div class="relative overflow-hidden py-6">
                     <!-- Carousel Container -->
-                    <div class="testimonials-carousel flex space-x-8" style="animation: slide-infinite 40s linear infinite; width: calc(200%);">
+                    <div class="testimonials-carousel flex space-x-4 sm:space-x-6 lg:space-x-8" style="animation: slide-infinite 40s linear infinite; width: calc(200%);">
                         <!-- First Set of Testimonials -->
                         <!-- Testimonial 1 -->
-                        <div class="testimonial-card flex-shrink-0 w-96 h-80 relative group cursor-pointer">
+                        <div class="testimonial-card flex-shrink-0 w-80 sm:w-96 h-64 sm:h-80 relative group cursor-pointer">
                             <!-- Futuristic Border -->
                             <div class="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="relative w-full h-full rounded-2xl bg-gray-900 overflow-hidden">
@@ -1885,7 +1885,7 @@
                         </div>
 
                         <!-- Testimonial 2 -->
-                        <div class="testimonial-card flex-shrink-0 w-96 h-80 relative group cursor-pointer">
+                        <div class="testimonial-card flex-shrink-0 w-80 sm:w-96 h-64 sm:h-80 relative group cursor-pointer">
                             <!-- Futuristic Border -->
                             <div class="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="relative w-full h-full rounded-2xl bg-gray-900 overflow-hidden">
@@ -1925,7 +1925,7 @@
                         </div>
 
                         <!-- Testimonial 3 -->
-                        <div class="testimonial-card flex-shrink-0 w-96 h-80 relative group cursor-pointer">
+                        <div class="testimonial-card flex-shrink-0 w-80 sm:w-96 h-64 sm:h-80 relative group cursor-pointer">
                             <!-- Futuristic Border -->
                             <div class="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="relative w-full h-full rounded-2xl bg-gray-900 overflow-hidden">
@@ -1965,7 +1965,7 @@
                         </div>
 
                         <!-- Testimonial 4 -->
-                        <div class="testimonial-card flex-shrink-0 w-96 h-80 relative group cursor-pointer">
+                        <div class="testimonial-card flex-shrink-0 w-80 sm:w-96 h-64 sm:h-80 relative group cursor-pointer">
                             <!-- Futuristic Border -->
                             <div class="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="relative w-full h-full rounded-2xl bg-gray-900 overflow-hidden">
@@ -2006,7 +2006,7 @@
 
                         <!-- Second Set for Seamless Loop -->
                         <!-- Testimonial 1 (Duplicate) -->
-                        <div class="testimonial-card flex-shrink-0 w-96 h-80 relative group cursor-pointer">
+                        <div class="testimonial-card flex-shrink-0 w-80 sm:w-96 h-64 sm:h-80 relative group cursor-pointer">
                             <!-- Futuristic Border -->
                             <div class="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="relative w-full h-full rounded-2xl bg-gray-900 overflow-hidden">
@@ -2046,7 +2046,7 @@
                         </div>
 
                         <!-- Testimonial 2 (Duplicate) -->
-                        <div class="testimonial-card flex-shrink-0 w-96 h-80 relative group cursor-pointer">
+                        <div class="testimonial-card flex-shrink-0 w-80 sm:w-96 h-64 sm:h-80 relative group cursor-pointer">
                             <!-- Futuristic Border -->
                             <div class="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="relative w-full h-full rounded-2xl bg-gray-900 overflow-hidden">
@@ -2086,7 +2086,7 @@
                         </div>
 
                         <!-- Testimonial 3 (Duplicate) -->
-                        <div class="testimonial-card flex-shrink-0 w-96 h-80 relative group cursor-pointer">
+                        <div class="testimonial-card flex-shrink-0 w-80 sm:w-96 h-64 sm:h-80 relative group cursor-pointer">
                             <!-- Futuristic Border -->
                             <div class="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="relative w-full h-full rounded-2xl bg-gray-900 overflow-hidden">
@@ -2126,7 +2126,7 @@
                         </div>
 
                         <!-- Testimonial 4 (Duplicate) -->
-                        <div class="testimonial-card flex-shrink-0 w-96 h-80 relative group cursor-pointer">
+                        <div class="testimonial-card flex-shrink-0 w-80 sm:w-96 h-64 sm:h-80 relative group cursor-pointer">
                             <!-- Futuristic Border -->
                             <div class="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                                 <div class="relative w-full h-full rounded-2xl bg-gray-900 overflow-hidden">
@@ -3409,6 +3409,14 @@
             border-radius: 1rem;
             padding: 0.5rem; /* Space for glow effect */
             overflow: hidden; /* Ensure shimmer effect stays inside */
+            width: 100%;
+            max-width: 320px;
+        }
+        
+        @media (min-width: 640px) {
+            .agent-card {
+                max-width: none;
+            }
         }
 
         .agent-card:hover {
@@ -3710,6 +3718,19 @@
             /* scroll-snap-type: y mandatory; */
             overflow-y: scroll;
             overflow-x: hidden;
+        }
+        
+        /* Responsive typed text width */
+        @media (max-width: 480px) {
+            #typed-text {
+                min-width: 150px !important;
+            }
+        }
+        
+        @media (max-width: 320px) {
+            #typed-text {
+                min-width: 120px !important;
+            }
         }
         
         /* Section layout - FIXED */
@@ -4136,10 +4157,6 @@
         /* AI Agent section needs special handling */
         #ai-agent.fullpage-section {
             padding: 4rem 0; /* More padding for content */
-        }
-        
-        #ai-agent .max-w-7xl {
-            flex: none; /* Don't stretch */
         }
         
         /* Responsive adjustments */
