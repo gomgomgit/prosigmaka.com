@@ -509,9 +509,9 @@
                     </div>
 
                     <!-- Horizontal Client Logos Scroll -->
-                    <div class="clients-horizontal-container w-full overflow-hidden">
+                    <div class="clients-horizontal-container w-[100vw] overflow-hidden">
                         <!-- First Row - Left to Right -->
-                        <div class="flex space-x-6 animate-scroll-horizontal mb-6">
+                        <div class="flex space-x-6 animate-scroll-horizontal mb-6 w-full">
                             <div class="flex justify-center items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 group min-w-[120px] min-h-[80px]">
                                 <img src="assets/client/1-Astra.png" alt="Astra" class="max-h-12 w-auto opacity-100">
                             </div>
@@ -546,7 +546,7 @@
                         </div>
 
                         <!-- Second Row - Right to Left -->
-                        <div class="flex space-x-6 animate-scroll-horizontal-reverse">
+                        <div class="flex space-x-6 animate-scroll-horizontal-reverse w-full">
                             <div class="flex justify-center items-center p-3 bg-white/5 rounded-lg hover:bg-white/10 group min-w-[120px] min-h-[80px]">
                                 <img src="assets/client/8-CT-Corp.png" alt="CT Corp" class="max-h-12 w-auto opacity-100">
                             </div>
@@ -4046,7 +4046,6 @@
         
         /* Vertical Scroll Animations for Clients */
         @keyframes scroll-up {
-            0% { transform: translateY(0); }
             100% { transform: translateY(-50%); }
         }
         
@@ -4069,18 +4068,29 @@
         }
         
         .animate-scroll-up-slow {
-            animation: scroll-up-slow 12s linear infinite;
+            animation: scroll-up-slow 9s linear infinite;
+        }
+        
+        /* Pause animation on hover */
+        .animate-scroll-up:hover,
+        .animate-scroll-up-slow:hover,
+        .animate-scroll-down:hover {
+            animation-play-state: paused;
         }
         
         /* Clients scroll container */
         .clients-scroll-container {
             width: 450px;
             max-height: 70vh;
+            
+            overflow: hidden;
+            mask: linear-gradient(0deg, transparent, white 10%, white 90%, transparent);
+            -webkit-mask: linear-gradient(0deg, transparent, white 10%, white 90%, transparent);
         }
         
         .clients-column {
             width: 120px;
-            min-height: 200vh; /* Ensure enough content for smooth scrolling */
+            min-height: 100%; /* Ensure enough content for smooth scrolling */
         }
         
         /* Ensure content is properly centered */
@@ -4548,13 +4558,13 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-50%);
             }
         }
 
         @keyframes scroll-horizontal-reverse {
             0% {
-                transform: translateX(-100%);
+                transform: translateX(-50%);
             }
             100% {
                 transform: translateX(0);
@@ -4562,11 +4572,11 @@
         }
 
         .animate-scroll-horizontal {
-            animation: scroll-horizontal 25s linear infinite;
+            animation: scroll-horizontal 15s linear infinite;
         }
 
         .animate-scroll-horizontal-reverse {
-            animation: scroll-horizontal-reverse 25s linear infinite;
+            animation: scroll-horizontal-reverse 15s linear infinite;
         }
 
         /* Pause animation on hover */
