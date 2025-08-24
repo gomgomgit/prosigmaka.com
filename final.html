@@ -137,29 +137,6 @@
             
             <!-- Floating Tech Elements -->
             <div class="absolute inset-0 z-5">
-                <!-- Binary Numbers -->
-                <div class="floating-element binary-1">01</div>
-                <div class="floating-element binary-2">10</div>
-                <div class="floating-element binary-3">11</div>
-                <div class="floating-element binary-4">00</div>
-                
-                <!-- Tech Icons -->
-                <div class="floating-tech tech-1">
-                    <svg class="w-8 h-8 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                </div>
-                <div class="floating-tech tech-2">
-                    <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                </div>
-                <div class="floating-tech tech-3">
-                    <svg class="w-7 h-7 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 11H7v3h2v-3zm4 0h-2v3h2v-3zm4 0h-2v3h2v-3zm2-7h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
-                    </svg>
-                </div>
-                
                 <!-- Geometric Shapes -->
                 <div class="floating-shape shape-1"></div>
                 <div class="floating-shape shape-2"></div>
@@ -199,15 +176,18 @@
 
             
             <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-                <img 
-                    src="assets/photos/robot-normal.png" 
-                    alt="AI Robot - Advanced Technology" 
-                    class="absolute z-10 w-auto h-full max-w-[40vw] sm:max-w-[35vw] lg:max-w-auto mx-auto -right-[5vw] sm:-right-[8vh] lg:-right-[10vh] bottom-0 hidden sm:block"
-                    style="filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.3));"
-                >
-                <div class="flex items-center min-h-screen relative z-20">
+                <!-- Hero Robot Image - Fixed positioning and sizing -->
+                <div class="absolute left-[50%] lg:left-[65%] top-0 bottom-0 z-10 w-[65vw] sm:w-[55vw] md:w-[50vw] lg:w-[45vw] xl:w-[40vw] flex items-center justify-end">
+                    <img 
+                        src="assets/photos/robot-normal.png" 
+                        alt="AI Robot - Advanced Technology" 
+                        class="hero-robot-img w-auto h-auto min-w-[500px] sm:min-w-[600px] md:min-w-[700px] lg:min-w-[800px] xl:min-w-[950px] max-h-[130vh]"
+                        style="filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.3)); object-fit: contain;"
+                    >
+                </div>
+                <div class="flex items-center min-h-screen relative z-20 hero-content-container">
                     <!-- Left Column - Main Content -->
-                    <div class="text-left space-y-8">
+                    <div class="text-left space-y-8 max-w-[55%] sm:max-w-[60%] md:max-w-[50%] lg:max-w-[55%] xl:max-w-[60%] pr-4 sm:pr-6 md:pr-8">
                         <!-- Animated Badge -->
                         <div class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 backdrop-blur-sm animate-fadeIn">
                             <div class="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></div>
@@ -220,14 +200,14 @@
                             <span class="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-2 hero-gradient-shadow">
                                 IDEAS INTO
                             </span>
-                            <span class="block text-gradient-fire">
+                            <span class="block text-gradient-fire w-[100vw]">
                                 <span id="typed-text" class="inline-block whitespace-nowrap min-w-0"></span>
                                 <span class="typing-cursor">|</span>
                             </span>
                         </h1>
                         
                         <!-- Enhanced Subtitle -->
-                        <p class="font-inter text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-medium tracking-wide max-w-2xl hero-subtitle-shadow">
+                        <p class="font-inter text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-medium tracking-wide hero-subtitle-shadow">
                             We are a <span class="text-gradient-bold font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">professional IT consulting</span> company that provides 
                             <span class="text-cyan-400 font-semibold">comprehensive technology solutions</span> 
                             to help businesses optimize their digital infrastructure and achieve sustainable growth.
@@ -2805,66 +2785,6 @@
             75% { transform: translateY(-8px) translateX(-3px); }
         }
         
-        /* Floating Elements */
-        .floating-element {
-            position: absolute;
-            color: #00ff41;
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            font-size: 1.5rem;
-            opacity: 0.7;
-            pointer-events: none;
-        }
-        
-        .binary-1 {
-            top: 20%;
-            left: 10%;
-            animation: floatUp 8s ease-in-out infinite;
-        }
-        
-        .binary-2 {
-            top: 60%;
-            left: 80%;
-            animation: floatUp 10s ease-in-out infinite 2s;
-        }
-        
-        .binary-3 {
-            top: 30%;
-            right: 20%;
-            animation: floatUp 12s ease-in-out infinite 4s;
-        }
-        
-        .binary-4 {
-            bottom: 40%;
-            left: 30%;
-            animation: floatUp 9s ease-in-out infinite 1s;
-        }
-        
-        /* Tech Icons */
-        .floating-tech {
-            position: absolute;
-            animation: floatUp 15s ease-in-out infinite;
-            opacity: 0.6;
-        }
-        
-        .tech-1 {
-            top: 25%;
-            left: 70%;
-            animation-delay: 0s;
-        }
-        
-        .tech-2 {
-            top: 70%;
-            left: 15%;
-            animation-delay: 3s;
-        }
-        
-        .tech-3 {
-            top: 45%;
-            right: 10%;
-            animation-delay: 6s;
-        }
-        
         /* Floating Shapes */
         .floating-shape {
             position: absolute;
@@ -3760,6 +3680,50 @@
             padding-top: 4rem;
         }
         
+        /* Hero Robot Image Styling */
+        .hero-robot-img {
+            transform-origin: center center;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Content Responsive Layout */
+        @media (max-width: 640px) {
+            /* Show robot on mobile but with reduced opacity */
+            .hero-robot-img {
+                display: block !important;
+                opacity: 0.4;
+            }
+            
+            /* Adjust content width on mobile */
+            .text-left.space-y-8 {
+                max-width: 85% !important;
+            }
+        }
+        
+        @media (min-width: 641px) and (max-width: 768px) {
+            .hero-robot-img {
+                opacity: 0.95;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .hero-robot-img {
+                opacity: 1;
+            }
+        }
+        
+        /* Robot image container centering */
+        .hero-robot-img {
+            margin: auto 0;
+            display: block;
+        }
+        
+        /* Ensure hero content doesn't overlap */
+        .hero-content-container {
+            position: relative;
+            z-index: 30;
+        }
+        
         /* Enhanced Hero Animations */
         @keyframes floatUp {
             0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
@@ -3813,66 +3777,6 @@
             25% { transform: translateY(-8px) translateX(3px); }
             50% { transform: translateY(-15px) translateX(0px); }
             75% { transform: translateY(-8px) translateX(-3px); }
-        }
-        
-        /* Floating Elements */
-        .floating-element {
-            position: absolute;
-            color: #00ff41;
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            font-size: 1.5rem;
-            opacity: 0.7;
-            pointer-events: none;
-        }
-        
-        .binary-1 {
-            top: 20%;
-            left: 10%;
-            animation: floatUp 8s ease-in-out infinite;
-        }
-        
-        .binary-2 {
-            top: 60%;
-            left: 80%;
-            animation: floatUp 10s ease-in-out infinite 2s;
-        }
-        
-        .binary-3 {
-            top: 30%;
-            right: 20%;
-            animation: floatUp 12s ease-in-out infinite 4s;
-        }
-        
-        .binary-4 {
-            bottom: 40%;
-            left: 30%;
-            animation: floatUp 9s ease-in-out infinite 1s;
-        }
-        
-        /* Tech Icons */
-        .floating-tech {
-            position: absolute;
-            animation: floatUp 15s ease-in-out infinite;
-            opacity: 0.6;
-        }
-        
-        .tech-1 {
-            top: 25%;
-            left: 70%;
-            animation-delay: 0s;
-        }
-        
-        .tech-2 {
-            top: 70%;
-            left: 15%;
-            animation-delay: 3s;
-        }
-        
-        .tech-3 {
-            top: 45%;
-            right: 10%;
-            animation-delay: 6s;
         }
         
         /* Floating Shapes */
