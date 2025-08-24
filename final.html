@@ -61,12 +61,12 @@
             <div class="relative mb-12">
                 <!-- Outer Ring -->
                 <div class="w-48 h-48 mx-auto relative">
-                    <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                    <svg class="w-full h-full transform -rotate-90 overflow-visible" viewBox="0 0 100 100">
                         <!-- Background Circle -->
-                        <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(75, 85, 99, 0.3)" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(75, 85, 99, 0.3)" stroke-width="4"/>
                         <!-- Progress Circle -->
                         <circle id="progress-circle" cx="50" cy="50" r="45" fill="none" 
-                                stroke="url(#gradient)" stroke-width="3" stroke-linecap="round"
+                                stroke="url(#gradient)" stroke-width="8" stroke-linecap="round"
                                 stroke-dasharray="283" stroke-dashoffset="283"/>
                         <defs>
                             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -78,15 +78,15 @@
                     </svg>
                     
                     <!-- Inner Rings -->
-                    <div class="absolute inset-4 border-2 border-cyan-500/30 rounded-full animate-pulse"></div>
+                    <div class="absolute inset-8 border-2 border-cyan-500/30 rounded-full animate-pulse"></div>
                     <div class="absolute inset-8 border border-blue-500/20 rounded-full animate-ping"></div>
                     
                     <!-- Center Loading Icon -->
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-16 h-16 relative">
-                            <div class="absolute inset-0 border-4 border-cyan-400/30 rounded-full animate-spin"></div>
-                            <div class="absolute inset-2 border-4 border-blue-500/40 rounded-full animate-spin" style="animation-direction: reverse; animation-duration: 2s;"></div>
-                            <div class="absolute inset-4 border-4 border-purple-500/50 rounded-full animate-spin" style="animation-duration: 3s;"></div>
+                        <div class="w-28 h-28 relative">
+                            <div class="absolute inset-0 border-4 border-cyan-400/30 rounded-full"></div>
+                            <div class="absolute inset-4 border-4 border-blue-500/40 rounded-full" style="animation-direction: reverse; animation-duration: 2s;"></div>
+                            <div class="absolute inset-8 border-4 border-purple-500/50 rounded-full" style="animation-duration: 3s;"></div>
                         </div>
                     </div>
                 </div>
