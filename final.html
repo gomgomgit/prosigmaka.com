@@ -127,93 +127,160 @@
     
     <!-- Main Content -->
     <div id="main-content" class="opacity-0">
-        <!-- Hero Section -->
-        <section id="home" class="fullpage-section flex items-center justify-center relative overflow-hidden">
-            <!-- Enhanced Background Layers -->
-            <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/30 to-purple-900/40 z-0"></div>
+        <!-- Hero Section with Integrated Navigation -->
+        <section id="home" class="fullpage-section relative overflow-hidden">
             
-            <!-- Dynamic Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-purple-600/20 animate-pulse z-0"></div>
-            
-            <!-- Floating Tech Elements -->
-            <div class="absolute inset-0 z-5">
-                <!-- Geometric Shapes -->
-                <div class="floating-shape shape-1"></div>
-                <div class="floating-shape shape-2"></div>
-                <div class="floating-shape shape-3"></div>
-                <div class="floating-shape shape-4"></div>
-            </div>
-            
-            <!-- Enhanced Moving Gradient Orbs -->
-            <div class="absolute inset-0 z-0">
-                <div class="absolute top-10 left-10 w-48 sm:w-64 lg:w-72 h-48 sm:h-64 lg:h-72 bg-cyan-500/15 rounded-full blur-3xl animate-float-slow"></div>
-                <div class="absolute top-20 right-20 w-56 sm:w-72 lg:w-96 h-56 sm:h-72 lg:h-96 bg-purple-500/15 rounded-full blur-3xl animate-float-medium"></div>
-                <div class="absolute bottom-20 left-1/3 w-40 sm:w-52 lg:w-64 h-40 sm:h-52 lg:h-64 bg-blue-500/15 rounded-full blur-3xl animate-float-fast"></div>
-                <div class="absolute top-1/3 right-1/4 w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 bg-pink-500/10 rounded-full blur-2xl animate-float-medium" style="animation-delay: 2s;"></div>
-            </div>
-            
-            <!-- Interactive Grid Pattern -->
-            <div class="absolute inset-0 opacity-[0.03] z-0 grid-pattern">
-                <div class="absolute inset-0" style="background-image: 
-                    linear-gradient(rgba(0,245,255,0.1) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(0,245,255,0.1) 1px, transparent 1px);
-                    background-size: 50px 50px;"></div>
-            </div>
-            
-            <!-- Dynamic Light Rays -->
-            <div class="absolute inset-0 z-0">
-                <div class="light-ray ray-1"></div>
-                <div class="light-ray ray-2"></div>
-                <div class="light-ray ray-3"></div>
-                <div class="light-ray ray-4"></div>
-            </div>
-            
-            <!-- Vanta.js NET Background -->
-            <div id="vanta-bg" class="absolute inset-0 z-10"></div>
-            
-            <!-- Content Overlay -->
-            <div class="absolute inset-0 bg-black/15 z-10"></div>
-
-            
-            <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-                <!-- Hero Robot Image - Fixed positioning and sizing -->
-                <div class="absolute left-[50%] lg:left-[65%] top-0 bottom-0 z-10 w-[65vw] sm:w-[55vw] md:w-[50vw] lg:w-[45vw] xl:w-[40vw] flex items-center justify-end">
-                    <img 
-                        src="assets/photos/robot-normal.png" 
-                        alt="AI Robot - Advanced Technology" 
-                        class="hero-robot-img w-auto h-auto min-w-[500px] sm:min-w-[600px] md:min-w-[700px] lg:min-w-[800px] xl:min-w-[950px] max-h-[130vh]"
-                        style="filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.3)); object-fit: contain;"
-                    >
+            <!-- Hero Content Container -->
+            <div class="absolute inset-0 flex items-center justify-center">
+                <!-- Enhanced Background Layers -->
+                <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/30 to-purple-900/40 z-0"></div>
+                
+                <!-- Dynamic Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-purple-600/20 animate-pulse z-0"></div>
+                
+                <!-- Floating Tech Elements -->
+                <div class="absolute inset-0 z-5">
+                    <!-- Geometric Shapes -->
+                    <div class="floating-shape shape-1"></div>
+                    <div class="floating-shape shape-2"></div>
+                    <div class="floating-shape shape-3"></div>
+                    <div class="floating-shape shape-4"></div>
                 </div>
-                <div class="flex items-center min-h-screen relative z-20 hero-content-container">
-                    <!-- Left Column - Main Content -->
-                    <div class="text-left space-y-8 max-w-[55%] sm:max-w-[60%] md:max-w-[50%] lg:max-w-[55%] xl:max-w-[60%] pr-4 sm:pr-6 md:pr-8">
-                        <!-- Animated Badge -->
-                        <div class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 backdrop-blur-sm animate-fadeIn">
-                            <div class="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></div>
-                            <span class="text-cyan-400 font-medium text-sm">🚀 Built on Innovation Since 2012</span>
-                        </div>
-                        
-                        <!-- Main Heading with Typing Effect -->
-                        <h1 class="hero-title text-mega text-ultra-bold leading-tight">
-                            <span class="block text-white text-bold-shadow mb-2">TRANSFORMING</span>
-                            <span class="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-2 hero-gradient-shadow">
-                                IDEAS INTO
-                            </span>
-                            <span class="block text-gradient-fire w-[100vw]">
-                                <span id="typed-text" class="inline-block whitespace-nowrap min-w-0"></span>
-                                <span class="typing-cursor">|</span>
-                            </span>
-                        </h1>
-                        
-                        <!-- Enhanced Subtitle -->
-                        <p class="font-inter text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-medium tracking-wide hero-subtitle-shadow">
-                            We are a <span class="text-gradient-bold font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">professional IT consulting</span> company that provides 
-                            <span class="text-cyan-400 font-semibold">comprehensive technology solutions</span> 
-                            to help businesses optimize their digital infrastructure and achieve sustainable growth.
-                        </p>
-                    </div>
+                
+                <!-- Enhanced Moving Gradient Orbs -->
+                <div class="absolute inset-0 z-0">
+                    <div class="absolute top-10 left-10 w-48 sm:w-64 lg:w-72 h-48 sm:h-64 lg:h-72 bg-cyan-500/15 rounded-full blur-3xl animate-float-slow"></div>
+                    <div class="absolute top-20 right-20 w-56 sm:w-72 lg:w-96 h-56 sm:h-72 lg:h-96 bg-purple-500/15 rounded-full blur-3xl animate-float-medium"></div>
+                    <div class="absolute bottom-20 left-1/3 w-40 sm:w-52 lg:w-64 h-40 sm:h-52 lg:h-64 bg-blue-500/15 rounded-full blur-3xl animate-float-fast"></div>
+                    <div class="absolute top-1/3 right-1/4 w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 bg-pink-500/10 rounded-full blur-2xl animate-float-medium" style="animation-delay: 2s;"></div>
+                </div>
+                
+                <!-- Interactive Grid Pattern -->
+                <div class="absolute inset-0 opacity-[0.03] z-0 grid-pattern">
+                    <div class="absolute inset-0" style="background-image: 
+                        linear-gradient(rgba(0,245,255,0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0,245,255,0.1) 1px, transparent 1px);
+                        background-size: 50px 50px;"></div>
+                </div>
+                
+                <!-- Dynamic Light Rays -->
+                <div class="absolute inset-0 z-0">
+                    <div class="light-ray ray-1"></div>
+                    <div class="light-ray ray-2"></div>
+                    <div class="light-ray ray-3"></div>
+                    <div class="light-ray ray-4"></div>
+                </div>
+                
+                <!-- Vanta.js NET Background -->
+                <div id="vanta-bg" class="absolute inset-0 z-10"></div>
+                
+                <!-- Content Overlay -->
+                <div class="absolute inset-0 bg-black/15 z-10"></div>
 
+                <!-- Main Hero Content -->
+                <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+                    
+                    <!-- Integrated Navigation Bar -->
+                    <nav id="top-navbar" class="relative z-50 opacity-100 transition-all duration-500">
+                        <div class="">
+                            <div class="">
+                                <div class="flex items-center justify-between h-16">
+                                    <!-- Logo Section -->
+                                    <div class="">
+                                        <div class="relative">
+                                            <div class="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-orange-500/20 to-orange-600/20 rounded-lg opacity-0 hover:opacity-100 transition-all duration-500 blur-lg"></div>
+                                            <img class="relative z-10 h-10 transform transition-all duration-500 ease-out hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(255,165,0,0.5)] filter hover:brightness-110" 
+                                                src="assets/logo-prosigmaka.png" alt="Prosigmaka Logo" />
+                                        </div>
+                                    </div>
+        
+                                    <!-- Desktop Navigation Menu -->
+                                    <div class="hidden md:flex items-center space-x-8">
+                                        <a href="#home" onclick="scrollToSection('home')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
+                                            <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Home</span>
+                                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
+                                        </a>
+                                        <a href="#clients" onclick="scrollToSection('clients')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
+                                            <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Clients</span>
+                                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
+                                        </a>
+                                        <a href="#services" onclick="scrollToSection('services')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
+                                            <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Services</span>
+                                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
+                                        </a>
+                                        <a href="#ai-agent" onclick="scrollToSection('ai-agent')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
+                                            <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">AI Agents</span>
+                                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
+                                        </a>
+                                        <a href="#case-study" onclick="scrollToSection('case-study')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
+                                            <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Testimonials</span>
+                                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
+                                        </a>
+                                    </div>
+        
+                                    <!-- Mobile Menu Button -->
+                                    <div class="md:hidden">
+                                        <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none focus:text-white transition-colors duration-300">
+                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+        
+                                <!-- Mobile Navigation Menu (Hidden by default) -->
+                                <div id="mobile-menu" class="md:hidden hidden pb-4">
+                                    <div class="flex flex-col space-y-2">
+                                        <a href="#home" onclick="scrollToSection('home'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Home</a>
+                                        <a href="#clients" onclick="scrollToSection('clients'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Clients</a>
+                                        <a href="#services" onclick="scrollToSection('services'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Services</a>
+                                        <a href="#ai-agent" onclick="scrollToSection('ai-agent'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">AI Agents</a>
+                                        <a href="#case-study" onclick="scrollToSection('case-study'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Testimonials</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- Hero Robot Image -->
+                    <div class="absolute left-[50%] lg:left-[65%] top-0 bottom-0 z-10 w-[65vw] sm:w-[55vw] md:w-[50vw] lg:w-[45vw] xl:w-[40vw] flex items-center justify-end">
+                        <img 
+                            src="assets/photos/robot-v2.png" 
+                            alt="AI Robot - Advanced Technology" 
+                            class="hero-robot-img w-auto h-auto min-w-[500px] sm:min-w-[600px] md:min-w-[700px] lg:min-w-[800px] xl:min-w-[950px] max-h-[130vh]"
+                            style="filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.3)); object-fit: contain;"
+                        >
+                    </div>
+                    
+                    <!-- Hero Text Content -->
+                    <div class="flex items-center min-h-[calc(100vh-64px)] relative z-20">
+                        <!-- Left Column - Main Content -->
+                        <div class="text-left space-y-8 max-w-[55%] sm:max-w-[60%] md:max-w-[50%] lg:max-w-[55%] xl:max-w-[60%] pr-4 sm:pr-6 md:pr-8">
+                            <!-- Animated Badge -->
+                            <div class="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 backdrop-blur-sm animate-fadeIn">
+                                <div class="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></div>
+                                <span class="text-cyan-400 font-medium text-sm">🚀 Built on Innovation Since 2012</span>
+                            </div>
+                            
+                            <!-- Main Heading with Typing Effect -->
+                            <h1 class="hero-title text-mega text-ultra-bold leading-tight">
+                                <span class="block text-white text-bold-shadow mb-2">TRANSFORMING</span>
+                                <span class="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-2 hero-gradient-shadow">
+                                    IDEAS INTO
+                                </span>
+                                <span class="block text-gradient-fire w-[100vw]">
+                                    <span id="typed-text" class="inline-block whitespace-nowrap min-w-0"></span>
+                                    <span class="typing-cursor">|</span>
+                                </span>
+                            </h1>
+                            
+                            <!-- Enhanced Subtitle -->
+                            <p class="font-inter text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-medium tracking-wide hero-subtitle-shadow">
+                                We are a <span class="text-gradient-bold font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">professional IT consulting</span> company that provides 
+                                <span class="text-cyan-400 font-semibold">comprehensive technology solutions</span> 
+                                to help businesses optimize their digital infrastructure and achieve sustainable growth.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -639,7 +706,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full">
                 <div class="flex lg:flex-row flex-col items-center justify-between h-full gap-16 lg:gap-16 md:gap-12 sm:gap-8">
                     <!-- Left Side - Services Grid -->
-                    <div class="flex-1 flex justify-center items-center lg:order-1 order-2">
+                    <div class="flex-1 flex justify-center items-center">
                         <!-- Desktop Layout - 2 rows, 3 columns -->
                         <div class="services-grid-large relative hidden lg:block">
                             <!-- First row - 3 columns -->
@@ -674,7 +741,7 @@
                                             </div>
                                             
                                             <!-- Title -->
-                                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">PROFESSIONAL<br><span class="text-cyan-400">SERVICES</span></h3>
+                                            <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">PROFESSIONAL<br><span class="text-cyan-400">SERVICES</span></h3>
                                             </div>
                                         
                                         <!-- Hover Overlay -->
@@ -713,92 +780,11 @@
                                             </div>
                                             
                                             <!-- Title -->
-                                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">DEDICATED<br><span class="text-purple-400">RESOURCES</span></h3>
+                                            <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">DEDICATED<br><span class="text-purple-400">RESOURCES</span></h3>
                                             </div>
                                         
                                         <!-- Hover Overlay -->
                                         <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Managed Services Card -->
-                                <div class="service-card-futuristic group cursor-pointer" data-service="managed">
-                                    <!-- Glow Border -->
-                                    <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4.5s ease-in-out infinite;"></div>
-                                    
-                                    <!-- Main Card -->
-                                    <div class="relative bg-gray-900/90 backdrop-blur-sm h-full border border-gray-700/50 rounded-2xl p-6 flex flex-col justify-between overflow-hidden group-hover:border-green-500/50 transition-all duration-500">
-                                        <!-- Background Pattern -->
-                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 50% 60%, rgba(16, 185, 129, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
-                                        </div>
-                                        
-                                        <!-- Background Icon -->
-                                        <div class="absolute -bottom-4 -right-4 w-40 h-40 opacity-5 group-hover:opacity-10 transition-opacity duration-500 overflow-hidden">
-                                            <img src="assets/svg/statistics.svg" alt="" class="w-full h-full object-contain transform" style="filter: brightness(0) saturate(100%) invert(64%) sepia(98%) saturate(6179%) hue-rotate(129deg) brightness(102%) contrast(82%);">
-                                        </div>
-                                        
-                                        <!-- Floating Elements with idle animation -->
-                                        <div class="absolute top-4 right-4 w-2 h-2 bg-green-400/60 rounded-full" style="animation: floatingDot 2.7s ease-in-out infinite;"></div>
-                                        <div class="absolute bottom-6 left-6 w-1 h-1 bg-emerald-400/40 rounded-full" style="animation: floatingDot 3.1s ease-in-out infinite; animation-delay: 0.8s;"></div>
-                                        
-                                        <!-- Content -->
-                                        <div class="relative z-10">
-                                            <!-- Icon Section with idle animation -->
-                                            <div class="mb-2">
-                                                <div class="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-green-400/40 group-hover:to-emerald-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 8.5s ease-in-out infinite; animation-delay: -2s;">
-                                                    <img src="assets/svg/statistics.svg" alt="Managed Services" class="w-8 h-8" style="filter: brightness(0) saturate(100%) invert(64%) sepia(98%) saturate(6179%) hue-rotate(129deg) brightness(102%) contrast(82%);">
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Title -->
-                                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors duration-300">MANAGED<br><span class="text-green-400">SERVICES</span></h3>
-                                            </div>
-                                        
-                                        <!-- Hover Overlay -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Second row - 3 columns -->
-                            <div class="services-row flex justify-center gap-6">
-                                <!-- AI Solutions Card -->
-                                <div class="service-card-futuristic group cursor-pointer" data-service="ai">
-                                    <!-- Glow Border -->
-                                    <div class="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4.2s ease-in-out infinite;"></div>
-                                    
-                                    <!-- Main Card -->
-                                    <div class="relative bg-gray-900/90 backdrop-blur-sm h-full border border-gray-700/50 rounded-2xl p-6 flex flex-col justify-between overflow-hidden group-hover:border-orange-500/50 transition-all duration-500">
-                                        <!-- Background Pattern -->
-                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 40% 30%, rgba(251, 146, 60, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
-                                        </div>
-                                        
-                                        <!-- Background Icon -->
-                                        <div class="absolute -bottom-4 -right-4 w-40 h-40 opacity-5 group-hover:opacity-10 transition-opacity duration-500 overflow-hidden">
-                                            <img src="assets/svg/ai-robot.svg" alt="" class="w-full h-full object-contain transform" style="filter: brightness(0) saturate(100%) invert(69%) sepia(80%) saturate(2028%) hue-rotate(8deg) brightness(104%) contrast(92%);">
-                                        </div>
-                                        
-                                        <!-- Floating Elements with idle animation -->
-                                        <div class="absolute top-4 right-4 w-2 h-2 bg-orange-400/60 rounded-full" style="animation: floatingDot 2.9s ease-in-out infinite;"></div>
-                                        <div class="absolute bottom-6 left-6 w-1 h-1 bg-red-400/40 rounded-full" style="animation: floatingDot 3.4s ease-in-out infinite; animation-delay: 1.2s;"></div>
-                                        
-                                        <!-- Content -->
-                                        <div class="relative z-10">
-                                            <!-- Icon Section with idle animation -->
-                                            <div class="mb-2">
-                                                <div class="w-16 h-16 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 7.5s ease-in-out infinite; animation-delay: -0.5s;">
-                                                    <img src="assets/svg/ai-robot.svg" alt="AI Solutions" class="w-8 h-8" style="filter: brightness(0) saturate(100%) invert(69%) sepia(80%) saturate(2028%) hue-rotate(8deg) brightness(104%) contrast(92%);">
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Title -->
-                                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors duration-300">AI<br><span class="text-orange-400">SOLUTIONS</span></h3>
-                                            </div>
-                                        
-                                        <!-- Hover Overlay -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
 
@@ -833,11 +819,53 @@
                                             </div>
                                             
                                             <!-- Title -->
-                                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors duration-300">LEARNING<br><span class="text-indigo-400">PLATFORM</span></h3>
+                                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors duration-300">LEARNING<br><span class="text-indigo-400">PLATFORM</span></h3>
                                             </div>
                                         
                                         <!-- Hover Overlay -->
                                         <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Second row - 2 columns -->
+                            <div class="services-row flex justify-center gap-6">
+                                <!-- AI Solutions Card -->
+                                <div class="service-card-futuristic group cursor-pointer" data-service="ai">
+                                    <!-- Glow Border -->
+                                    <div class="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4.2s ease-in-out infinite;"></div>
+                                    
+                                    <!-- Main Card -->
+                                    <div class="relative bg-gray-900/90 backdrop-blur-sm h-full border border-gray-700/50 rounded-2xl p-6 flex flex-col justify-between overflow-hidden group-hover:border-orange-500/50 transition-all duration-500">
+                                        <!-- Background Pattern -->
+                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 40% 30%, rgba(251, 146, 60, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
+                                        </div>
+                                        
+                                        <!-- Background Icon -->
+                                        <div class="absolute -bottom-4 -right-4 w-40 h-40 opacity-5 group-hover:opacity-10 transition-opacity duration-500 overflow-hidden">
+                                            <img src="assets/svg/ai-robot.svg" alt="" class="w-full h-full object-contain transform" style="filter: brightness(0) saturate(100%) invert(69%) sepia(80%) saturate(2028%) hue-rotate(8deg) brightness(104%) contrast(92%);">
+                                        </div>
+                                        
+                                        <!-- Floating Elements with idle animation -->
+                                        <div class="absolute top-4 right-4 w-2 h-2 bg-orange-400/60 rounded-full" style="animation: floatingDot 2.9s ease-in-out infinite;"></div>
+                                        <div class="absolute bottom-6 left-6 w-1 h-1 bg-red-400/40 rounded-full" style="animation: floatingDot 3.4s ease-in-out infinite; animation-delay: 1.2s;"></div>
+                                        
+                                        <!-- Content -->
+                                        <div class="relative z-10">
+                                            <!-- Icon Section with idle animation -->
+                                            <div class="mb-2">
+                                                <div class="w-16 h-16 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 7.5s ease-in-out infinite; animation-delay: -0.5s;">
+                                                    <img src="assets/svg/ai-robot.svg" alt="AI Solutions" class="w-8 h-8" style="filter: brightness(0) saturate(100%) invert(69%) sepia(80%) saturate(2028%) hue-rotate(8deg) brightness(104%) contrast(92%);">
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Title -->
+                                            <h3 class="text-xl font-bold text-white group-hover:text-orange-300 transition-colors duration-300">AI<br><span class="text-orange-400">SOLUTIONS</span></h3>
+                                            </div>
+                                        
+                                        <!-- Hover Overlay -->
+                                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
 
@@ -871,7 +899,7 @@
                                             </div>
                                             
                                             <!-- Title -->
-                                            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors duration-300">CORPORATE<br><span class="text-yellow-400">TRAINING</span></h3>
+                                            <h3 class="text-xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">CORPORATE<br><span class="text-yellow-400">TRAINING</span></h3>
                                             </div>
                                         
                                         <!-- Hover Overlay -->
@@ -881,264 +909,51 @@
                             </div>
                         </div>
 
-                        <!-- Mobile Layout - 3 rows, 2 columns -->
+                        <!-- Mobile Layout - Simple circular icons in 3+2 layout -->
                         <div class="services-grid-mobile relative lg:hidden px-4">
-                            <!-- First row - 2 columns -->
-                            <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
-                                <!-- Professional Services Card -->
-                                <div class="service-card-futuristic group cursor-pointer min-h-[180px] sm:min-h-[200px]" data-service="professional">
-                                    <!-- Glow Border -->
-                                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4s ease-in-out infinite;"></div>
-                                    
-                                    <!-- Main Card -->
-                                    <div class="relative bg-gray-900/90 backdrop-blur-sm h-full min-h-[160px] sm:min-h-[180px] border border-gray-700/50 rounded-lg sm:rounded-2xl p-3 sm:p-4 flex flex-col justify-between overflow-hidden group-hover:border-cyan-500/50 transition-all duration-500">
-                                        <!-- Background Pattern -->
-                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 30% 40%, rgba(6, 182, 212, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
-                                        </div>
-                                        
-                                        <!-- Background Icon -->
-                                        <div class="absolute -bottom-2 -right-2 w-24 h-24 sm:w-32 sm:h-32 opacity-5 group-hover:opacity-10 transition-opacity duration-500 overflow-hidden">
-                                            <img src="assets/svg/professional-services.svg" alt="" class="w-full h-full object-contain transform" style="filter: brightness(0) saturate(100%) invert(84%) sepia(50%) saturate(2500%) hue-rotate(176deg) brightness(98%) contrast(89%);">
-                                        </div>
-                                        
-                                        <!-- Floating Elements with idle animation -->
-                                        <div class="absolute top-2 right-2 w-2 h-2 bg-cyan-400/60 rounded-full" style="animation: floatingDot 3s ease-in-out infinite;"></div>
-                                        
-                                        <!-- Content -->
-                                        <div class="relative z-10">
-                                            <!-- Icon Section with idle animation -->
-                                            <div class="mb-1 sm:mb-2">
-                                                <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 8s ease-in-out infinite;">
-                                                    <img src="assets/svg/professional-services.svg" alt="Professional Services" class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 filter brightness-0 invert" style="filter: brightness(0) saturate(100%) invert(84%) sepia(50%) saturate(2500%) hue-rotate(176deg) brightness(98%) contrast(89%);">
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Title -->
-                                            <h3 class="text-xs sm:text-sm md:text-base lg:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-cyan-300 transition-colors duration-300">PROFESSIONAL<br><span class="text-cyan-400">SERVICES</span></h3>
-                                            
-                                            <!-- Description -->
-                                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Strategic IT consulting & implementation solutions</p>
-                                        </div>
-                                        
-                                        <!-- Hover Overlay -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <!-- First row - 3 columns -->
+                            <div class="flex justify-center gap-8 sm:gap-12 mb-8 sm:mb-12">
+                                <!-- Professional Services Icon -->
+                                <div class="service-icon-mobile group cursor-pointer text-center" data-service="professional">
+                                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-500 group-hover:scale-110 border-2 border-cyan-400/30 group-hover:border-cyan-400/60 shadow-lg group-hover:shadow-cyan-400/25 mx-auto mb-2" style="animation: iconFloat 6s ease-in-out infinite;">
+                                        <img src="assets/svg/professional-services.svg" alt="Professional Services" class="w-7 h-7 sm:w-9 sm:h-9" style="filter: brightness(0) saturate(100%) invert(84%) sepia(50%) saturate(2500%) hue-rotate(176deg) brightness(98%) contrast(89%);">
                                     </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300 leading-tight">Professional<br>Services</span>
                                 </div>
 
-                                <!-- Dedicated Resources Card -->
-                                <div class="service-card-futuristic group cursor-pointer" data-service="headhunting">
-                                    <!-- Glow Border -->
-                                    <div class="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 5s ease-in-out infinite;"></div>
-                                    
-                                    <!-- Main Card -->
-                                    <div class="relative bg-gray-900/90 backdrop-blur-sm h-full border border-gray-700/50 rounded-2xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden group-hover:border-purple-500/50 transition-all duration-500">
-                                        <!-- Background Pattern -->
-                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
-                                        </div>
-                                        
-                                        <!-- Background Icon -->
-                                        <div class="absolute -bottom-2 -right-2 w-24 h-24 sm:w-32 sm:h-32 opacity-5 group-hover:opacity-10 transition-opacity duration-500 overflow-hidden">
-                                            <img src="assets/svg/customer-hand.svg" alt="" class="w-full h-full object-contain transform" style="filter: brightness(0) saturate(100%) invert(74%) sepia(37%) saturate(2610%) hue-rotate(264deg) brightness(92%) contrast(89%);">
-                                        </div>
-                                        
-                                        <!-- Floating Elements with idle animation -->
-                                        <div class="absolute top-2 right-2 w-2 h-2 bg-purple-400/60 rounded-full" style="animation: floatingDot 3.2s ease-in-out infinite;"></div>
-                                        <div class="absolute bottom-3 left-3 w-1 h-1 bg-pink-400/40 rounded-full" style="animation: floatingDot 2.8s ease-in-out infinite; animation-delay: 1.5s;"></div>
-                                        
-                                        <!-- Content -->
-                                        <div class="relative z-10">
-                                            <!-- Icon Section with idle animation -->
-                                            <div class="mb-2">
-                                                <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 7s ease-in-out infinite; animation-delay: -1s;">
-                                                    <img src="assets/svg/customer-hand.svg" alt="Dedicated Resources" class="w-6 h-6 sm:w-8 sm:h-8" style="filter: brightness(0) saturate(100%) invert(74%) sepia(37%) saturate(2610%) hue-rotate(264deg) brightness(92%) contrast(89%);">
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Title -->
-                                            <h3 class="text-xs sm:text-sm md:text-base lg:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-purple-300 transition-colors duration-300">DEDICATED<br><span class="text-purple-400">RESOURCES</span></h3>
-                                            
-                                            <!-- Description -->
-                                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Flexible talent & time allocation for your projects</p>
-                                        </div>
-                                        
-                                        <!-- Hover Overlay -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <!-- Dedicated Resources Icon -->
+                                <div class="service-icon-mobile group cursor-pointer text-center" data-service="headhunting">
+                                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full flex items-center justify-center group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-500 group-hover:scale-110 border-2 border-purple-400/30 group-hover:border-purple-400/60 shadow-lg group-hover:shadow-purple-400/25 mx-auto mb-2" style="animation: iconFloat 6s ease-in-out infinite; animation-delay: -1s;">
+                                        <img src="assets/svg/customer-hand.svg" alt="Dedicated Resources" class="w-7 h-7 sm:w-9 sm:h-9" style="filter: brightness(0) saturate(100%) invert(74%) sepia(37%) saturate(2610%) hue-rotate(264deg) brightness(92%) contrast(89%);">
                                     </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-purple-300 transition-colors duration-300 leading-tight">Dedicated<br>Resources</span>
+                                </div>
+
+                                <!-- Learning Platform Icon -->
+                                <div class="service-icon-mobile group cursor-pointer text-center" data-service="lxp">
+                                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-indigo-400/20 to-purple-500/20 rounded-full flex items-center justify-center group-hover:from-indigo-400/40 group-hover:to-purple-500/40 transition-all duration-500 group-hover:scale-110 border-2 border-indigo-400/30 group-hover:border-indigo-400/60 shadow-lg group-hover:shadow-indigo-400/25 mx-auto mb-2" style="animation: iconFloat 6s ease-in-out infinite; animation-delay: -2s;">
+                                        <img src="assets/svg/elearning.svg" alt="Learning Platform" class="w-7 h-7 sm:w-9 sm:h-9" style="filter: brightness(0) saturate(100%) invert(51%) sepia(76%) saturate(4934%) hue-rotate(226deg) brightness(97%) contrast(86%);">
+                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-indigo-300 transition-colors duration-300 leading-tight">Learning<br>Platform</span>
                                 </div>
                             </div>
 
-                            <!-- Second row - 2 columns -->
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <!-- Managed Services Card -->
-                                <div class="service-card-futuristic group cursor-pointer" data-service="managed">
-                                    <!-- Glow Border -->
-                                    <div class="absolute inset-0 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4.5s ease-in-out infinite;"></div>
-                                    
-                                    <!-- Main Card -->
-                                    <div class="relative bg-gray-900/90 backdrop-blur-sm h-full border border-gray-700/50 rounded-2xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden group-hover:border-green-500/50 transition-all duration-500">
-                                        <!-- Background Pattern -->
-                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 50% 60%, rgba(16, 185, 129, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
-                                        </div>
-                                        
-                                        <!-- Background Icon -->
-                                        <div class="absolute -bottom-2 -right-2 w-24 h-24 sm:w-32 sm:h-32 opacity-5 group-hover:opacity-10 transition-opacity duration-500 overflow-hidden">
-                                            <img src="assets/svg/statistics.svg" alt="" class="w-full h-full object-contain transform" style="filter: brightness(0) saturate(100%) invert(64%) sepia(98%) saturate(6179%) hue-rotate(129deg) brightness(102%) contrast(82%);">
-                                        </div>
-                                        
-                                        <!-- Floating Elements with idle animation -->
-                                        <div class="absolute top-2 right-2 w-2 h-2 bg-green-400/60 rounded-full" style="animation: floatingDot 2.7s ease-in-out infinite;"></div>
-                                        <div class="absolute bottom-3 left-3 w-1 h-1 bg-emerald-400/40 rounded-full" style="animation: floatingDot 3.1s ease-in-out infinite; animation-delay: 0.8s;"></div>
-                                        
-                                        <!-- Content -->
-                                        <div class="relative z-10">
-                                            <!-- Icon Section with idle animation -->
-                                            <div class="mb-1 sm:mb-2">
-                                                <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:from-green-400/40 group-hover:to-emerald-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 8.5s ease-in-out infinite; animation-delay: -2s;">
-                                                    <img src="assets/svg/statistics.svg" alt="Managed Services" class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" style="filter: brightness(0) saturate(100%) invert(64%) sepia(98%) saturate(6179%) hue-rotate(129deg) brightness(102%) contrast(82%);">
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Title -->
-                                            <h3 class="text-xs sm:text-sm md:text-base lg:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-green-300 transition-colors duration-300">MANAGED<br><span class="text-green-400">SERVICES</span></h3>
-                                            
-                                            <!-- Description -->
-                                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">End-to-end infrastructure management solutions</p>
-                                        </div>
-                                        
-                                        <!-- Hover Overlay -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <!-- Second row - 2 columns centered -->
+                            <div class="flex justify-center gap-16 sm:gap-20">
+                                <!-- AI Solutions Icon -->
+                                <div class="service-icon-mobile group cursor-pointer text-center" data-service="ai">
+                                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-full flex items-center justify-center group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-500 group-hover:scale-110 border-2 border-orange-400/30 group-hover:border-orange-400/60 shadow-lg group-hover:shadow-orange-400/25 mx-auto mb-2" style="animation: iconFloat 6s ease-in-out infinite; animation-delay: -3s;">
+                                        <img src="assets/svg/ai-robot.svg" alt="AI Solutions" class="w-7 h-7 sm:w-9 sm:h-9" style="filter: brightness(0) saturate(100%) invert(69%) sepia(80%) saturate(2028%) hue-rotate(8deg) brightness(104%) contrast(92%);">
                                     </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-orange-300 transition-colors duration-300 leading-tight">AI<br>Solutions</span>
                                 </div>
 
-                                <!-- AI Solutions Card -->
-                                <div class="service-card-futuristic group cursor-pointer" data-service="ai">
-                                    <!-- Glow Border -->
-                                    <div class="absolute inset-0 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4.2s ease-in-out infinite;"></div>
-                                    
-                                    <!-- Main Card -->
-                                    <div class="relative bg-gray-900/90 backdrop-blur-sm h-full border border-gray-700/50 rounded-2xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden group-hover:border-orange-500/50 transition-all duration-500">
-                                        <!-- Background Pattern -->
-                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 40% 30%, rgba(251, 146, 60, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
-                                        </div>
-                                        
-                                        <!-- Background Icon -->
-                                        <div class="absolute -bottom-2 -right-2 w-24 h-24 sm:w-32 sm:h-32 opacity-5 group-hover:opacity-10 transition-opacity duration-500 overflow-hidden">
-                                            <img src="assets/svg/ai-robot.svg" alt="" class="w-full h-full object-contain transform" style="filter: brightness(0) saturate(100%) invert(69%) sepia(80%) saturate(2028%) hue-rotate(8deg) brightness(104%) contrast(92%);">
-                                        </div>
-                                        
-                                        <!-- Floating Elements with idle animation -->
-                                        <div class="absolute top-2 right-2 w-2 h-2 bg-orange-400/60 rounded-full" style="animation: floatingDot 2.9s ease-in-out infinite;"></div>
-                                        <div class="absolute bottom-3 left-3 w-1 h-1 bg-red-400/40 rounded-full" style="animation: floatingDot 3.4s ease-in-out infinite; animation-delay: 1.2s;"></div>
-                                        
-                                        <!-- Content -->
-                                        <div class="relative z-10">
-                                            <!-- Icon Section with idle animation -->
-                                            <div class="mb-1 sm:mb-2">
-                                                <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 7.5s ease-in-out infinite; animation-delay: -0.5s;">
-                                                    <img src="assets/svg/ai-robot.svg" alt="AI Solutions" class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" style="filter: brightness(0) saturate(100%) invert(69%) sepia(80%) saturate(2028%) hue-rotate(8deg) brightness(104%) contrast(92%);">
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Title -->
-                                            <h3 class="text-xs sm:text-sm md:text-base lg:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-orange-300 transition-colors duration-300">AI<br><span class="text-orange-400">SOLUTIONS</span></h3>
-                                            
-                                            <!-- Description -->
-                                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Intelligent automation & analytics solutions</p>
-                                        </div>
-                                        
-                                        <!-- Hover Overlay -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <!-- Corporate Training Icon -->
+                                <div class="service-icon-mobile group cursor-pointer text-center" data-service="training">
+                                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-full flex items-center justify-center group-hover:from-yellow-400/40 group-hover:to-orange-500/40 transition-all duration-500 group-hover:scale-110 border-2 border-yellow-400/30 group-hover:border-yellow-400/60 shadow-lg group-hover:shadow-yellow-400/25 mx-auto mb-2" style="animation: iconFloat 6s ease-in-out infinite; animation-delay: -4s;">
+                                        <img src="assets/svg/presentation-corporate.svg" alt="Corporate Training" class="w-7 h-7 sm:w-9 sm:h-9" style="filter: brightness(0) saturate(100%) invert(82%) sepia(61%) saturate(2217%) hue-rotate(7deg) brightness(101%) contrast(103%);">
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Third row - 2 columns -->
-                            <div class="grid grid-cols-2 gap-4">
-                                <!-- Learning Platform Card -->
-                                <div class="service-card-futuristic group cursor-pointer" data-service="lxp">
-                                    <!-- Glow Border -->
-                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-400 via-purple-500 to-violet-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 4.8s ease-in-out infinite;"></div>
-                                    
-                                    <!-- Main Card -->
-                                    <div class="relative bg-gray-900/90 backdrop-blur-sm h-full border border-gray-700/50 rounded-2xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden group-hover:border-indigo-500/50 transition-all duration-500">
-                                        <!-- Background Pattern -->
-                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 60% 50%, rgba(99, 102, 241, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
-                                        </div>
-                                        
-                                        <!-- Background Icon -->
-                                        <div class="absolute -bottom-2 -right-2 w-24 h-24 sm:w-32 sm:h-32 opacity-5 group-hover:opacity-10 transition-opacity duration-500 overflow-hidden">
-                                            <img src="assets/svg/elearning.svg" alt="" class="w-full h-full object-contain transform" style="filter: brightness(0) saturate(100%) invert(51%) sepia(76%) saturate(4934%) hue-rotate(226deg) brightness(97%) contrast(86%);">
-                                        </div>
-                                        
-                                        <!-- Floating Elements with idle animation -->
-                                        <div class="absolute top-2 right-2 w-2 h-2 bg-indigo-400/60 rounded-full" style="animation: floatingDot 3.3s ease-in-out infinite;"></div>
-                                        <div class="absolute bottom-3 left-3 w-1 h-1 bg-purple-400/40 rounded-full" style="animation: floatingDot 2.6s ease-in-out infinite; animation-delay: 0.7s;"></div>
-                                        
-                                        <!-- Content -->
-                                        <div class="relative z-10">
-                                            <!-- Icon Section with idle animation -->
-                                            <div class="mb-1 sm:mb-2">
-                                                <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-indigo-400/20 to-purple-500/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:from-indigo-400/40 group-hover:to-purple-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 9s ease-in-out infinite; animation-delay: -1.5s;">
-                                                    <img src="assets/svg/elearning.svg" alt="Learning Platform" class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" style="filter: brightness(0) saturate(100%) invert(51%) sepia(76%) saturate(4934%) hue-rotate(226deg) brightness(97%) contrast(86%);">
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Title -->
-                                            <h3 class="text-xs sm:text-sm md:text-base lg:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-indigo-300 transition-colors duration-300">LEARNING<br><span class="text-indigo-400">PLATFORM</span></h3>
-                                            
-                                            <!-- Description -->
-                                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Modern digital learning ecosystem platform</p>
-                                        </div>
-                                        
-                                        <!-- Hover Overlay -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    </div>
-                                </div>
-
-                                <!-- Corporate Training Card -->
-                                <div class="service-card-futuristic group cursor-pointer" data-service="training">
-                                    <!-- Glow Border -->
-                                    <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-amber-600 rounded-2xl blur-sm opacity-0 group-hover:opacity-60 transition-opacity duration-500" style="animation: pulseGlow 5.2s ease-in-out infinite;"></div>
-                                    
-                                    <!-- Main Card -->
-                                    <div class="relative bg-gray-900/90 backdrop-blur-sm h-full border border-gray-700/50 rounded-2xl p-4 sm:p-6 flex flex-col justify-between overflow-hidden group-hover:border-yellow-500/50 transition-all duration-500">
-                                        <!-- Background Pattern -->
-                                        <div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                                            <div class="w-full h-full" style="background-image: radial-gradient(circle at 30% 70%, rgba(245, 158, 11, 0.3) 1px, transparent 1px); background-size: 20px 20px;"></div>
-                                        </div>
-                                        
-                                        <!-- Background Icon -->
-                                        <div class="absolute -bottom-2 -right-2 w-24 h-24 sm:w-32 sm:h-32 opacity-5 group-hover:opacity-10 transition-opacity duration-500 overflow-hidden">
-                                            <img src="assets/svg/presentation-corporate.svg" alt="" class="w-full h-full object-contain transform" style="filter: brightness(0) saturate(100%) invert(82%) sepia(61%) saturate(2217%) hue-rotate(7deg) brightness(101%) contrast(103%);">
-                                        </div>
-                                        
-                                        <!-- Floating Elements with idle animation -->
-                                        <div class="absolute top-2 right-2 w-2 h-2 bg-yellow-400/60 rounded-full" style="animation: floatingDot 2.4s ease-in-out infinite;"></div>
-                                        
-                                        <!-- Content -->
-                                        <div class="relative z-10">
-                                            <!-- Icon Section with idle animation -->
-                                            <div class="mb-1 sm:mb-2">
-                                                <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:from-yellow-400/40 group-hover:to-orange-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 6.5s ease-in-out infinite; animation-delay: -2.5s;">
-                                                    <img src="assets/svg/presentation-corporate.svg" alt="Corporate Training" class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" style="filter: brightness(0) saturate(100%) invert(82%) sepia(61%) saturate(2217%) hue-rotate(7deg) brightness(101%) contrast(103%);">
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- Title -->
-                                            <h3 class="text-xs sm:text-sm md:text-base lg:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-yellow-300 transition-colors duration-300">CORPORATE<br><span class="text-yellow-400">TRAINING</span></h3>
-                                            
-                                            <!-- Description -->
-                                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Enterprise skill development programs</p>
-                                        </div>
-                                        
-                                        <!-- Hover Overlay -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-orange-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    </div>
+                                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-yellow-300 transition-colors duration-300 leading-tight">Corporate<br>Training</span>
                                 </div>
                             </div>
                         </div>
@@ -1161,7 +976,7 @@
                                 </div>
                                 <div class="flex lg:justify-start justify-center items-center text-gray-300">
                                     <div class="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mr-3 sm:mr-4 flex-shrink-0"></div>
-                                    <span class="text-sm sm:text-base lg:text-lg font-medium">Dedicated resources and managed services</span>
+                                    <span class="text-sm sm:text-base lg:text-lg font-medium">Dedicated resources and professional consulting</span>
                                 </div>
                                 <div class="flex lg:justify-start justify-center items-center text-gray-300">
                                     <div class="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full mr-3 sm:mr-4 flex-shrink-0"></div>
@@ -1342,34 +1157,30 @@
         
         <!-- Fixed Section Navigation Menu -->
         <div class="section-nav-menu">
-            <!-- Company Logo as Home/Hero -->
-            <div class="section-nav-item logo-item group active" onclick="scrollToSection('home')" data-section="home">
+            <!-- Home -->
+            <div class="section-nav-item group active" onclick="scrollToSection('home')" data-section="home">
                 <div class="relative">
-                    <!-- Glow Effect for Logo -->
+                    <!-- Glow Effect -->
                     <div class="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-orange-500/20 to-orange-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-500 blur-lg"></div>
                     
-                    <!-- Logo Image -->
-                    <img class="relative z-10 w-8 h-8 transform transition-all duration-500 ease-out
+                    <!-- House Icon -->
+                    <img class="nav-icon relative z-10 w-6 h-6 transform transition-all duration-500 ease-out
                                 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,165,0,0.5)]
-                                filter group-hover:brightness-110" 
-                         src="assets/pro-orange.png" alt="Prosigmaka Logo" />
+                                filter brightness-0 invert group-hover:brightness-110" 
+                         src="assets/svg-menu/house.svg" alt="Home" />
                 </div>
                 <div class="nav-label">Home</div>
             </div>
             
             <!-- Clients -->
             <div class="section-nav-item" onclick="scrollToSection('clients')" data-section="clients">
-                <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                </svg>
+                <img class="nav-icon w-6 h-6 filter brightness-0 invert" src="assets/svg-menu/users.svg" alt="Clients" />
                 <div class="nav-label">Clients</div>
             </div>
             
             <!-- Services -->
             <div class="section-nav-item" onclick="scrollToSection('services')" data-section="services">
-                <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6z"></path>
-                </svg>
+                <img class="nav-icon w-6 h-6 filter brightness-0 invert" src="assets/svg-menu/gear.svg" alt="Services" />
                 <div class="nav-label">Services</div>
             </div>
             
@@ -1395,7 +1206,7 @@
                                     animate-bounce-slow
                                     group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.6)]
                                     filter group-hover:brightness-110 group-hover:contrast-110" 
-                             src="assets/photos/pala-light.png" alt="AI Agent" />
+                             src="assets/photos/pala-v2.png" alt="AI Agent" />
                         
                     </div>
                     
@@ -1408,20 +1219,10 @@
                 </div>
             </div>
             
-            <!-- Case Study -->
+            <!-- Impact & Testimonials -->
             <div class="section-nav-item" onclick="scrollToSection('case-study')" data-section="case-study">
-                <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-                <div class="nav-label">Case Study</div>
-            </div>
-            
-            <!-- Testimonials -->
-            <div class="section-nav-item" onclick="scrollToSection('testimonials')" data-section="testimonials">
-                <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
-                </svg>
-                <div class="nav-label">Testimonials</div>
+                <img class="nav-icon w-6 h-6 filter brightness-0 invert" src="assets/svg-menu/stars.svg" alt="Impact & Testimonials" />
+                <div class="nav-label">Impact & Testimonials</div>
             </div>
         </div>
         
@@ -1430,742 +1231,334 @@
             <!-- Professional Background -->
             <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-slate-900 to-gray-900"></div>
             
-            <!-- Neural Network Pattern -->
-            <div class="absolute inset-0 opacity-10">
-                <div class="absolute inset-0" style="background-image: 
-                    radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.3) 1px, transparent 1px),
-                    radial-gradient(circle at 70% 70%, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
-                    radial-gradient(circle at 40% 90%, rgba(139, 92, 246, 0.3) 1px, transparent 1px),
-                    radial-gradient(circle at 90% 10%, rgba(168, 85, 247, 0.3) 1px, transparent 1px);
-                    background-size: 80px 80px, 120px 120px, 100px 100px, 140px 140px;
-                    animation: neuralPulse 20s ease-in-out infinite;"></div>
-            </div>
-            
-            <!-- Floating Elements -->
-            <div class="absolute inset-0">
-                <div class="absolute top-20 left-20 w-4 h-4 bg-cyan-400/20 rounded-full animate-ping"></div>
-                <div class="absolute top-1/3 right-32 w-6 h-6 bg-blue-400/20 rounded-full animate-ping" style="animation-delay: 1s;"></div>
-                <div class="absolute bottom-1/4 left-1/4 w-3 h-3 bg-purple-400/20 rounded-full animate-ping" style="animation-delay: 2s;"></div>
-                <div class="absolute top-1/4 right-1/3 w-5 h-5 bg-indigo-400/20 rounded-full animate-ping" style="animation-delay: 3s;"></div>
-            </div>
-            
-            <!-- Matrix Effect Lines -->
-            <div class="absolute inset-0 opacity-5">
-                <div class="absolute top-0 left-1/6 w-px h-full bg-gradient-to-b from-cyan-400 via-transparent to-transparent animate-pulse"></div>
-                <div class="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-blue-400 via-transparent to-transparent animate-pulse" style="animation-delay: 1s;"></div>
-                <div class="absolute left-0 top-1/4 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse" style="animation-delay: 2s;"></div>
-            </div>
-            
-            <div class="w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 relative z-10">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 sm:py-16 lg:py-20">
                 <!-- Section Header -->
-                <div class="text-center mb-8 sm:mb-12 lg:mb-16">
-                    <h2 class="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-ultra-bold text-white mb-4 sm:mb-6 tracking-tighter">
-                        <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-glow">CASE STUDY</span>
+                <div class="text-center mb-8 lg:mb-12">
+                    <h2 class="section-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ultra-bold text-white mb-3 sm:mb-4 tracking-tighter">
+                        <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-glow">Impact</span>
+                        &
+                        <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-glow">Testimonials</span>
                     </h2>
-                    <p class="font-inter text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium px-2 sm:px-4">
-                        Discover how we've helped <span class="text-cyan-400 font-semibold">leading companies</span> transform their business with our <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent font-bold">innovative solutions</span>
+                    <p class="font-inter text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-medium">
+                        Discover how we've helped <span class="text-cyan-400 font-semibold">leading companies</span> with our <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent font-bold">innovative solutions</span>
                     </p>
                 </div>
-
-                <!-- Case Study Horizontal Timeline -->
-                <div class="relative max-w-7xl mx-auto">
-                    <!-- Fixed Navigation Arrows (Outside scroll container) -->
-                    <div class="hidden sm:block absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-30 opacity-60 hover:opacity-100 transition-opacity duration-300 scroll-hint-left cursor-pointer">
-                        <div class="w-8 h-8 sm:w-10 sm:h-10 bg-cyan-400/20 backdrop-blur-sm border border-cyan-400/30 rounded-full flex items-center justify-center hover:bg-cyan-400/30 transition-all duration-300">
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    
-                    <div class="hidden sm:block absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-30 opacity-60 hover:opacity-100 transition-opacity duration-300 scroll-hint-right cursor-pointer">
-                        <div class="w-8 h-8 sm:w-10 sm:h-10 bg-purple-400/20 backdrop-blur-sm border border-purple-400/30 rounded-full flex items-center justify-center hover:bg-purple-400/30 transition-all duration-300">
-                            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </div>
-                    </div>
                 
-                    <!-- Enhanced Scroll Container -->
-                    <div class="relative overflow-x-auto scrollbar-hide pb-4 sm:pb-8 scroll-smooth">
-                        <!-- Timeline Container -->
-                        <div class="relative min-w-max px-2 sm:px-4 md:px-8 lg:px-16">
-                            <!-- Enhanced Horizontal Timeline Line with Progress -->
-                            <div class="absolute top-20 sm:top-24 left-0 right-0 h-1 sm:h-2 bg-gradient-to-r from-transparent via-gray-700 to-transparent rounded-full opacity-20"></div>
-                            <div class="absolute top-20 sm:top-24 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-indigo-700 rounded-full opacity-50 timeline-progress"></div>
+                <!-- Combined Layout: Success Stories & Testimonials -->
+                <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 flex-1">
+                    <!-- Left: Success Stories -->
+                    <div class="flex flex-col">
+                        <div class="text-center lg:text-left mb-6">
+                            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3">
+                                <span class="text-cyan-400">Success</span> Stories
+                            </h3>
+                            <p class="text-gray-400 text-sm sm:text-base">
+                                Real results from industry leaders
+                            </p>
+                        </div>
                         
-                        <!-- Timeline Items Container -->
-                        <div class="flex space-x-6 sm:space-x-8 md:space-x-12 lg:space-x-16 pt-6 sm:pt-8 case-study-container">
-                            <!-- Case Study 1: Astra International -->
-                            <div class="relative flex-shrink-0 w-72 sm:w-80 group case-study-card">
-                                <!-- Timeline Node -->
-                                <div class="absolute left-1/2 transform -translate-x-1/2 -top-3 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-4 border-gray-900 z-10 group-hover:scale-125 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-ping opacity-30"></div>
-                                    <div class="absolute inset-2 bg-white rounded-full opacity-80"></div>
-                                </div>
-                                
-                                <!-- Year/Phase Indicator -->
-                                <div class="text-center mb-6 pt-8">
-                                    <div class="inline-block bg-gradient-to-r from-blue-500/20 to-purple-600/20 backdrop-blur-sm border border-blue-400/30 rounded-full px-4 py-2">
-                                        <span class="text-blue-400 font-semibold text-sm">2024 Project</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Content Card -->
-                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-6 hover:border-blue-500/50 transition-all duration-500 group-hover:transform group-hover:scale-105 h-80 case-study-card-enhanced">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                                    
-                                    <!-- Header -->
-                                    <div class="flex flex-col items-center text-center mb-4 relative">
-                                        <div class="w-16 h-16 flex items-center justify-center mb-3">
-                                            <img src="assets/clients/1.png" alt="Astra International" class="max-h-16 w-auto opacity-90">
+                        <!-- Compact Case Studies Grid -->
+                        <div class="grid sm:grid-cols-1 lg:grid-cols-1 gap-6 flex-1">
+                            <!-- Case Study 1: ASTRA INTERNATIONAL -->
+                            <div class="group cursor-pointer">
+                                <div class="relative bg-gradient-to-br from-orange-500/10 to-orange-600/5 backdrop-blur-sm border border-orange-400/20 rounded-2xl p-6 hover:border-orange-400/50 transition-all duration-300 group-hover:scale-[1.02] min-h-[200px]">
+                                    <!-- Company Header -->
+                                    <div class="flex items-center mb-4">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-500 rounded-lg flex items-center justify-center mr-3">
+                                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                                            </svg>
                                         </div>
-                                        <h3 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors duration-300">ASTRA INTERNATIONAL</h3>
-                                        <p class="text-blue-400 text-xs font-semibold">AI Predictive Maintenance</p>
-                                    </div>
-                                    
-                                    <!-- Stats Grid -->
-                                    <div class="grid grid-cols-2 gap-3 mb-4">
-                                        <div class="text-center p-2 bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-lg border border-blue-400/20">
-                                            <div class="text-lg font-bold text-blue-400">40%</div>
-                                            <div class="text-xs text-gray-400">Efisiensi</div>
-                                        </div>
-                                        <div class="text-center p-2 bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-lg border border-blue-400/20">
-                                            <div class="text-lg font-bold text-purple-400">60%</div>
-                                            <div class="text-xs text-gray-400">Downtime ↓</div>
+                                        <div>
+                                            <h4 class="text-white font-bold text-lg">ASTRA INTERNATIONAL</h4>
+                                            <p class="text-orange-400 text-sm font-medium">Automotive & Heavy Equipment</p>
                                         </div>
                                     </div>
                                     
-                                    <!-- Key Points -->
-                                    <div class="space-y-2 text-xs text-gray-300 mb-4">
-                                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>AI sistem prediksi maintenance</div>
-                                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>ROI 250% dalam 12 bulan</div>
+                                    <!-- Project Title -->
+                                    <h5 class="text-orange-300 font-bold text-base mb-4">AI-Powered Predictive Maintenance System</h5>
+                                    
+                                    <!-- Project Details -->
+                                    <div class="space-y-2 text-sm">
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Desain dan implementasi sistem AI untuk prediksi maintenance</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Peningkatan efisiensi operasional hingga 40%</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Pengurangan downtime equipment sampai 60%</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Monitoring real-time untuk 500+ unit equipment</span>
+                                        </div>
                                     </div>
+                                    
+                                    <!-- Hover Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-orange-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
                             </div>
 
                             <!-- Case Study 2: TMMIN -->
-                            <div class="relative flex-shrink-0 w-72 sm:w-80 group case-study-card">
-                                <!-- Timeline Node -->
-                                <div class="absolute left-1/2 transform -translate-x-1/2 -top-3 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full border-4 border-gray-900 z-10 group-hover:scale-125 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full animate-ping opacity-30"></div>
-                                    <div class="absolute inset-2 bg-white rounded-full opacity-80"></div>
-                                </div>
-                                
-                                <!-- Year/Phase Indicator -->
-                                <div class="text-center mb-6 pt-8">
-                                    <div class="inline-block bg-gradient-to-r from-purple-500/20 to-pink-600/20 backdrop-blur-sm border border-purple-400/30 rounded-full px-4 py-2">
-                                        <span class="text-purple-400 font-semibold text-sm">2023 Project</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Content Card -->
-                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-6 hover:border-purple-500/50 transition-all duration-500 group-hover:transform group-hover:scale-105 h-80 case-study-card-enhanced">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                                    
-                                    <!-- Header -->
-                                    <div class="flex flex-col items-center text-center mb-4 relative">
-                                        <div class="w-16 h-16 flex items-center justify-center mb-3">
-                                            <img src="assets/clients/2.png" alt="TMMIN" class="max-h-16 w-auto opacity-90">
+                            <div class="group cursor-pointer">
+                                <div class="relative bg-gradient-to-br from-blue-500/10 to-blue-600/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-6 hover:border-blue-400/50 transition-all duration-300 group-hover:scale-[1.02] min-h-[200px]">
+                                    <!-- Company Header -->
+                                    <div class="flex items-center mb-4">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-lg flex items-center justify-center mr-3">
+                                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                            </svg>
                                         </div>
-                                        <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors duration-300">TMMIN</h3>
-                                        <p class="text-purple-400 text-xs font-semibold">Digital Manufacturing</p>
-                                    </div>
-                                    
-                                    <!-- Stats Grid -->
-                                    <div class="grid grid-cols-2 gap-3 mb-4">
-                                        <div class="text-center p-2 bg-gradient-to-r from-purple-500/10 to-pink-600/10 rounded-lg border border-purple-400/20">
-                                            <div class="text-lg font-bold text-purple-400">75%</div>
-                                            <div class="text-xs text-gray-400">Defect ↓</div>
-                                        </div>
-                                        <div class="text-center p-2 bg-gradient-to-r from-purple-500/10 to-pink-600/10 rounded-lg border border-purple-400/20">
-                                            <div class="text-lg font-bold text-pink-400">35%</div>
-                                            <div class="text-xs text-gray-400">Efficiency</div>
+                                        <div>
+                                            <h4 class="text-white font-bold text-lg">TMMIN</h4>
+                                            <p class="text-blue-400 text-sm font-medium">Toyota Manufacturing</p>
                                         </div>
                                     </div>
                                     
-                                    <!-- Key Points -->
-                                    <div class="space-y-2 text-xs text-gray-300 mb-4">
-                                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></div>Digital manufacturing process</div>
-                                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-pink-400 rounded-full mr-2"></div>Automated quality control</div>
+                                    <!-- Project Title -->
+                                    <h5 class="text-blue-300 font-bold text-base mb-4">Digital Manufacturing Transformation</h5>
+                                    
+                                    <!-- Project Details -->
+                                    <div class="space-y-2 text-sm">
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Implementasi sistem manufaktur digital terintegrasi</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Otomasi quality control dengan AI vision</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Penurunan defect rate hingga 75%</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Peningkatan produktivitas 35% overall</span>
+                                        </div>
                                     </div>
+                                    
+                                    <!-- Hover Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
                             </div>
 
-                            <!-- Case Study 3: Bank Mega Syariah -->
-                            <div class="relative flex-shrink-0 w-72 sm:w-80 group case-study-card">
-                                <!-- Timeline Node -->
-                                <div class="absolute left-1/2 transform -translate-x-1/2 -top-3 w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full border-4 border-gray-900 z-10 group-hover:scale-125 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full animate-ping opacity-30"></div>
-                                    <div class="absolute inset-2 bg-white rounded-full opacity-80"></div>
-                                </div>
-                                
-                                <!-- Year/Phase Indicator -->
-                                <div class="text-center mb-6 pt-8">
-                                    <div class="inline-block bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm border border-cyan-400/30 rounded-full px-4 py-2">
-                                        <span class="text-cyan-400 font-semibold text-sm">2024 Project</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Content Card -->
-                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-6 hover:border-cyan-500/50 transition-all duration-500 group-hover:transform group-hover:scale-105 h-80 case-study-card-enhanced">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                                    
-                                    <!-- Header -->
-                                    <div class="flex flex-col items-center text-center mb-4 relative">
-                                        <div class="w-16 h-16 flex items-center justify-center mb-3">
-                                            <img src="assets/clients/5.png" alt="Bank Mega Syariah" class="max-h-16 w-auto opacity-90">
+                            <!-- Case Study 3: BANK SYARIAH INDONESIA -->
+                            <div class="group cursor-pointer">
+                                <div class="relative bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 backdrop-blur-sm border border-emerald-400/20 rounded-2xl p-6 hover:border-emerald-400/50 transition-all duration-300 group-hover:scale-[1.02] min-h-[200px]">
+                                    <!-- Company Header -->
+                                    <div class="flex items-center mb-4">
+                                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-lg flex items-center justify-center mr-3">
+                                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                            </svg>
                                         </div>
-                                        <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">BANK MEGA SYARIAH</h3>
-                                        <p class="text-cyan-400 text-xs font-semibold">Core Banking Modernization</p>
-                                    </div>
-                                    
-                                    <!-- Stats Grid -->
-                                    <div class="grid grid-cols-2 gap-3 mb-4">
-                                        <div class="text-center p-2 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-lg border border-cyan-400/20">
-                                            <div class="text-lg font-bold text-cyan-400">10x</div>
-                                            <div class="text-xs text-gray-400">Speed ↑</div>
-                                        </div>
-                                        <div class="text-center p-2 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-lg border border-cyan-400/20">
-                                            <div class="text-lg font-bold text-blue-400">95%</div>
-                                            <div class="text-xs text-gray-400">Satisfaction</div>
+                                        <div>
+                                            <h4 class="text-white font-bold text-lg">BANK SYARIAH INDONESIA</h4>
+                                            <p class="text-emerald-400 text-sm font-medium">Islamic Banking</p>
                                         </div>
                                     </div>
                                     
-                                    <!-- Key Points -->
-                                    <div class="space-y-2 text-xs text-gray-300 mb-4">
-                                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>Core banking modernization</div>
-                                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>AI-powered fraud detection</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Case Study 4: BPJS Kesehatan -->
-                            <div class="relative flex-shrink-0 w-72 sm:w-80 group case-study-card">
-                                <!-- Timeline Node -->
-                                <div class="absolute left-1/2 transform -translate-x-1/2 -top-3 w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full border-4 border-gray-900 z-10 group-hover:scale-125 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full animate-ping opacity-30"></div>
-                                    <div class="absolute inset-2 bg-white rounded-full opacity-80"></div>
-                                </div>
-                                
-                                <!-- Year/Phase Indicator -->
-                                <div class="text-center mb-6 pt-8">
-                                    <div class="inline-block bg-gradient-to-r from-indigo-500/20 to-purple-600/20 backdrop-blur-sm border border-indigo-400/30 rounded-full px-4 py-2">
-                                        <span class="text-indigo-400 font-semibold text-sm">2023 Project</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Content Card -->
-                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-6 hover:border-indigo-500/50 transition-all duration-500 group-hover:transform group-hover:scale-105 h-80 case-study-card-enhanced">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                                    <!-- Project Title -->
+                                    <h5 class="text-emerald-300 font-bold text-base mb-4">Core Banking System Modernization</h5>
                                     
-                                    <!-- Header -->
-                                    <div class="flex flex-col items-center text-center mb-4 relative">
-                                        <div class="w-16 h-16 flex items-center justify-center mb-3">
-                                            <img src="assets/clients/10.png" alt="BPJS Kesehatan" class="max-h-16 w-auto opacity-90">
+                                    <!-- Project Details -->
+                                    <div class="space-y-2 text-sm">
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Migrasi sistem core banking ke arsitektur cloud-native</span>
                                         </div>
-                                        <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors duration-300">BPJS KESEHATAN</h3>
-                                        <p class="text-indigo-400 text-xs font-semibold">Healthcare Analytics</p>
-                                    </div>
-                                    
-                                    <!-- Stats Grid -->
-                                    <div class="grid grid-cols-2 gap-3 mb-4">
-                                        <div class="text-center p-2 bg-gradient-to-r from-indigo-500/10 to-purple-600/10 rounded-lg border border-indigo-400/20">
-                                            <div class="text-lg font-bold text-indigo-400">80%</div>
-                                            <div class="text-xs text-gray-400">Automation</div>
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Implementasi microservices dan API-first approach</span>
                                         </div>
-                                        <div class="text-center p-2 bg-gradient-to-r from-indigo-500/10 to-purple-600/10 rounded-lg border border-indigo-400/20">
-                                            <div class="text-lg font-bold text-purple-400">50%</div>
-                                            <div class="text-xs text-gray-400">Service ↑</div>
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Peningkatan kecepatan transaksi 10x lipat</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <div class="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                            <span class="text-gray-300">Customer satisfaction rate mencapai 95%</span>
                                         </div>
                                     </div>
                                     
-                                    <!-- Key Points -->
-                                    <div class="space-y-2 text-xs text-gray-300 mb-4">
-                                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2"></div>Healthcare data analytics</div>
-                                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></div>Predictive health risk modeling</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Case Study 5: CT Corp Digital -->
-                            <div class="relative flex-shrink-0 w-72 sm:w-80 group case-study-card">
-                                <!-- Timeline Node -->
-                                <div class="absolute left-1/2 transform -translate-x-1/2 -top-3 w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full border-4 border-gray-900 z-10 group-hover:scale-125 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full animate-ping opacity-30"></div>
-                                    <div class="absolute inset-2 bg-white rounded-full opacity-80"></div>
-                                </div>
-                                
-                                <!-- Year/Phase Indicator -->
-                                <div class="text-center mb-6 pt-8">
-                                    <div class="inline-block bg-gradient-to-r from-blue-600/20 to-indigo-700/20 backdrop-blur-sm border border-blue-400/30 rounded-full px-4 py-2">
-                                        <span class="text-blue-400 font-semibold text-sm">2024 Project</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Content Card -->
-                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-6 hover:border-blue-600/50 transition-all duration-500 group-hover:transform group-hover:scale-105 h-80 case-study-card-enhanced">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                                    
-                                    <!-- Header -->
-                                    <div class="flex flex-col items-center text-center mb-4 relative">
-                                        <div class="w-16 h-16 flex items-center justify-center mb-3">
-                                            <img src="assets/clients/8.png" alt="CT Corp Digital" class="max-h-16 w-auto opacity-90">
-                                        </div>
-                                        <h3 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors duration-300">CT CORP DIGITAL</h3>
-                                        <p class="text-blue-400 text-xs font-semibold">Enterprise Transformation</p>
-                                    </div>
-                                    
-                                    <!-- Stats Grid -->
-                                    <div class="grid grid-cols-2 gap-3 mb-4">
-                                        <div class="text-center p-2 bg-gradient-to-r from-blue-600/10 to-indigo-700/10 rounded-lg border border-blue-400/20">
-                                            <div class="text-lg font-bold text-blue-400">300%</div>
-                                            <div class="text-xs text-gray-400">Scalability</div>
-                                        </div>
-                                        <div class="text-center p-2 bg-gradient-to-r from-blue-600/10 to-indigo-700/10 rounded-lg border border-blue-400/20">
-                                            <div class="text-lg font-bold text-indigo-400">45%</div>
-                                            <div class="text-xs text-gray-400">Cost ↓</div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Key Points -->
-                                    <div class="space-y-2 text-xs text-gray-300 mb-4">
-                                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>Enterprise digital transformation</div>
-                                        <div class="flex items-center"><div class="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2"></div>Multi-cloud infrastructure</div>
-                                    </div>
+                                    <!-- Hover Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-emerald-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Enhanced Scroll Instructions -->
-                <div class="text-center mt-6 sm:mt-8">
-                    <div class="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm border border-gray-600/30 rounded-full px-4 sm:px-6 py-2 sm:py-3">
-                        <div class="flex gap-1">
-                            <div class="w-1 h-1 bg-cyan-400 rounded-full animate-bounce"></div>
-                            <div class="w-1 h-1 bg-blue-400 rounded-full animate-bounce" style="animation-delay: 0.1s;"></div>
-                            <div class="w-1 h-1 bg-purple-400 rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+
+                    <!-- Right: Testimonials -->
+                    <div class="flex flex-col">
+                        <div class="text-center lg:text-left mb-6">
+                            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3">
+                                Client <span class="text-purple-400">Testimonials</span>
+                            </h3>
+                            <p class="text-gray-400 text-sm sm:text-base">
+                                What our clients say about us
+                            </p>
                         </div>
-                        <span class="text-gray-300 text-xs sm:text-sm font-medium">
-                            <span class="hidden sm:inline">Scroll horizontally to explore more case studies</span>
-                            <span class="sm:hidden">Swipe to see more projects</span>
-                        </span>
-                        <svg class="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l4-4m0 0l4-4m-4 4H3m18 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="fullpage-section relative overflow-hidden">
-            <!-- Elegant Background -->
-            <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-slate-900 to-gray-900"></div>
-            
-            <!-- Floating Quote Pattern -->
-            <div class="absolute inset-0 opacity-5">
-                <div class="absolute inset-0" style="background-image: 
-                    radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.3) 2px, transparent 2px),
-                    radial-gradient(circle at 70% 70%, rgba(59, 130, 246, 0.3) 2px, transparent 2px),
-                    radial-gradient(circle at 50% 20%, rgba(168, 85, 247, 0.3) 2px, transparent 2px);
-                    background-size: 120px 120px, 150px 150px, 100px 100px;
-                    animation: floatPattern 25s ease-in-out infinite;"></div>
-            </div>
-            
-            <!-- Decorative Elements -->
-            <div class="absolute inset-0">
-                <div class="absolute top-20 left-20 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl animate-pulse"></div>
-                <div class="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/5 rounded-full blur-2xl animate-pulse" style="animation-delay: 2s;"></div>
-                <div class="absolute top-1/2 left-10 w-24 h-24 bg-green-500/5 rounded-full blur-2xl animate-pulse" style="animation-delay: 4s;"></div>
-            </div>
-            
-            <div class="w-full max-w-7xl mx-auto my-auto relative z-10">
-                <!-- Section Header Container -->
-                <div class="max-w-7xl mx-auto">
-                    <!-- Section Header -->
-                    <div class="text-center mb-8 sm:mb-12 lg:mb-16">
-                        <h2 class="section-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-ultra-bold text-white mb-4 sm:mb-6 tracking-tighter">
-                            CLIENT <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-glow">TESTIMONIALS</span>
-                        </h2>
-                        <p class="font-inter text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 font-medium px-4">
-                            Hear from industry leaders who have experienced the <span class="text-cyan-400 font-semibold">transformative power</span> of our digital solutions and <span class="text-gradient-bold">achieved remarkable results</span>
-                        </p>
-                    </div>
-                </div>
-    
-                <!-- Testimonials Horizontal Carousel Container -->
-                <div class="relative z-10">
-                    <!-- Carousel Wrapper - Full Width on Mobile/Tablet -->
-                    <div class="relative overflow-hidden py-4 sm:py-6 w-full md:w-screen lg:max-w-7xl lg:mx-auto">
-                        <!-- Carousel Container with Precise Width Calculation -->
-                        <div class="testimonials-carousel flex space-x-3 sm:space-x-4 lg:space-x-6 xl:space-x-8 pl-4 sm:pl-6 lg:pl-0" 
-                             style="animation: slide-infinite 40s linear infinite;">
-                            <!-- First Set of Testimonials -->
-                            <!-- Testimonial 1 -->
-                            <div class="testimonial-card flex-shrink-0 w-72 sm:w-80 lg:w-96 h-56 sm:h-64 lg:h-80 relative group cursor-pointer">
-                                <!-- Futuristic Border -->
-                                <div class="absolute inset-0 rounded-xl sm:rounded-2xl p-[2px] bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                    <div class="relative w-full h-full rounded-xl sm:rounded-2xl bg-gray-900 overflow-hidden">
-                                        
+
+                        <!-- Vertical Loop Testimonials -->
+                        <div class="testimonials-vertical-loop h-96 overflow-hidden relative">
+                            <div class="testimonials-track">
+                                <!-- Testimonial 1 -->
+                                <div class="testimonial-item mb-4">
+                                    <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border-2 border-cyan-500/60 rounded-2xl p-4 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(0,212,255,0.3)] transition-all duration-300">
                                         <!-- Quote Icon -->
-                                        <div class="absolute top-3 sm:top-4 lg:top-6 left-3 sm:left-4 lg:left-6">
-                                            <svg class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-cyan-400/60" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                        <div class="absolute top-2 right-3 opacity-30">
+                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#00d4ff"/>
                                             </svg>
                                         </div>
-                                        
-                                        <!-- Testimonial Content -->
-                                        <div class="p-3 sm:p-4 lg:p-6 pt-12 sm:pt-16 lg:pt-20 h-full flex flex-col justify-between">
-                                            <blockquote class="text-white text-sm sm:text-base lg:text-lg leading-relaxed font-medium mb-3 sm:mb-4 lg:mb-6">
-                                                "Prosigmaka transformed our entire digital infrastructure. Their AI solutions increased our operational efficiency by 40%."
+                                        <div class="relative z-10">
+                                            <blockquote class="text-white text-sm leading-relaxed mb-3">
+                                                "Selama bekerja sama selama 4 tahun terakhir ini kami melihat bahwa pelatihan / program yang diberikan Prosigmaka itu mendukung oprasional / bisnis Yokke, memberikan kontribusi positif dalam artian program-program itu sesuai dengan apa yang di inginkan Yokke. Kami beraharp kerjasamanya bisa berlanjut terus."
                                             </blockquote>
-                                            
-                                            <!-- Client Info -->
-                                            <div class="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-                                                <div class="relative">
-                                                    <div class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-xs sm:text-sm lg:text-base font-bold group-hover:scale-110 transition-transform duration-500">
-                                                        AS
-                                                    </div>
-                                                    <div class="absolute -top-0.5 -right-0.5 lg:-top-1 lg:-right-1 w-3 h-3 lg:w-4 lg:h-4 bg-cyan-400 rounded-full border-2 border-gray-900 animate-pulse"></div>
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-xs font-bold">
+                                                    WM
                                                 </div>
                                                 <div>
-                                                    <h4 class="text-white font-bold text-xs sm:text-sm lg:text-base">Ahmad Sutanto</h4>
-                                                    <p class="text-cyan-400 font-medium text-xs sm:text-sm">CTO, PT Astra International</p>
+                                                    <h4 class="text-white font-bold text-xs">WIDIYA MAHATI</h4>
+                                                    <p class="text-cyan-400 font-medium text-xs">HR HEAD PT MITRA TRANSAKSI INDONESIA</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!-- Hover Effect -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
-                            </div>
-    
-                            <!-- Testimonial 2 -->
-                            <div class="testimonial-card flex-shrink-0 w-72 sm:w-80 lg:w-96 h-56 sm:h-64 lg:h-80 relative group cursor-pointer">
-                                <!-- Futuristic Border -->
-                                <div class="absolute inset-0 rounded-xl sm:rounded-2xl p-[2px] bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                    <div class="relative w-full h-full rounded-xl sm:rounded-2xl bg-gray-900 overflow-hidden">
-                                        
+
+                                <!-- Testimonial 2 -->
+                                <div class="testimonial-item mb-4">
+                                    <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border-2 border-purple-500/60 rounded-2xl p-4 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(192,132,252,0.3)] transition-all duration-300">
                                         <!-- Quote Icon -->
-                                        <div class="absolute top-3 sm:top-4 lg:top-6 left-3 sm:left-4 lg:left-6">
-                                            <svg class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-purple-400/60" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                        <div class="absolute top-2 right-3 opacity-30">
+                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#c084fc"/>
                                             </svg>
                                         </div>
-                                        
-                                        <!-- Testimonial Content -->
-                                        <div class="p-3 sm:p-4 lg:p-6 pt-12 sm:pt-16 lg:pt-20 h-full flex flex-col justify-between">
-                                            <blockquote class="text-white text-sm sm:text-base lg:text-lg leading-relaxed font-medium mb-3 sm:mb-4 lg:mb-6">
-                                                "The corporate training program helped us upskill our entire team. Their LXP solution made learning engaging and measurable."
+                                        <div class="relative z-10">
+                                            <blockquote class="text-white text-sm leading-relaxed mb-3">
+                                                "Pengalaman bekerja sama dengan Prosigmaka sangat positif ya, dari MTI merasa kandidat yang diberikan PT Pro Sigmaka Mandiri sangat cocok ya serta dukungan service aftersalesnya bagus dari prosigmaka dan Sangat puas dengan pelayanannya."
                                             </blockquote>
-                                            
-                                            <!-- Client Info -->
-                                            <div class="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-                                                <div class="relative">
-                                                    <div class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-xs sm:text-sm lg:text-base font-bold group-hover:scale-110 transition-transform duration-500">
-                                                        SR
-                                                    </div>
-                                                    <div class="absolute -top-0.5 -right-0.5 lg:-top-1 lg:-right-1 w-3 h-3 lg:w-4 lg:h-4 bg-purple-400 rounded-full border-2 border-gray-900 animate-pulse"></div>
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-xs font-bold">
+                                                    AT
                                                 </div>
                                                 <div>
-                                                    <h4 class="text-white font-bold text-xs sm:text-sm lg:text-base">Sari Rahayu</h4>
-                                                    <p class="text-purple-400 font-medium text-xs sm:text-sm">Head of HR, Bank Syariah Indonesia</p>
+                                                    <h4 class="text-white font-bold text-xs">ANDREW TASIDJAWA</h4>
+                                                    <p class="text-purple-400 font-medium text-xs">HEAD BACKEND DEVELOPMENT PT MITRA TRANSAKSI INDONESIA</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!-- Hover Effect -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
-                            </div>
-    
-                            <!-- Testimonial 3 -->
-                            <div class="testimonial-card flex-shrink-0 w-72 sm:w-80 lg:w-96 h-56 sm:h-64 lg:h-80 relative group cursor-pointer">
-                                <!-- Futuristic Border -->
-                                <div class="absolute inset-0 rounded-xl sm:rounded-2xl p-[2px] bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                    <div class="relative w-full h-full rounded-xl sm:rounded-2xl bg-gray-900 overflow-hidden">
-                                        
+
+                                <!-- Testimonial 3 -->
+                                <div class="testimonial-item mb-4">
+                                    <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border-2 border-green-500/60 rounded-2xl p-4 hover:border-green-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all duration-300">
                                         <!-- Quote Icon -->
-                                        <div class="absolute top-3 sm:top-4 lg:top-6 left-3 sm:left-4 lg:left-6">
-                                            <svg class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-green-400/60" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                        <div class="absolute top-2 right-3 opacity-30">
+                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#10b981"/>
                                             </svg>
                                         </div>
-                                        
-                                        <!-- Testimonial Content -->
-                                        <div class="p-3 sm:p-4 lg:p-6 pt-12 sm:pt-16 lg:pt-20 h-full flex flex-col justify-between">
-                                            <blockquote class="text-white text-sm sm:text-base lg:text-lg leading-relaxed font-medium mb-3 sm:mb-4 lg:mb-6">
-                                                "Professional service and technical expertise that exceeded our expectations. Their managed services keep our systems running 24/7."
+                                        <div class="relative z-10">
+                                            <blockquote class="text-white text-sm leading-relaxed mb-3">
+                                                "Saya merasa puas dengan training yang diberikan, dikarenakan materinya secara lebih terstuktur dan disampakan dengan jelas. selain itu instuktur yang mengajar juga memiliki kopetensi dibidangnya. saya beserta tim merasa terbantu karena materi yang diberkan sangat relevan dengan apa yang kami hadapi sehari hari didalam pekerjaan."
                                             </blockquote>
-                                            
-                                            <!-- Client Info -->
-                                            <div class="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-                                                <div class="relative">
-                                                    <div class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-xs sm:text-sm lg:text-base font-bold group-hover:scale-110 transition-transform duration-500">
-                                                        DW
-                                                    </div>
-                                                    <div class="absolute -top-0.5 -right-0.5 lg:-top-1 lg:-right-1 w-3 h-3 lg:w-4 lg:h-4 bg-green-400 rounded-full border-2 border-gray-900 animate-pulse"></div>
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-xs font-bold">
+                                                    AE
                                                 </div>
                                                 <div>
-                                                    <h4 class="text-white font-bold text-xs sm:text-sm lg:text-base">Dian Wijaya</h4>
-                                                    <p class="text-green-400 font-medium text-xs sm:text-sm">IT Director, CT Corp Digital</p>
+                                                    <h4 class="text-white font-bold text-xs">ANDREAS EIRISON</h4>
+                                                    <p class="text-green-400 font-medium text-xs">PT KPSG</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!-- Hover Effect -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
-                            </div>
-    
-                            <!-- Testimonial 4 -->
-                            <div class="testimonial-card flex-shrink-0 w-72 sm:w-80 lg:w-96 h-56 sm:h-64 lg:h-80 relative group cursor-pointer">
-                                <!-- Futuristic Border -->
-                                <div class="absolute inset-0 rounded-xl sm:rounded-2xl p-[2px] bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                    <div class="relative w-full h-full rounded-xl sm:rounded-2xl bg-gray-900 overflow-hidden">
-                                        
+
+                                <!-- Duplicate for seamless loop -->
+                                <div class="testimonial-item mb-4">
+                                    <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border-2 border-cyan-500/60 rounded-2xl p-4 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(0,212,255,0.3)] transition-all duration-300">
                                         <!-- Quote Icon -->
-                                        <div class="absolute top-3 sm:top-4 lg:top-6 left-3 sm:left-4 lg:left-6">
-                                            <svg class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-orange-400/60" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                        <div class="absolute top-2 right-3 opacity-30">
+                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#00d4ff"/>
                                             </svg>
                                         </div>
-                                        
-                                        <!-- Testimonial Content -->
-                                        <div class="p-3 sm:p-4 lg:p-6 pt-12 sm:pt-16 lg:pt-20 h-full flex flex-col justify-between">
-                                            <blockquote class="text-white text-sm sm:text-base lg:text-lg leading-relaxed font-medium mb-3 sm:mb-4 lg:mb-6">
-                                                "Incredible ROI from their digital transformation strategy. They helped us modernize legacy systems and improve customer satisfaction."
+                                        <div class="relative z-10">
+                                            <blockquote class="text-white text-sm leading-relaxed mb-3">
+                                                "Selama bekerja sama selama 4 tahun terakhir ini kami melihat bahwa pelatihan / program yang diberikan Prosigmaka itu mendukung oprasional / bisnis Yokke, memberikan kontribusi positif dalam artian program-program itu sesuai dengan apa yang di inginkan Yokke. Kami beraharp kerjasamanya bisa berlanjut terus."
                                             </blockquote>
-                                            
-                                            <!-- Client Info -->
-                                            <div class="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-                                                <div class="relative">
-                                                    <div class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center text-xs sm:text-sm lg:text-base font-bold group-hover:scale-110 transition-transform duration-500">
-                                                        RM
-                                                    </div>
-                                                    <div class="absolute -top-0.5 -right-0.5 lg:-top-1 lg:-right-1 w-3 h-3 lg:w-4 lg:h-4 bg-orange-400 rounded-full border-2 border-gray-900 animate-pulse"></div>
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-xs font-bold">
+                                                    WM
                                                 </div>
                                                 <div>
-                                                    <h4 class="text-white font-bold text-xs sm:text-sm lg:text-base">Rizki Maulana</h4>
-                                                    <p class="text-orange-400 font-medium text-xs sm:text-sm">Digital Lead, BPJS Kesehatan</p>
+                                                    <h4 class="text-white font-bold text-xs">WIDIYA MAHATI</h4>
+                                                    <p class="text-cyan-400 font-medium text-xs">HR HEAD PT MITRA TRANSAKSI INDONESIA</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!-- Hover Effect -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
-                            </div>
-    
-                            <!-- Second Set for Seamless Loop -->
-                            <!-- Testimonial 1 (Duplicate) -->
-                            <div class="testimonial-card flex-shrink-0 w-72 sm:w-80 lg:w-96 h-56 sm:h-64 lg:h-80 relative group cursor-pointer">
-                                <!-- Futuristic Border -->
-                                <div class="absolute inset-0 rounded-xl sm:rounded-2xl p-[2px] bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                    <div class="relative w-full h-full rounded-xl sm:rounded-2xl bg-gray-900 overflow-hidden">
-                                        
+
+                                <div class="testimonial-item mb-4">
+                                    <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border-2 border-purple-500/60 rounded-2xl p-4 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(192,132,252,0.3)] transition-all duration-300">
                                         <!-- Quote Icon -->
-                                        <div class="absolute top-3 sm:top-4 lg:top-6 left-3 sm:left-4 lg:left-6">
-                                            <svg class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-cyan-400/60" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                        <div class="absolute top-2 right-3 opacity-30">
+                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#c084fc"/>
                                             </svg>
                                         </div>
-                                        
-                                        <!-- Testimonial Content -->
-                                        <div class="p-3 sm:p-4 lg:p-6 pt-12 sm:pt-16 lg:pt-20 h-full flex flex-col justify-between">
-                                            <blockquote class="text-white text-sm sm:text-base lg:text-lg leading-relaxed font-medium mb-3 sm:mb-4 lg:mb-6">
-                                                "Prosigmaka transformed our entire digital infrastructure. Their AI solutions increased our operational efficiency by 40%."
+                                        <div class="relative z-10">
+                                            <blockquote class="text-white text-sm leading-relaxed mb-3">
+                                                "Pengalaman bekerja sama dengan Prosigmaka sangat positif ya, dari MTI merasa kandidat yang diberikan PT Pro Sigmaka Mandiri sangat cocok ya serta dukungan service aftersalesnya bagus dari prosigmaka dan Sangat puas dengan pelayanannya."
                                             </blockquote>
-                                            
-                                            <!-- Client Info -->
-                                            <div class="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-                                                <div class="relative">
-                                                    <div class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-xs sm:text-sm lg:text-base font-bold group-hover:scale-110 transition-transform duration-500">
-                                                        AS
-                                                    </div>
-                                                    <div class="absolute -top-0.5 -right-0.5 lg:-top-1 lg:-right-1 w-3 h-3 lg:w-4 lg:h-4 bg-cyan-400 rounded-full border-2 border-gray-900 animate-pulse"></div>
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-xs font-bold">
+                                                    AT
                                                 </div>
                                                 <div>
-                                                    <h4 class="text-white font-bold text-xs sm:text-sm lg:text-base">Ahmad Sutanto</h4>
-                                                    <p class="text-cyan-400 font-medium text-xs sm:text-sm">CTO, PT Astra International</p>
+                                                    <h4 class="text-white font-bold text-xs">ANDREW TASIDJAWA</h4>
+                                                    <p class="text-purple-400 font-medium text-xs">HEAD BACKEND DEVELOPMENT PT MITRA TRANSAKSI INDONESIA</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!-- Hover Effect -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
-                            </div>
-    
-                            <!-- Testimonial 2 (Duplicate) -->
-                            <div class="testimonial-card flex-shrink-0 w-72 sm:w-80 lg:w-96 h-56 sm:h-64 lg:h-80 relative group cursor-pointer">
-                                <!-- Futuristic Border -->
-                                <div class="absolute inset-0 rounded-xl sm:rounded-2xl p-[2px] bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                    <div class="relative w-full h-full rounded-xl sm:rounded-2xl bg-gray-900 overflow-hidden">
-                                        
+
+                                <div class="testimonial-item mb-4">
+                                    <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border-2 border-green-500/60 rounded-2xl p-4 hover:border-green-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all duration-300">
                                         <!-- Quote Icon -->
-                                        <div class="absolute top-3 sm:top-4 lg:top-6 left-3 sm:left-4 lg:left-6">
-                                            <svg class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-purple-400/60" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                                        <div class="absolute top-2 right-3 opacity-30">
+                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#10b981"/>
                                             </svg>
                                         </div>
-                                        
-                                        <!-- Testimonial Content -->
-                                        <div class="p-3 sm:p-4 lg:p-6 pt-12 sm:pt-16 lg:pt-20 h-full flex flex-col justify-between">
-                                            <blockquote class="text-white text-sm sm:text-base lg:text-lg leading-relaxed font-medium mb-3 sm:mb-4 lg:mb-6">
-                                                "The corporate training program helped us upskill our entire team. Their LXP solution made learning engaging and measurable."
+                                        <div class="relative z-10">
+                                            <blockquote class="text-white text-sm leading-relaxed mb-3">
+                                                "Saya merasa puas dengan training yang diberikan, dikarenakan materinya secara lebih terstuktur dan disampakan dengan jelas. selain itu instuktur yang mengajar juga memiliki kopetensi dibidangnya. saya beserta tim merasa terbantu karena materi yang diberkan sangat relevan dengan apa yang kami hadapi sehari hari didalam pekerjaan."
                                             </blockquote>
-                                            
-                                            <!-- Client Info -->
-                                            <div class="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-                                                <div class="relative">
-                                                    <div class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-xs sm:text-sm lg:text-base font-bold group-hover:scale-110 transition-transform duration-500">
-                                                        SR
-                                                    </div>
-                                                    <div class="absolute -top-0.5 -right-0.5 lg:-top-1 lg:-right-1 w-3 h-3 lg:w-4 lg:h-4 bg-purple-400 rounded-full border-2 border-gray-900 animate-pulse"></div>
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-xs font-bold">
+                                                    AE
                                                 </div>
                                                 <div>
-                                                    <h4 class="text-white font-bold text-xs sm:text-sm lg:text-base">Sari Rahayu</h4>
-                                                    <p class="text-purple-400 font-medium text-xs sm:text-sm">Head of HR, Bank Syariah Indonesia</p>
+                                                    <h4 class="text-white font-bold text-xs">ANDREAS EIRISON</h4>
+                                                    <p class="text-green-400 font-medium text-xs">PT KPSG</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!-- Hover Effect -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
-                                </div>
-                            </div>
-    
-                            <!-- Testimonial 3 (Duplicate) -->
-                            <div class="testimonial-card flex-shrink-0 w-72 sm:w-80 lg:w-96 h-56 sm:h-64 lg:h-80 relative group cursor-pointer">
-                                <!-- Futuristic Border -->
-                                <div class="absolute inset-0 rounded-xl sm:rounded-2xl p-[2px] bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                    <div class="relative w-full h-full rounded-xl sm:rounded-2xl bg-gray-900 overflow-hidden">
-                                        
-                                        <!-- Quote Icon -->
-                                        <div class="absolute top-3 sm:top-4 lg:top-6 left-3 sm:left-4 lg:left-6">
-                                            <svg class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-green-400/60" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-                                            </svg>
-                                        </div>
-                                        
-                                        <!-- Testimonial Content -->
-                                        <div class="p-3 sm:p-4 lg:p-6 pt-12 sm:pt-16 lg:pt-20 h-full flex flex-col justify-between">
-                                            <blockquote class="text-white text-sm sm:text-base lg:text-lg leading-relaxed font-medium mb-3 sm:mb-4 lg:mb-6">
-                                                "Professional service and technical expertise that exceeded our expectations. Their managed services keep our systems running 24/7."
-                                            </blockquote>
-                                            
-                                            <!-- Client Info -->
-                                            <div class="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-                                                <div class="relative">
-                                                    <div class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-xs sm:text-sm lg:text-base font-bold group-hover:scale-110 transition-transform duration-500">
-                                                        DW
-                                                    </div>
-                                                    <div class="absolute -top-0.5 -right-0.5 lg:-top-1 lg:-right-1 w-3 h-3 lg:w-4 lg:h-4 bg-green-400 rounded-full border-2 border-gray-900 animate-pulse"></div>
-                                                </div>
-                                                <div>
-                                                    <h4 class="text-white font-bold text-xs sm:text-sm lg:text-base">Dian Wijaya</h4>
-                                                    <p class="text-green-400 font-medium text-xs sm:text-sm">IT Director, CT Corp Digital</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Hover Effect -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <!-- Testimonial 4 (Duplicate) -->
-                            <div class="testimonial-card flex-shrink-0 w-72 sm:w-80 lg:w-96 h-56 sm:h-64 lg:h-80 relative group cursor-pointer">
-                                <!-- Futuristic Border -->
-                                <div class="absolute inset-0 rounded-xl sm:rounded-2xl p-[2px] bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500">
-                                    <div class="relative w-full h-full rounded-xl sm:rounded-2xl bg-gray-900 overflow-hidden">
-                                        
-                                        <!-- Quote Icon -->
-                                        <div class="absolute top-3 sm:top-4 lg:top-6 left-3 sm:left-4 lg:left-6">
-                                            <svg class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-orange-400/60" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-                                            </svg>
-                                        </div>
-                                        
-                                        <!-- Testimonial Content -->
-                                        <div class="p-3 sm:p-4 lg:p-6 pt-12 sm:pt-16 lg:pt-20 h-full flex flex-col justify-between">
-                                            <blockquote class="text-white text-sm sm:text-base lg:text-lg leading-relaxed font-medium mb-3 sm:mb-4 lg:mb-6">
-                                                "Incredible ROI from their digital transformation strategy. They helped us modernize legacy systems and improve customer satisfaction."
-                                            </blockquote>
-                                            
-                                            <!-- Client Info -->
-                                            <div class="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
-                                                <div class="relative">
-                                                    <div class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center text-xs sm:text-sm lg:text-base font-bold group-hover:scale-110 transition-transform duration-500">
-                                                        RM
-                                                    </div>
-                                                    <div class="absolute -top-0.5 -right-0.5 lg:-top-1 lg:-right-1 w-3 h-3 lg:w-4 lg:h-4 bg-orange-400 rounded-full border-2 border-gray-900 animate-pulse"></div>
-                                                </div>
-                                                <div>
-                                                    <h4 class="text-white font-bold text-xs sm:text-sm lg:text-base">Rizki Maulana</h4>
-                                                    <p class="text-orange-400 font-medium text-xs sm:text-sm">Digital Lead, BPJS Kesehatan</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Hover Effect -->
-                                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Duplicate Set -->
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Trust Indicators -->
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div class="text-center mt-16">
-                        <div class="grid grid-cols-3 gap-6 sm:gap-8 items-center">
-                            <!-- Trust Indicator 1 -->
-                            <div class="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-                                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center">
-                                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                </div>
-                                <div class="text-center sm:text-left">
-                                    <p class="text-xl sm:text-2xl font-bold text-white">98%</p>
-                                    <p class="text-sm sm:text-base text-gray-400">Client <br class="inline sm:hidden"> Satisfaction</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Trust Indicator 2 -->
-                            <div class="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-                                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                </div>
-                                <div class="text-center sm:text-left">
-                                    <p class="text-xl sm:text-2xl font-bold text-white">10+</p>
-                                    <p class="text-sm sm:text-base text-gray-400">Years <br class="inline sm:hidden"> Experience</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-                                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
-                                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                                    </svg>
-                                </div>
-                                <div class="text-center sm:text-left">
-                                    <p class="text-xl sm:text-2xl font-bold text-white">10+</p>
-                                    <p class="text-sm sm:text-base text-gray-400">Corporate <br class="inline sm:hidden"> Training</p>
                                 </div>
                             </div>
                         </div>
@@ -2206,7 +1599,7 @@
                             <img src="assets/logo-prosigmaka.png" alt="Prosigmaka Logo" class="h-12">
                         </div>
                         <p class="text-gray-400 leading-relaxed mb-8 max-w-md">
-                            Professional IT consulting company providing comprehensive technology solutions, managed services, and expert resources to help businesses optimize their digital infrastructure since 2019.
+                            Professional IT consulting company providing comprehensive technology solutions, expert consulting services, and dedicated resources to help businesses optimize their digital infrastructure since 2019.
                         </p>
                         
                         <!-- Social Media Links -->
@@ -2261,7 +1654,7 @@
                                     <svg class="w-3 h-3 mr-2 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
-                                    Managed Services
+                                    Corporate Training
                                 </a>
                             </li>
                             <li>
@@ -2319,15 +1712,7 @@
                                     <svg class="w-3 h-3 mr-2 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
-                                    Case Studies
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#testimonials" class="text-gray-400 hover:text-green-400 transition-colors duration-300 flex items-center group text-sm">
-                                    <svg class="w-3 h-3 mr-2 text-green-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                    Testimonials
+                                    Impact & Testimonials
                                 </a>
                             </li>
                             <li>
@@ -2974,40 +2359,6 @@
             background: rgba(17, 24, 39, 0.9);
         }
         
-        /* Managed Services - Green to Emerald like Agent Learning */
-        .managed-card {
-            position: relative;
-        }
-        
-        .managed-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.4) 0%, rgba(16, 185, 129, 0.4) 100%);
-            border-radius: 20px;
-            filter: blur(12px);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: 0;
-        }
-        
-        .managed-card:hover::before {
-            opacity: 0.6;
-        }
-        
-        .managed-card .card-content-large {
-            background: rgba(17, 24, 39, 0.8);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(34, 197, 94, 0.3);
-            position: relative;
-            z-index: 1;
-        }
-        
-        .managed-card:hover .card-content-large {
-            border-color: rgba(34, 197, 94, 0.8);
-            box-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
-            background: rgba(17, 24, 39, 0.9);
-        }
         
         /* AI Solutions - Orange to Red like Agent AI */
         .ai-card {
@@ -3187,10 +2538,6 @@
             box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
         }
         
-        .service-hex[data-service="managed"] .hex-content:hover {
-            box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
-        }
-        
         .service-hex[data-service="ai"] .hex-content:hover {
             box-shadow: 0 0 30px rgba(249, 115, 22, 0.5);
         }
@@ -3358,6 +2705,15 @@
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             33% { transform: translateY(-10px) rotate(2deg); }
             66% { transform: translateY(5px) rotate(-1deg); }
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { 
+                transform: translateY(0px) scale(1); 
+            }
+            50% { 
+                transform: translateY(-8px) scale(1.02); 
+            }
         }
 
         .agent-card:nth-child(1) { animation: float 6s ease-in-out infinite; }
@@ -3750,8 +3106,10 @@
         /* Hero section specific styling */
         #home.fullpage-section {
             min-height: 100vh;
+            height: 100vh;
             padding: 0;
-            padding-top: 4rem;
+            display: flex;
+            flex-direction: column;
         }
         
         /* Hero Robot Image Styling */
@@ -4142,6 +3500,31 @@
             50% {
                 opacity: 1;
             }
+        }
+
+        /* Vertical Loop Testimonials */
+        @keyframes verticalLoop {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        .testimonials-vertical-loop {
+            position: relative;
+            mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, transparent 100%);
+        }
+
+        .testimonials-track {
+            animation: verticalLoop 20s linear infinite;
+            will-change: transform;
+        }
+
+        .testimonials-vertical-loop:hover .testimonials-track {
+            animation-play-state: paused;
         }
         
         .testimonial-card {
@@ -5157,7 +4540,7 @@
             
             // Update active section in navigation menu
             function updateActiveSection() {
-                const sections = ['home', 'clients', 'services', 'ai-agent', 'case-study', 'testimonials'];
+                const sections = ['home', 'clients', 'services', 'ai-agent', 'case-study'];
                 let activeSection = 'home';
                 
                 sections.forEach(sectionId => {
@@ -5345,13 +4728,6 @@
                     features: ['Dedicated Development Teams', 'Staff Augmentation', 'Flexible Engagement Models', 'Technical Expertise Pool'],
                     color: 'purple'
                 },
-                managed: {
-                    title: 'MANAGED SERVICES',
-                    icon: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
-                    description: 'Complete IT infrastructure management and support services with 24/7 monitoring, maintenance, and proactive optimization.',
-                    features: ['24/7 Infrastructure Monitoring', 'Proactive System Maintenance', 'Network & Security Management', 'Performance Optimization'],
-                    color: 'emerald'
-                },
                 ai: {
                     title: 'AI SOLUTIONS',
                     icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
@@ -5487,16 +4863,6 @@
                         { color: 'from-purple-500 to-pink-400', text: 'Technical expertise across all domains' }
                     ]
                 },
-                managed: {
-                    title: 'MANAGED <span class="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent text-glow">SERVICES</span>',
-                    description: 'Comprehensive infrastructure management and operational support with <span class="text-green-400 font-semibold">24/7 monitoring and maintenance</span> to ensure <span class="text-gradient-bold">optimal system performance</span>.',
-                    features: [
-                        { color: 'from-green-400 to-emerald-500', text: 'Proactive infrastructure monitoring and alerts' },
-                        { color: 'from-emerald-500 to-teal-600', text: 'End-to-end system maintenance and updates' },
-                        { color: 'from-teal-600 to-green-500', text: 'Security management and compliance monitoring' },
-                        { color: 'from-green-500 to-emerald-400', text: 'Performance optimization and capacity planning' }
-                    ]
-                },
                 ai: {
                     title: 'AI <span class="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent text-glow">SOLUTIONS</span>',
                     description: 'Cutting-edge artificial intelligence and machine learning solutions that <span class="text-orange-400 font-semibold">automate complex processes</span> and deliver <span class="text-gradient-bold">intelligent business insights</span>.',
@@ -5561,11 +4927,53 @@
                 });
             });
 
+            // Add click handlers to mobile service icons
+            const mobileServiceIcons = document.querySelectorAll('.service-icon-mobile[data-service]');
+            mobileServiceIcons.forEach(icon => {
+                icon.addEventListener('click', () => {
+                    const serviceType = icon.getAttribute('data-service');
+                    const service = currentServiceData[serviceType];
+                    
+                    if (service) {
+                        updateServiceDetails(service);
+                        
+                        // Add visual feedback for mobile icons
+                        const iconCircle = icon.querySelector('div');
+                        iconCircle.style.transform = 'scale(0.9)';
+                        setTimeout(() => {
+                            iconCircle.style.transform = '';
+                        }, 150);
+
+                        // Remove active state from all mobile icons
+                        mobileServiceIcons.forEach(i => i.classList.remove('service-active'));
+                        // Add active state to clicked icon
+                        icon.classList.add('service-active');
+                        
+                        // Also sync with desktop cards
+                        serviceCards.forEach(c => c.classList.remove('service-active'));
+                        const correspondingCard = document.querySelector(`.service-card-futuristic[data-service="${serviceType}"]`);
+                        if (correspondingCard) {
+                            correspondingCard.classList.add('service-active');
+                        }
+                    }
+                });
+
+                // Add hover effect for mobile icons
+                icon.addEventListener('mouseenter', () => {
+                    const iconCircle = icon.querySelector('div');
+                    iconCircle.style.zIndex = '10';
+                });
+
+                icon.addEventListener('mouseleave', () => {
+                    const iconCircle = icon.querySelector('div');
+                    iconCircle.style.zIndex = '';
+                });
+            });
+
             function updateServiceDetails(service) {
                 // Get current service type from the title
                 let serviceType = 'professional'; // default
                 if (service.title.includes('DEDICATED')) serviceType = 'headhunting';
-                else if (service.title.includes('MANAGED')) serviceType = 'managed';
                 else if (service.title.includes('AI ')) serviceType = 'ai';
                 else if (service.title.includes('LEARNING')) serviceType = 'lxp';
                 else if (service.title.includes('CORPORATE')) serviceType = 'training';
@@ -5580,7 +4988,7 @@
                     const glowSpan = serviceTitle.querySelector('.text-glow');
                     if (glowSpan) {
                         // Remove all existing glow classes
-                        glowSpan.classList.remove('glow-professional', 'glow-headhunting', 'glow-managed', 'glow-ai', 'glow-lxp', 'glow-training');
+                        glowSpan.classList.remove('glow-professional', 'glow-headhunting', 'glow-ai', 'glow-lxp', 'glow-training');
                         // Add the appropriate glow class
                         glowSpan.classList.add(`glow-${serviceType}`);
                     }
@@ -5633,7 +5041,23 @@
                 
                 .service-active {
                     transform: scale(1.02) !important;
-                    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4) !important;
+                }
+
+                .service-icon-mobile.service-active > div {
+                    transform: scale(1.1) !important;
+                    border-width: 3px !important;
+                }
+
+                .service-icon-mobile.service-active span {
+                    font-weight: 700 !important;
+                }
+                
+                .service-icon-mobile {
+                    transition: all 0.3s ease;
+                }
+
+                .service-icon-mobile > div {
+                    transition: all 0.3s ease;
                 }
                 
                 .feature-item {
@@ -5658,9 +5082,6 @@
                     text-shadow: 0 0 10px rgba(168, 85, 247, 0.4), 0 0 15px rgba(168, 85, 247, 0.3), 0 0 20px rgba(168, 85, 247, 0.2) !important;
                 }
                 
-                .glow-managed {
-                    text-shadow: 0 0 10px rgba(16, 185, 129, 0.4), 0 0 15px rgba(16, 185, 129, 0.3), 0 0 20px rgba(16, 185, 129, 0.2) !important;
-                }
                 
                 .glow-ai {
                     text-shadow: 0 0 10px rgba(251, 146, 60, 0.4), 0 0 15px rgba(251, 146, 60, 0.3), 0 0 20px rgba(251, 146, 60, 0.2) !important;
@@ -5675,6 +5096,21 @@
                 }
             `;
             document.head.appendChild(serviceTransitionStyles);
+
+            // Initialize default service (Professional Services)
+            const defaultService = currentServiceData.professional;
+            updateServiceDetails(defaultService);
+            
+            // Set initial active state
+            const defaultDesktopCard = document.querySelector('.service-card-futuristic[data-service="professional"]');
+            const defaultMobileIcon = document.querySelector('.service-icon-mobile[data-service="professional"]');
+            
+            if (defaultDesktopCard) {
+                defaultDesktopCard.classList.add('service-active');
+            }
+            if (defaultMobileIcon) {
+                defaultMobileIcon.classList.add('service-active');
+            }
         }
         
         // Enhanced scroll functionality (without indicators)
@@ -5759,6 +5195,153 @@
             // Set initial cursor style
             scrollContainer.style.cursor = 'grab';
         }
+        
+        // Top Navbar Control
+        function initTopNavbar() {
+            const navbar = document.getElementById('top-navbar');
+            
+            // Show navbar after preloader (no need for scroll effects since it's integrated)
+            setTimeout(() => {
+                if (navbar) {
+                    navbar.classList.add('opacity-100');
+                    navbar.classList.remove('opacity-0');
+                }
+            }, 4500); // Show after preloader finishes
+        }
+        
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            
+            if (mobileMenu && menuBtn) {
+                mobileMenu.classList.toggle('hidden');
+                
+                // Toggle hamburger to X icon
+                const menuIcon = menuBtn.querySelector('svg');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+                } else {
+                    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+                }
+            }
+        }
+        
+        // Initialize mobile menu button
+        function initMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+        }
+        
+        // Update active nav link based on current section
+        function updateActiveNavLink() {
+            const sections = ['home', 'clients', 'services', 'ai-agent', 'case-study'];
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            for (const section of sections) {
+                const element = document.getElementById(section);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        currentSection = section;
+                        break;
+                    }
+                }
+            }
+            
+            // Update active states
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').substring(1); // Remove #
+                if (href === currentSection) {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-200');
+                } else {
+                    link.classList.add('text-gray-200');
+                    link.classList.remove('text-white');
+                }
+            });
+        }
+        
+        // Add scroll listener for active nav links
+        window.addEventListener('scroll', updateActiveNavLink);
+        
+        // Initialize navbar and mobile menu
+        initTopNavbar();
+        initMobileMenu();
+        
+        // Global toggle function for mobile menu
+        window.toggleMobileMenu = toggleMobileMenu;
     </script>
+
+    <!-- Floating WhatsApp Chat Button -->
+    <div id="whatsapp-float" class="fixed bottom-6 right-6 z-[100] group">
+        <a href="https://wa.me/6281292787801?text=Hello,%20I'm%20interested%20in%20your%20services" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="flex items-center justify-center w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-110 group-hover:shadow-green-400/30">
+            <!-- WhatsApp Icon SVG -->
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+            
+            <!-- Pulse Animation Ring -->
+            <div class="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-20"></div>
+        </a>
+        
+        <!-- Tooltip -->
+        <div class="absolute right-20 bottom-2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 pointer-events-none">
+            Chat with us on WhatsApp
+            <!-- Arrow -->
+            <div class="absolute right-0 top-1/2 transform translate-x-full -translate-y-1/2">
+                <div class="w-0 h-0 border-l-4 border-l-gray-800 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Styles -->
+    <style>
+        #whatsapp-float {
+            animation: whatsappFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes whatsappFloat {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        
+        #whatsapp-float:hover {
+            animation-play-state: paused;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            #whatsapp-float {
+                bottom: 5rem; /* Above mobile navigation */
+                right: 1rem;
+            }
+            
+            #whatsapp-float a {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+            
+            #whatsapp-float svg {
+                width: 1.75rem;
+                height: 1.75rem;
+            }
+            
+            /* Hide tooltip on mobile */
+            #whatsapp-float .absolute.right-20 {
+                display: none;
+            }
+        }
+    </style>
 </body>
 </html>
