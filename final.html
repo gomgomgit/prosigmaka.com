@@ -1553,7 +1553,7 @@
                 <!-- Chat Interface with Background Integration -->
                 <div class="max-w-5xl mx-auto relative">
                     <!-- Robot Image -->
-                    <div class="absolute top-0 left-0">
+                    <div class="absolute top-0 left-0 hidden sm:block">
                         <img src="assets/photos/robot-r-v2.png" 
                             alt="Robot Background" 
                             class="transform -translate-x-3/4 w-96 h-96 sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] object-contain"
@@ -1563,7 +1563,7 @@
                     <div class="relative bg-transparent">
 
                         <!-- Chat Messages Area -->
-                        <div class="bg-black/20 backdrop-blur-xl border-2 border-purple-500/40 rounded-3xl p-6 sm:p-8 mb-6 shadow-2xl relative hover:border-blue-500/50 transition-all duration-300" id="chat-container" style="box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);">
+                        <div class="bg-black/20 md:backdrop-blur-xl border-2 border-purple-500/40 rounded-3xl p-6 sm:p-8 mb-6 shadow-2xl relative hover:border-blue-500/50 transition-all duration-300" id="chat-container" style="box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);">
                             <!-- Clean Background Pattern -->
                             <div class="absolute inset-0 opacity-10">
                                 <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20"></div>
@@ -1594,7 +1594,7 @@
                             <div class="space-y-4 mb-6 relative z-10 max-h-96 overflow-y-auto" id="chat-messages">
                                 <!-- Welcome Message from AI -->
                                 <div class="flex space-x-3 animate-fadeIn">
-                                    <div class="flex-1 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-cyan-400/20 rounded-3xl rounded-tl-none p-4 shadow-lg">
+                                    <div class="flex-1 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 md:backdrop-blur-sm border border-cyan-400/20 rounded-3xl rounded-tl-none p-4 shadow-lg">
                                         <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
                                             👋 Hello! I'm your ProSigmaka AI Assistant. I can help you learn about our services, answer questions about our solutions, and guide you through our offerings. 
                                             <span class="text-cyan-400 font-semibold">What would you like to know?</span>
@@ -1613,7 +1613,7 @@
 
                                 <!-- AI Response -->
                                 <div class="flex space-x-3 animate-fadeIn" style="animation-delay: 1s;">
-                                    <div class="flex-1 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-cyan-400/20 rounded-3xl rounded-tl-none p-4 shadow-lg">
+                                    <div class="flex-1 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 md:backdrop-blur-sm border border-cyan-400/20 rounded-3xl rounded-tl-none p-4 shadow-lg">
                                         <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
                                             🚀 Great question! We offer comprehensive AI solutions including:
                                             <br><br>
@@ -1638,7 +1638,7 @@
                                         <input 
                                             type="text" 
                                             placeholder="Type your message here..." 
-                                            class="w-full bg-purple-900/30 backdrop-blur-sm border-2 border-purple-500/50 rounded-2xl px-4 py-3 text-white placeholder-purple-200 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30 transition-all duration-300 shadow-lg"
+                                            class="w-full bg-purple-900/30 md:backdrop-blur-sm border-2 border-purple-500/50 rounded-2xl px-4 py-3 text-white placeholder-purple-200 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30 transition-all duration-300 shadow-lg"
                                             id="chat-input"
                                         />
                                         <!-- Typing indicator (hidden by default) -->
@@ -1921,10 +1921,10 @@
     </div> <!-- End of main-content -->
 
     <!-- Floating AI Chat Bot CTA -->
-    <div class="fixed bottom-6 right-6 z-50 floating-ai-bot">
+    <div class="fixed bottom-6 right-6 md:bottom-6 md:right-6 bottom-24 right-4 z-[110] floating-ai-bot">
         <div class="group cursor-pointer flex items-center" onclick="scrollToSection('ai-agent')">
             <!-- CTA Balloon - Positioned to the left -->
-            <div class="relative mr-4 animate-bounce" style="animation-duration: 2s;">
+            <div class="relative mr-4 animate-bounce hidden sm:block" style="animation-duration: 2s;">
                 <div class="relative">
                     <!-- Balloon Background -->
                     <div class="bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-bold px-4 py-2 rounded-full shadow-xl whitespace-nowrap">
@@ -1946,7 +1946,7 @@
                 <div class="absolute -inset-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full opacity-10 animate-ping" style="animation-delay: 0.5s;"></div>
                 
                 <!-- Bot Container -->
-                <div class="relative w-16 h-16 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-125 animate-bounce" style="animation-duration: 2s;">
+                <div class="relative w-16 h-16 md:w-16 md:h-16 w-14 h-14 rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:scale-125 animate-bounce" style="animation-duration: 2s;">
                     <!-- Pala Image with Enhanced Animations -->
                     <img src="assets/photos/pala-v2.png" alt="AI Assistant" class="object-contain drop-shadow-lg" style="animation-duration: 3s;" />
                 </div>
@@ -4104,6 +4104,70 @@
                     opacity: 1;
                     transform: translateX(-50%) translateY(0);
                 }
+            }
+        }
+        
+        /* Floating AI Bot Mobile Adjustments */
+        @media (max-width: 1024px) {
+            .floating-ai-bot {
+                bottom: 6rem !important; /* Above the bottom navigation */
+                right: 1rem !important;
+                z-index: 110 !important;
+            }
+            
+            .floating-ai-bot .group {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            
+            .floating-ai-bot .group > div:first-child {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+                display: none; /* Hide chat balloon on mobile to save space */
+            }
+            
+            .floating-ai-bot .relative:last-child > div:last-child {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .floating-ai-bot {
+                bottom: 5.5rem !important;
+                right: 0.75rem !important;
+            }
+            
+            .floating-ai-bot .relative:last-child > div:last-child {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        
+        /* Chat Mobile Optimizations */
+        @media (max-width: 768px) {
+            #chat-container {
+                background: rgba(0, 0, 0, 0.4) !important;
+                backdrop-filter: none !important;
+                border: 2px solid rgba(168, 85, 247, 0.6) !important;
+            }
+            
+            #chat-container .bg-gradient-to-br {
+                background: rgba(59, 130, 246, 0.15) !important;
+                backdrop-filter: none !important;
+            }
+            
+            #chat-input {
+                background: rgba(147, 51, 234, 0.4) !important;
+                backdrop-filter: none !important;
+                border: 2px solid rgba(147, 51, 234, 0.6) !important;
+            }
+            
+            /* Ensure chat messages have solid backgrounds for readability */
+            .bg-gradient-to-br.from-blue-500\/10 {
+                background: rgba(59, 130, 246, 0.2) !important;
+                backdrop-filter: none !important;
+                border: 1px solid rgba(6, 182, 212, 0.4) !important;
             }
         }
         
