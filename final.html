@@ -1268,31 +1268,41 @@
                 </div>
 
                 <!-- Client Testimonials Section - Bottom -->
-                <div class="flex items-center gap-8">
-                    <!-- Infinite Testimonials Slider -->
-                    <div class="testimonials-infinite-container relative overflow-hidden py-4">
-                        <div class="testimonials-infinite-track flex gap-6" style="animation: infiniteSlide 30s linear infinite; mask: linear-gradient(90deg, transparent 0%, white 15%, white 85%, transparent 100%); -webkit-mask: linear-gradient(90deg, transparent 0%, white 15%, white 85%, transparent 100%);">
+                <div class="flex items-center gap-8 flex-col lg:flex-row">
+                    <!-- Title Section - First on Mobile, Last on Desktop -->
+                    <div class="text-center lg:text-left lg:w-80 xl:w-96 flex-shrink-0 order-1 lg:order-2">
+                        <h2 class="section-title text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl text-ultra-bold text-white mb-4 sm:mb-6 tracking-tighter leading-tight">
+                            Client <span class="bg-gradient-to-r from-purple-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent text-glow">Testimonials</span>
+                        </h2>
+                        <p class="font-inter text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                            What our clients say about us
+                        </p>
+                    </div>
+                    
+                    <!-- Infinite Testimonials Slider - Last on Mobile, First on Desktop -->
+                    <div class="testimonials-infinite-container relative overflow-hidden py-4 w-full lg:flex-1 order-2 lg:order-1">
+                        <div class="testimonials-infinite-track flex gap-4 sm:gap-6" style="animation: infiniteSlide 30s linear infinite; mask: linear-gradient(90deg, transparent 0%, white 15%, white 85%, transparent 100%); -webkit-mask: linear-gradient(90deg, transparent 0%, white 15%, white 85%, transparent 100%);">
                             <!-- Original Testimonials -->
                             <!-- Testimonial 1 -->
-                            <div class="testimonial-card flex-none w-[500px]">
-                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border-2 border-cyan-500/60 rounded-2xl p-5 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(0,212,255,0.3)] transition-all duration-300 h-[280px] flex flex-col justify-between">
+                            <div class="testimonial-card flex-none w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px]">
+                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 md:backdrop-blur-sm border-2 border-cyan-500/60 rounded-2xl p-4 sm:p-5 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(0,212,255,0.3)] transition-all duration-300 h-[240px] sm:h-[260px] md:h-[280px] flex flex-col justify-between">
                                     <!-- Quote Icon -->
                                     <div class="absolute top-3 right-4 opacity-30">
-                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="30" height="30" class="sm:w-[35px] sm:h-[35px] md:w-[40px] md:h-[40px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#00d4ff"/>
                                         </svg>
                                     </div>
                                     <div class="relative z-10 flex-1">
-                                        <blockquote class="text-white text-base leading-relaxed mb-4">
+                                        <blockquote class="text-white text-sm sm:text-base leading-relaxed mb-3 sm:mb-4 pr-8">
                                             "Selama bekerja sama selama 4 tahun terakhir ini kami melihat bahwa pelatihan / program yang diberikan Prosigmaka itu mendukung oprasional / bisnis Yokke, memberikan kontribusi positif dalam artian program-program itu sesuai dengan apa yang di inginkan Yokke."
                                         </blockquote>
                                     </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-sm font-bold">
+                                    <div class="flex items-center space-x-2 sm:space-x-3">
+                                        <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold">
                                             WM
                                         </div>
                                         <div>
-                                            <h4 class="text-white font-bold text-sm">WIDIYA MAHATI</h4>
+                                            <h4 class="text-white font-bold text-xs sm:text-sm">WIDIYA MAHATI</h4>
                                             <p class="text-cyan-400 font-medium text-xs">HR HEAD PT MITRA TRANSAKSI INDONESIA</p>
                                         </div>
                                     </div>
@@ -1300,25 +1310,25 @@
                             </div>
     
                             <!-- Testimonial 2 -->
-                            <div class="testimonial-card flex-none w-[500px]">
-                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border-2 border-purple-500/60 rounded-2xl p-5 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(192,132,252,0.3)] transition-all duration-300 h-[280px] flex flex-col justify-between">
+                            <div class="testimonial-card flex-none w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px]">
+                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 md:backdrop-blur-sm border-2 border-purple-500/60 rounded-2xl p-4 sm:p-5 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(192,132,252,0.3)] transition-all duration-300 h-[240px] sm:h-[260px] md:h-[280px] flex flex-col justify-between">
                                     <!-- Quote Icon -->
                                     <div class="absolute top-3 right-4 opacity-30">
-                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="30" height="30" class="sm:w-[35px] sm:h-[35px] md:w-[40px] md:h-[40px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#c084fc"/>
                                         </svg>
                                     </div>
                                     <div class="relative z-10 flex-1">
-                                        <blockquote class="text-white text-base leading-relaxed mb-4">
+                                        <blockquote class="text-white text-sm sm:text-base leading-relaxed mb-3 sm:mb-4 pr-8">
                                             "Pengalaman bekerja sama dengan Prosigmaka sangat positif ya, dari MTI merasa kandidat yang diberikan PT Pro Sigmaka Mandiri sangat cocok ya serta dukungan service aftersalesnya bagus dari prosigmaka dan Sangat puas dengan pelayanannya."
                                         </blockquote>
                                     </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-sm font-bold">
+                                    <div class="flex items-center space-x-2 sm:space-x-3">
+                                        <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold">
                                             AT
                                         </div>
                                         <div>
-                                            <h4 class="text-white font-bold text-sm">ANDREW TASIDJAWA</h4>
+                                            <h4 class="text-white font-bold text-xs sm:text-sm">ANDREW TASIDJAWA</h4>
                                             <p class="text-purple-400 font-medium text-xs">HEAD BACKEND DEVELOPMENT PT MITRA TRANSAKSI INDONESIA</p>
                                         </div>
                                     </div>
@@ -1326,25 +1336,25 @@
                             </div>
     
                             <!-- Testimonial 3 -->
-                            <div class="testimonial-card flex-none w-[500px]">
-                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-sm border-2 border-green-500/60 rounded-2xl p-5 hover:border-green-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all duration-300 h-[280px] flex flex-col justify-between">
+                            <div class="testimonial-card flex-none w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px]">
+                                <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 md:backdrop-blur-sm border-2 border-green-500/60 rounded-2xl p-4 sm:p-5 hover:border-green-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all duration-300 h-[240px] sm:h-[260px] md:h-[280px] flex flex-col justify-between">
                                     <!-- Quote Icon -->
                                     <div class="absolute top-3 right-4 opacity-30">
-                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg width="30" height="30" class="sm:w-[35px] sm:h-[35px] md:w-[40px] md:h-[40px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" fill="#10b981"/>
                                         </svg>
                                     </div>
                                     <div class="relative z-10 flex-1">
-                                        <blockquote class="text-white text-base leading-relaxed mb-4">
+                                        <blockquote class="text-white text-sm sm:text-base leading-relaxed mb-3 sm:mb-4 pr-8">
                                             "Saya merasa puas dengan training yang diberikan, dikarenakan materinya secara lebih terstuktur dan disampakan dengan jelas. selain itu instuktur yang mengajar juga memiliki kopetensi dibidangnya."
                                         </blockquote>
                                     </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-sm font-bold">
+                                    <div class="flex items-center space-x-2 sm:space-x-3">
+                                        <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold">
                                             AE
                                         </div>
                                         <div>
-                                            <h4 class="text-white font-bold text-sm">ANDREAS EIRISON</h4>
+                                            <h4 class="text-white font-bold text-xs sm:text-sm">ANDREAS EIRISON</h4>
                                             <p class="text-green-400 font-medium text-xs">PT KPSG</p>
                                         </div>
                                     </div>
@@ -1485,14 +1495,6 @@
     
                         <!-- Pause on Hover Overlay -->
                         <div class="testimonials-hover-overlay absolute inset-0 z-10"></div>
-                    </div>
-                    <div class="">
-                        <h2 class="section-title text-4xl sm:text-5xl md:text-6xl text-ultra-bold text-white mb-4 sm:mb-6 tracking-tighter leading-tight">
-                            Client <span class="bg-gradient-to-r from-purple-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent text-glow">Testimonials</span>
-                        </h2>
-                        <p class="font-inter text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-medium leading-relaxed">
-                            What our clients say about us
-                        </p>
                     </div>
                 </div>
             </div>
@@ -3789,7 +3791,41 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(calc(-506px * 4)); /* Move by 4 testimonials (original set) */
+                transform: translateX(calc(-286px * 4)); /* Mobile width + gap */
+            }
+        }
+
+        /* Responsive Animation Adjustments */
+        @media (min-width: 640px) {
+            @keyframes infiniteSlide {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-356px * 4)); /* SM width + gap */
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            @keyframes infiniteSlide {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-406px * 4)); /* MD width + gap */
+                }
+            }
+        }
+
+        @media (min-width: 1024px) {
+            @keyframes infiniteSlide {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-456px * 4)); /* LG width + gap */
+                }
             }
         }
         
@@ -3808,6 +3844,108 @@
         .testimonial-card:nth-child(4) { animation-delay: 0.2s; }
         .testimonial-card:nth-child(5) { animation-delay: 0.25s; }
         .testimonial-card:nth-child(6) { animation-delay: 0.3s; }
+        
+        /* Testimonials Responsive Improvements */
+        @media (max-width: 1024px) {
+            .testimonials-infinite-container {
+                width: 100%;
+                padding: 0.5rem 0;
+            }
+            
+            .testimonials-infinite-track {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-infinite-container {
+                padding: 1rem 0;
+            }
+            
+            .testimonials-infinite-track {
+                gap: 0.75rem;
+                mask: linear-gradient(90deg, transparent 0%, white 10%, white 90%, transparent 100%) !important;
+                -webkit-mask: linear-gradient(90deg, transparent 0%, white 10%, white 90%, transparent 100%) !important;
+            }
+            
+            .testimonial-card {
+                min-width: 280px;
+            }
+            
+            .testimonial-card .relative {
+                background: rgba(17, 24, 39, 0.9) !important;
+                backdrop-filter: none !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .testimonials-infinite-track {
+                animation-duration: 25s !important; /* Slower on mobile for readability */
+            }
+        }
+        
+        /* Global Testimonial Card Responsive Fixes */
+        @media (max-width: 1024px) {
+            .testimonial-card {
+                width: 350px !important;
+            }
+            
+            .testimonial-card .relative {
+                height: 260px !important;
+                padding: 1rem !important;
+            }
+            
+            .testimonial-card svg {
+                width: 35px !important;
+                height: 35px !important;
+            }
+            
+            .testimonial-card blockquote {
+                font-size: 0.875rem !important;
+                margin-bottom: 0.75rem !important;
+                padding-right: 2rem !important;
+            }
+            
+            .testimonial-card .flex.items-center {
+                gap: 0.5rem !important;
+            }
+            
+            .testimonial-card .w-10.h-10 {
+                width: 2rem !important;
+                height: 2rem !important;
+                font-size: 0.75rem !important;
+            }
+            
+            .testimonial-card h4 {
+                font-size: 0.75rem !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-card {
+                width: 300px !important;
+            }
+            
+            .testimonial-card .relative {
+                height: 240px !important;
+                padding: 0.875rem !important;
+            }
+            
+            .testimonial-card svg {
+                width: 30px !important;
+                height: 30px !important;
+            }
+            
+            .testimonial-card blockquote {
+                font-size: 0.8125rem !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .testimonial-card {
+                width: 280px !important;
+            }
+        }
         
         /* Improve testimonial card readability */
         .testimonial-card .bg-gradient-to-t {
