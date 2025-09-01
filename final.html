@@ -182,62 +182,56 @@
                     
                     <!-- Integrated Navigation Bar -->
                     <nav id="top-navbar" class="relative z-50 opacity-100 transition-all duration-500">
-                        <div class="">
-                            <div class="">
-                                <div class="flex items-center justify-between h-16">
-                                    <!-- Logo Section -->
-                                    <div class="">
-                                        <div class="relative">
-                                            <div class="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-orange-500/20 to-orange-600/20 rounded-lg opacity-0 hover:opacity-100 transition-all duration-500 blur-lg"></div>
-                                            <img class="relative z-10 h-10 transform transition-all duration-500 ease-out hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(255,165,0,0.5)] filter hover:brightness-110" 
-                                                src="assets/logo-prosigmaka.png" alt="Prosigmaka Logo" />
-                                        </div>
-                                    </div>
-        
-                                    <!-- Desktop Navigation Menu -->
-                                    <div class="hidden md:flex items-center space-x-8">
-                                        <a href="#home" onclick="scrollToSection('home')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
-                                            <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Home</span>
-                                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                        </a>
-                                        <a href="#clients" onclick="scrollToSection('clients')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
-                                            <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Clients</span>
-                                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                        </a>
-                                        <a href="#services" onclick="scrollToSection('services')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
-                                            <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Services</span>
-                                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                        </a>
-                                        <a href="#case-study" onclick="scrollToSection('case-study')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
-                                            <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Testimonials</span>
-                                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                        </a>
-                                        <a href="#ai-agent" onclick="scrollToSection('ai-agent')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
-                                            <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">AI Agents</span>
-                                            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                        </a>
-                                    </div>
-        
-                                    <!-- Mobile Menu Button -->
-                                    <div class="md:hidden">
-                                        <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none focus:text-white transition-colors duration-300">
-                                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-        
-                                <!-- Mobile Navigation Menu (Hidden by default) -->
-                                <div id="mobile-menu" class="md:hidden hidden pb-4">
-                                    <div class="flex flex-col space-y-2">
-                                        <a href="#home" onclick="scrollToSection('home'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Home</a>
-                                        <a href="#clients" onclick="scrollToSection('clients'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Clients</a>
-                                        <a href="#services" onclick="scrollToSection('services'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Services</a>
-                                        <a href="#case-study" onclick="scrollToSection('case-study'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Testimonials</a>
-                                        <a href="#ai-agent" onclick="scrollToSection('ai-agent'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">AI Agents</a>
-                                    </div>
-                                </div>
+                        <div class="flex items-center justify-between h-16">
+                            <!-- Logo Section -->
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-orange-500/20 to-orange-600/20 rounded-lg opacity-0 hover:opacity-100 transition-all duration-500 blur-lg"></div>
+                                <img class="relative z-10 h-10 transform transition-all duration-500 ease-out hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(255,165,0,0.5)] filter hover:brightness-110" 
+                                    src="assets/logo-prosigmaka.png" alt="Prosigmaka Logo" />
+                            </div>
+
+                            <!-- Desktop Navigation Menu -->
+                            <div class="hidden md:flex items-center space-x-8">
+                                <a href="#home" onclick="scrollToSection('home')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
+                                    <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Home</span>
+                                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
+                                </a>
+                                <a href="#clients" onclick="scrollToSection('clients')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
+                                    <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Clients</span>
+                                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
+                                </a>
+                                <a href="#services" onclick="scrollToSection('services')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
+                                    <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Services</span>
+                                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
+                                </a>
+                                <a href="#case-study" onclick="scrollToSection('case-study')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
+                                    <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Testimonials</span>
+                                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
+                                </a>
+                                <a href="#ai-agent" onclick="scrollToSection('ai-agent')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group">
+                                    <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">AI Agents</span>
+                                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
+                                </a>
+                            </div>
+
+                            <!-- Mobile Menu Button -->
+                            <div class="md:hidden">
+                                <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none focus:text-white transition-colors duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Navigation Menu -->
+                        <div id="mobile-menu" class="md:hidden hidden pb-4">
+                            <div class="flex flex-col space-y-2">
+                                <a href="#home" onclick="scrollToSection('home'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Home</a>
+                                <a href="#clients" onclick="scrollToSection('clients'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Clients</a>
+                                <a href="#services" onclick="scrollToSection('services'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Services</a>
+                                <a href="#case-study" onclick="scrollToSection('case-study'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Testimonials</a>
+                                <a href="#ai-agent" onclick="scrollToSection('ai-agent'); toggleMobileMenu()" class="text-gray-200 hover:text-white px-3 py-2 text-sm font-bold transition-colors duration-300" style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">AI Agents</a>
                             </div>
                         </div>
                     </nav>
@@ -770,12 +764,14 @@
                                             <div class="mb-2">
                                                 <div class="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-500 group-hover:scale-110" style="animation: iconPulse 7s ease-in-out infinite; animation-delay: -1s;">
                                                     <img src="assets/svg/customer-hand.svg" alt="Head Hunting" class="w-8 h-8" style="filter: brightness(0) saturate(100%) invert(74%) sepia(37%) saturate(2610%) hue-rotate(264deg) brightness(92%) contrast(89%);">
-                                </div>
-                            </div>
-                            
-                            <!-- Title -->
-                            <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">HEAD<br><span class="text-purple-400">HUNTING</span></h3>
-                                            </div>                                        <!-- Hover Overlay -->
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Title -->
+                                            <h3 class="text-xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">HEAD<br><span class="text-purple-400">HUNTING</span></h3>
+                                        </div>
+                                        
+                                        <!-- Hover Overlay -->
                                         <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     </div>
                                 </div>
@@ -812,7 +808,7 @@
                                             
                                             <!-- Title -->
                                             <h3 class="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors duration-300">LEARNING<br><span class="text-indigo-400">PLATFORM</span></h3>
-                                            </div>
+                                        </div>
                                         
                                         <!-- Hover Overlay -->
                                         <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -892,7 +888,7 @@
                                             
                                             <!-- Title -->
                                             <h3 class="text-xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">CORPORATE<br><span class="text-yellow-400">TRAINING</span></h3>
-                                            </div>
+                                        </div>
                                         
                                         <!-- Hover Overlay -->
                                         <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-orange-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -3165,17 +3161,13 @@
             }
         }
         
-        /* Section layout - FIXED */
+        /* Section layout */
         .fullpage-section {
-            min-height: 100vh; /* Restore minimum height for proper layout */
-            /* height: 100vh; */ /* Keep this disabled for flexible height */
-            /* scroll-snap-align: start; */
-            /* scroll-snap-stop: always; */
+            min-height: 100vh;
             display: flex;
-            /* flex-direction: column; */
             align-items: center;
             position: relative;
-            padding: 2rem 0; /* Reduce padding for better spacing */
+            padding: 2rem 0;
         }
         
         /* Hero section specific styling */
@@ -3195,20 +3187,18 @@
         
         /* Hero Content Responsive Layout */
         @media (max-width: 640px) {
-            /* Show robot on mobile but with reduced opacity and translateX */
             .hero-robot-img {
                 display: block !important;
                 opacity: 0.9;
                 transform: translateX(30%);
             }
             
-            /* Adjust content width on mobile */
             .text-left.space-y-8 {
                 max-width: 85% !important;
             }
         }
 
-        /* Tablet Layout - translateX for tablet devices */
+        /* Tablet Layout */
         @media (min-width: 641px) and (max-width: 1023px) {
             .hero-robot-img {
                 transform: translateX(30%);
@@ -3314,19 +3304,6 @@
         .testimonial-card {
             transform: translateZ(0);
             backface-visibility: hidden;
-        }
-        
-        @keyframes float-medium {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-15px) rotate(5deg); }
-            66% { transform: translateY(-5px) rotate(-5deg); }
-        }
-        
-        @keyframes float-fast {
-            0%, 100% { transform: translateY(0px) translateX(0px); }
-            25% { transform: translateY(-8px) translateX(3px); }
-            50% { transform: translateY(-15px) translateX(0px); }
-            75% { transform: translateY(-8px) translateX(-3px); }
         }
         
         /* Floating Shapes */
@@ -3687,20 +3664,17 @@
             filter: brightness(1.05);
         }
         
-        /* Ensure consistent card layout without fixed height */
         .case-study-card-enhanced > div {
-            min-height: 280px; /* Minimum height for desktop */
+            min-height: 280px;
         }
         
         @media (min-width: 1024px) {
             .case-study-card-enhanced > div {
-                min-height: 320px; /* Slightly larger on desktop */
+                min-height: 320px;
             }
         }
         
-        /* Carousel container adjustment for dynamic heights */
         .success-stories-carousel {
-            /* Allow height to adjust based on content */
             height: auto !important;
         }
         
@@ -3822,22 +3796,19 @@
                 width: 100% !important;
             }
             
-            /* Better content flow on mobile - removed fixed height */
             .case-study-card-enhanced > div {
                 display: flex !important;
                 flex-direction: column !important;
                 justify-content: space-between !important;
                 min-height: auto !important;
-                padding-bottom: 1.5rem !important; /* Ensure bottom spacing */
+                padding-bottom: 1.5rem !important;
             }
             
-            /* Ensure flex-1 sections have proper spacing */
             .case-study-card-enhanced .flex-1 {
                 flex-grow: 1 !important;
                 margin-bottom: 1rem !important;
             }
             
-            /* Optimize company header spacing */
             .case-study-card-enhanced .flex.items-center.mb-2 {
                 margin-bottom: 0.75rem !important;
                 align-items: flex-start !important;
@@ -3933,7 +3904,6 @@
             }
         }
         
-        /* Global Testimonial Card Responsive Fixes */
         @media (max-width: 1024px) {
             .testimonial-card {
                 width: 350px !important;
@@ -6179,9 +6149,6 @@
                     } else {
                         successStoriesTrack.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
                     }
-                    
-                    // Debug log for development (can be removed in production)
-                    console.log(`Carousel: Index ${successCurrentIndex}, Screen width: ${window.innerWidth}px, Translate: ${translateX}%`);
                 }
                 
                 // Auto-play success stories with responsive timing
