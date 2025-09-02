@@ -1800,6 +1800,13 @@
             word-spacing: 1.2rem;
         }
         
+        /* Mobile word-spacing adjustment for hero title */
+        @media (max-width: 640px) {
+            .hero-title {
+                word-spacing: 0.7rem;
+            }
+        }
+        
         .section-title {
             font-family: 'Inter', sans-serif;
             font-weight: 700;
@@ -3195,20 +3202,7 @@
             overflow-y: scroll;
             overflow-x: hidden;
         }
-        
-        /* Responsive typed text width */
-        @media (max-width: 480px) {
-            #typed-text {
-                min-width: 150px !important;
-            }
-        }
-        
-        @media (max-width: 320px) {
-            #typed-text {
-                min-width: 120px !important;
-            }
-        }
-        
+
         /* Section layout */
         .fullpage-section {
             min-height: 100vh;
