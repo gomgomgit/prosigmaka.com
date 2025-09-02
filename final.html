@@ -4259,7 +4259,6 @@
             }
             
             .testimonial-card .relative {
-                height: 260px !important;
                 padding: 1rem !important;
             }
             
@@ -4294,7 +4293,6 @@
             }
             
             .testimonial-card .relative {
-                height: 240px !important;
                 padding: 0.875rem !important;
             }
             
@@ -5817,7 +5815,7 @@
         function createTestimonialHTML(testimonial) {
             return `
                 <div class="testimonial-card flex-none w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px]">
-                    <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 md:backdrop-blur-sm border-2 ${testimonial.borderColor} rounded-2xl p-4 sm:p-5 ${testimonial.hoverColor} ${testimonial.shadowColor} transition-all duration-300 h-[240px] sm:h-[260px] md:h-[280px] flex flex-col justify-between">
+                    <div class="relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 md:backdrop-blur-sm border-2 ${testimonial.borderColor} rounded-2xl p-4 sm:p-5 ${testimonial.hoverColor} ${testimonial.shadowColor} transition-all duration-300 min-h-[240px] sm:min-h-[260px] md:min-h-[280px] flex flex-col justify-between">
                         <!-- Quote Icon -->
                         <div class="absolute top-3 right-4 opacity-30">
                             <svg width="30" height="30" class="sm:w-[35px] sm:h-[35px] md:w-[40px] md:h-[40px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5829,8 +5827,8 @@
                                 "${testimonial.quote}"
                             </blockquote>
                         </div>
-                        <div class="flex items-center space-x-2 sm:space-x-3">
-                            <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br ${testimonial.gradientFrom} ${testimonial.gradientTo} rounded-full flex items-center justify-center text-xs sm:text-sm font-bold">
+                        <div class="flex items-center space-x-2 sm:space-x-3 mt-auto">
+                            <div class="w-8 h-8 sm:w-10 sm:h-10 shrink-0 bg-gradient-to-br ${testimonial.gradientFrom} ${testimonial.gradientTo} rounded-full flex items-center justify-center text-xs sm:text-sm font-bold">
                                 ${testimonial.initials}
                             </div>
                             <div>
@@ -5911,6 +5909,66 @@
             `;
             document.head.appendChild(style);
         }
+
+        // Function to equalize testimonial card heights
+        function equalizeTestimonialHeights() {
+            // Wait for DOM to be fully rendered
+            setTimeout(() => {
+                const testimonialCards = document.querySelectorAll('.testimonial-card > div');
+                if (testimonialCards.length === 0) return;
+
+                // Reset heights first
+                testimonialCards.forEach(card => {
+                    card.style.height = 'auto';
+                });
+
+                // Get all unique testimonials (excluding duplicates from infinite scroll)
+                const uniqueCards = Array.from(testimonialCards).slice(0, testimonialsData.length);
+                
+                // Calculate the maximum height needed
+                let maxHeight = 0;
+                uniqueCards.forEach(card => {
+                    const cardHeight = card.offsetHeight;
+                    if (cardHeight > maxHeight) {
+                        maxHeight = cardHeight;
+                    }
+                });
+
+                // Apply the maximum height to all cards (including duplicates)
+                testimonialCards.forEach(card => {
+                    card.style.height = `${maxHeight}px`;
+                });
+
+                // Responsive height adjustments
+                const handleResize = () => {
+                    // Reset heights
+                    testimonialCards.forEach(card => {
+                        card.style.height = 'auto';
+                    });
+
+                    // Recalculate maximum height
+                    let newMaxHeight = 0;
+                    uniqueCards.forEach(card => {
+                        const cardHeight = card.offsetHeight;
+                        if (cardHeight > newMaxHeight) {
+                            newMaxHeight = cardHeight;
+                        }
+                    });
+
+                    // Reapply equalized height
+                    testimonialCards.forEach(card => {
+                        card.style.height = `${newMaxHeight}px`;
+                    });
+                };
+
+                // Add resize listener with debouncing
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(handleResize, 250);
+                });
+            }, 100);
+        }
     </script>
 
     <!-- Initialize Hexagonal Services Animation -->
@@ -5920,6 +5978,7 @@
             initializeScrollEnhancements();
             initializeHexagonalServices();
             generateTestimonials(); // Generate dynamic testimonials
+            equalizeTestimonialHeights(); // Equalize card heights
             initializeServiceCards(); // Add new function call
         });
         
