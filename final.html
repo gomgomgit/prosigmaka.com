@@ -1526,7 +1526,7 @@
         </section>
         
         <!-- Footer Section -->
-        <footer class="relative overflow-hidden bg-gradient-to-br from-gray-950 via-blue-950/50 to-purple-950/50">
+        <footer id="footer" class="relative overflow-hidden bg-gradient-to-br from-gray-950 via-blue-950/50 to-purple-950/50">
             <!-- Animated Background Pattern -->
             <div class="absolute inset-0 opacity-5">
                 <div class="absolute inset-0" style="background-image: 
@@ -5374,23 +5374,38 @@
             // Update active section in navigation menu
             function updateActiveSection() {
                 const sections = ['home', 'clients', 'services', 'ai-agent', 'case-study'];
+                const footer = document.getElementById('footer');
                 let activeSection = 'home';
+                let isInFooter = false;
                 
-                sections.forEach(sectionId => {
-                    const section = document.getElementById(sectionId);
-                    if (section) {
-                        const rect = section.getBoundingClientRect();
-                        // Check if section is in viewport (at least 50% visible)
-                        if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
-                            activeSection = sectionId;
-                        }
+                // Check if footer is visible in viewport
+                if (footer) {
+                    const footerRect = footer.getBoundingClientRect();
+                    // If footer is significantly visible (more than 30% of viewport height)
+                    if (footerRect.top < window.innerHeight * 0.7) {
+                        isInFooter = true;
                     }
-                });
+                }
+                
+                // Only check sections if not in footer
+                if (!isInFooter) {
+                    sections.forEach(sectionId => {
+                        const section = document.getElementById(sectionId);
+                        if (section) {
+                            const rect = section.getBoundingClientRect();
+                            // Check if section is in viewport (at least 50% visible)
+                            if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
+                                activeSection = sectionId;
+                            }
+                        }
+                    });
+                }
                 
                 // Update active state in navigation
                 sectionNavItems.forEach(item => {
                     item.classList.remove('active');
-                    if (item.dataset.section === activeSection) {
+                    // Only add active class if not in footer
+                    if (!isInFooter && item.dataset.section === activeSection) {
                         item.classList.add('active');
                     }
                 });
@@ -6589,15 +6604,30 @@
         function updateActiveNavLink() {
             const sections = ['home', 'clients', 'services', 'ai-agent', 'case-study'];
             const navLinks = document.querySelectorAll('.nav-link');
+            const footer = document.getElementById('footer');
             
             let currentSection = '';
-            for (const section of sections) {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.top <= 100 && rect.bottom >= 100) {
-                        currentSection = section;
-                        break;
+            let isInFooter = false;
+            
+            // Check if footer is visible in viewport
+            if (footer) {
+                const footerRect = footer.getBoundingClientRect();
+                // If footer is significantly visible (more than 30% of viewport height)
+                if (footerRect.top < window.innerHeight * 0.7) {
+                    isInFooter = true;
+                }
+            }
+            
+            // Only check sections if not in footer
+            if (!isInFooter) {
+                for (const section of sections) {
+                    const element = document.getElementById(section);
+                    if (element) {
+                        const rect = element.getBoundingClientRect();
+                        if (rect.top <= 100 && rect.bottom >= 100) {
+                            currentSection = section;
+                            break;
+                        }
                     }
                 }
             }
@@ -6605,7 +6635,8 @@
             // Update active states
             navLinks.forEach(link => {
                 const href = link.getAttribute('href').substring(1); // Remove #
-                if (href === currentSection) {
+                // Only add active class if not in footer and matches current section
+                if (!isInFooter && href === currentSection) {
                     link.classList.add('text-white');
                     link.classList.remove('text-gray-200');
                 } else {
