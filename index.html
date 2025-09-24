@@ -187,10 +187,10 @@
                                     <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Testimonials</span>
                                     <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
                                 </a>
-                                <!-- <a href="#ai-agent" onclick="scrollToSection('ai-agent')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group" aria-label="Navigate to AI Agents section">
+                                <a href="#ai-agent" onclick="scrollToSection('ai-agent')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group" aria-label="Navigate to AI Agents section">
                                     <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">AI Agents</span>
                                     <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                </a> -->
+                                </a>
                             </div>
 
                             <!-- Mobile Menu Button -->
@@ -1034,7 +1034,7 @@
             </div>
             
             <!-- AI Agents -->
-            <div class="section-nav-item" style="display: none" onclick="scrollToSection('ai-agent')" data-section="ai-agent">
+            <div class="section-nav-item" onclick="scrollToSection('ai-agent')" data-section="ai-agent">
                 <!-- AI Agent Icon with Simple Design -->
                 <img class="nav-icon w-6 h-6 filter brightness-0 invert" src="assets/svg-menu/bot.svg" alt="AI Agent" />
                 <div class="nav-label">AI Agent</div>
@@ -1293,7 +1293,7 @@
         </section>
 
         <!-- AI Agent Section -->
-        <section id="ai-agent" class="fullpage-section relative overflow-hidden" style="display: none;">
+        <section id="ai-agent" class="fullpage-section relative overflow-hidden">
             <!-- Bold Featured Background - Clean & Eye-Catching -->
             <div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900"></div>
             
@@ -1598,14 +1598,14 @@
                                     Impact & Testimonials
                                 </a>
                             </li>
-                            <!-- <li>
+                            <li>
                                 <a href="#ai-agent" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300 flex items-center group text-sm">
                                     <svg class="w-3 h-3 mr-2 text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                     AI Agents
                                 </a>
-                            </li> -->
+                            </li>
                         </ul>
                     </div>
                     
@@ -1680,7 +1680,7 @@
     </div> <!-- End of main-content -->
 
     <!-- Floating AI Chat Bot CTA -->
-    <div class="hidden bottom-6 right-6 md:bottom-6 md:right-6 bottom-24 right-4 z-[110] floating-ai-bot">
+    <div class="fixed bottom-6 right-6 md:bottom-6 md:right-6 z-[110] floating-ai-bot">
         <div class="group cursor-pointer flex items-center" onclick="scrollToSection('ai-agent')">
             <!-- CTA Balloon - Positioned to the left -->
             <div class="relative mr-4 animate-bounce hidden sm:block" style="animation-duration: 2s;">
