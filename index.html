@@ -5063,173 +5063,6 @@
             threshold: 0.5
         });
         
-        // AI Agent Interaction Functions
-        function initAIAgentInteractions() {
-            // Add click handlers for AI agent cards
-            const agentCards = document.querySelectorAll('.agent-card');
-            const chatButtons = document.querySelectorAll('.agent-card button');
-            
-            agentCards.forEach((card, index) => {
-                // Add hover sound effect (optional)
-                card.addEventListener('mouseenter', () => {
-                    card.style.transform = 'translateY(-10px) scale(1.05)';
-                });
-                
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = '';
-                });
-                
-                // Add click to card effect
-                card.addEventListener('click', (e) => {
-                    if (!e.target.closest('button')) {
-                        // Simulate button click if not clicking the button directly
-                        const button = card.querySelector('button');
-                        if (button) {
-                            button.click();
-                        }
-                    }
-                });
-            });
-            
-            // Chat button handlers
-            chatButtons.forEach((button, index) => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const agentNames = ['Sophia', 'Maya 3D', 'Pixel', 'WA Assistant'];
-                    const agentName = agentNames[index] || 'AI Agent';
-                    
-                    // Show confirmation with modern alert
-                    showAIAgentModal(agentName, index);
-                });
-            });
-        }
-        
-        // Modern AI Agent Modal
-        function showAIAgentModal(agentName, agentIndex) {
-            // Create modal backdrop
-            const modal = document.createElement('div');
-            modal.className = 'fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4';
-            modal.style.animation = 'fadeIn 0.3s ease-out';
-            
-            // Create modal content
-            const modalContent = document.createElement('div');
-            modalContent.className = 'bg-gray-900 border border-gray-700 rounded-2xl p-8 max-w-md w-full text-center transform';
-            modalContent.style.animation = 'slideInUp 0.3s ease-out';
-            
-            // Modal HTML
-            modalContent.innerHTML = `
-                <div class="mb-6">
-                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
-                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">Connect with ${agentName}</h3>
-                    <p class="text-gray-400">You're about to start a conversation with our AI agent</p>
-                </div>
-                
-                <div class="flex gap-4">
-                    <button onclick="startAIChat('${agentName}', '${agentIndex}')" class="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-                        Start Chat
-                    </button>
-                    <button onclick="closeAIModal()" class="flex-1 bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-                        Cancel
-                    </button>
-                </div>
-            `;
-            
-            modal.appendChild(modalContent);
-            document.body.appendChild(modal);
-            
-            // Close on backdrop click
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeAIModal();
-                }
-            });
-            
-            // Store modal reference
-            window.currentAIModal = modal;
-        }
-        
-        // Close AI Modal
-        function closeAIModal() {
-            const modal = window.currentAIModal;
-            if (modal) {
-                modal.style.animation = 'fadeOut 0.3s ease-out';
-                setTimeout(() => {
-                    document.body.removeChild(modal);
-                    window.currentAIModal = null;
-                }, 300);
-            }
-        }
-        
-        // Start AI Chat (placeholder - can be integrated with actual chat system)
-        function startAIChat(agentName, agentIndex) {
-            closeAIModal();
-            
-            // Show chat starting notification
-            const notification = document.createElement('div');
-            notification.className = 'fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform transition-all duration-300';
-            notification.innerHTML = `
-                <div class="flex items-center gap-3">
-                    <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                    <span class="font-semibold">Connecting to ${agentName}...</span>
-                </div>
-            `;
-            notification.style.transform = 'translateX(100%)';
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.transform = 'translateX(0)';
-            }, 100);
-            
-            // Auto remove notification
-            setTimeout(() => {
-                notification.style.transform = 'translateX(100%)';
-                setTimeout(() => {
-                    if (document.body.contains(notification)) {
-                        document.body.removeChild(notification);
-                    }
-                }, 300);
-            }, 3000);
-            
-            // Here you can integrate with actual chat widget or redirect to chat page
-        }
-        
-        // Add CSS animations for modal
-        const modalStyles = document.createElement('style');
-        modalStyles.textContent = `
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-            
-            @keyframes fadeOut {
-                from { opacity: 1; }
-                to { opacity: 0; }
-            }
-            
-            @keyframes slideInUp {
-                from { 
-                    opacity: 0; 
-                    transform: translateY(30px) scale(0.95); 
-                }
-                to { 
-                    opacity: 1; 
-                    transform: translateY(0) scale(1); 
-                }
-            }
-        `;
-        document.head.appendChild(modalStyles);
-        
-        // Global functions for modal (accessible from onclick handlers)
-        window.startAIChat = startAIChat;
-        window.closeAIModal = closeAIModal;
-        
         // Section Navigation Control
         function initSectionNavigation() {
             const sectionNavItems = document.querySelectorAll('.section-nav-item');
@@ -6538,11 +6371,6 @@
                     <div class="flex-1 max-w-xs sm:max-w-sm bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rounded-tr-none p-4 shadow-lg">
                         <p class="text-white text-sm sm:text-base">${message}</p>
                     </div>
-                    <div class="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                    </div>
                 `;
                 chatMessages.appendChild(messageDiv);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -6552,11 +6380,6 @@
                 const messageDiv = document.createElement('div');
                 messageDiv.className = 'flex space-x-3 animate-fadeIn';
                 messageDiv.innerHTML = `
-                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
                     <div class="flex-1 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-cyan-400/20 rounded-2xl rounded-tl-none p-4 shadow-lg">
                         <p class="text-gray-200 text-sm sm:text-base leading-relaxed">${message}</p>
                     </div>
@@ -6565,38 +6388,306 @@
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             }
             
-            function sendMessage() {
+            // Configuration for API Integration
+            const API_CONFIG = {
+                // Production API endpoint
+                endpoint: 'https://api.prosigmaka.com/chat', // Ganti dengan URL API Anda
+                
+                // Development/Local API endpoint (uncomment for local testing)
+                // endpoint: 'http://localhost:3000/api/chat',
+                
+                // API Key (sebaiknya disimpan di environment variable)
+                apiKey: 'YOUR_API_KEY_HERE', // Ganti dengan API key Anda
+                
+                // Request timeout in milliseconds
+                timeout: 30000,
+                
+                // Maximum retry attempts
+                maxRetries: 3,
+                
+                // Retry delay in milliseconds
+                retryDelay: 1000
+            };
+
+            // Enhanced sendMessage function with API integration
+            async function sendMessage() {
                 const message = chatInput.value.trim();
-                if (!message) return;
+                
+                // Input validation
+                if (!message) {
+                    showErrorMessage('Please enter a message');
+                    return;
+                }
+                
+                if (message.length > 1000) {
+                    showErrorMessage('Message is too long. Please keep it under 1000 characters.');
+                    return;
+                }
+                
+                // Check if previous request is still processing
+                if (sendButton.disabled) {
+                    return;
+                }
                 
                 // Add user message to chat
                 addUserMessage(message);
                 
-                // Clear input and show typing indicator
+                // Clear input and prepare UI for response
                 chatInput.value = '';
-                typingIndicator.classList.remove('hidden');
-                sendButton.disabled = true;
+                showTypingIndicator();
+                disableChatInput();
                 
-                // Simulate AI response delay
-                setTimeout(() => {
-                    typingIndicator.classList.add('hidden');
-                    sendButton.disabled = false;
+                try {
+                    // Call API with retry mechanism
+                    const response = await callChatAPI(message);
                     
-                    // Find appropriate response
-                    let response = aiResponses.default;
-                    const lowerMessage = message.toLowerCase();
-                    
-                    for (const [key, value] of Object.entries(aiResponses)) {
-                        if (lowerMessage.includes(key)) {
-                            response = value;
-                            break;
+                    // Handle successful response
+                    if (response && response.message) {
+                        addAIMessage(response.message);
+                        
+                        // Optional: Handle additional response data
+                        if (response.suggestions) {
+                            addSuggestionButtons(response.suggestions);
                         }
+                        
+                        if (response.metadata) {
+                            handleResponseMetadata(response.metadata);
+                        }
+                    } else {
+                        // Handle empty or invalid response
+                        addAIMessage(getDefaultResponse(message));
                     }
                     
-                    // Add AI response to chat
-                    addAIMessage(response);
+                } catch (error) {
+                    console.error('Chat API Error:', error);
+                    handleChatError(error, message);
+                } finally {
+                    // Always clean up UI state
+                    hideTypingIndicator();
+                    enableChatInput();
+                }
+            }
+
+            // API call function with retry mechanism
+            async function callChatAPI(message, retryCount = 0) {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+                
+                try {
+                    const requestBody = {
+                        message: message,
+                        timestamp: new Date().toISOString(),
+                        sessionId: getOrCreateSessionId(),
+                        userAgent: navigator.userAgent,
+                        // Add additional context if needed
+                        context: {
+                            page: 'homepage',
+                            section: 'ai-chat'
+                        }
+                    };
                     
-                }, Math.random() * 1000 + 1500); // Random delay 1.5-2.5 seconds
+                    const response = await fetch(API_CONFIG.endpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${API_CONFIG.apiKey}`,
+                            'X-Requested-With': 'XMLHttpRequest'
+                        },
+                        body: JSON.stringify(requestBody),
+                        signal: controller.signal
+                    });
+                    
+                    clearTimeout(timeoutId);
+                    
+                    // Check if response is ok
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+                    
+                    // Parse JSON response
+                    const data = await response.json();
+                    
+                    // Validate response structure
+                    if (!data || typeof data !== 'object') {
+                        throw new Error('Invalid response format');
+                    }
+                    
+                    return data;
+                    
+                } catch (error) {
+                    clearTimeout(timeoutId);
+                    
+                    // Handle different error types
+                    if (error.name === 'AbortError') {
+                        throw new Error('Request timed out');
+                    }
+                    
+                    if (error.name === 'TypeError' && error.message.includes('Failed to fetch')) {
+                        throw new Error('Network connection failed');
+                    }
+                    
+                    // Retry mechanism for recoverable errors
+                    if (retryCount < API_CONFIG.maxRetries && isRetryableError(error)) {
+                        console.warn(`API call failed, retrying... (${retryCount + 1}/${API_CONFIG.maxRetries})`);
+                        await new Promise(resolve => setTimeout(resolve, API_CONFIG.retryDelay));
+                        return await callChatAPI(message, retryCount + 1);
+                    }
+                    
+                    throw error;
+                }
+            }
+
+            // Check if error is retryable
+            function isRetryableError(error) {
+                const retryableErrors = [
+                    'Network connection failed',
+                    'Request timed out',
+                    'HTTP 500',
+                    'HTTP 502',
+                    'HTTP 503',
+                    'HTTP 504'
+                ];
+                
+                return retryableErrors.some(errorType => 
+                    error.message.includes(errorType)
+                );
+            }
+
+            // Handle API errors with appropriate user feedback
+            function handleChatError(error, originalMessage) {
+                let errorMessage = 'Maaf, terjadi kesalahan. Silakan coba lagi.';
+                
+                if (error.message.includes('timed out')) {
+                    errorMessage = 'Koneksi timeout. Silakan periksa koneksi internet Anda dan coba lagi.';
+                } else if (error.message.includes('Network connection failed')) {
+                    errorMessage = 'Tidak dapat terhubung ke server. Silakan periksa koneksi internet Anda.';
+                } else if (error.message.includes('HTTP 429')) {
+                    errorMessage = 'Terlalu banyak permintaan. Silakan tunggu beberapa saat sebelum mencoba lagi.';
+                } else if (error.message.includes('HTTP 401') || error.message.includes('HTTP 403')) {
+                    errorMessage = 'Sesi Anda telah berakhir. Silakan refresh halaman.';
+                }
+                
+                // Show error message to user
+                addErrorMessage(errorMessage);
+                
+                // Optional: Provide fallback response
+                setTimeout(() => {
+                    addAIMessage(getDefaultResponse(originalMessage));
+                }, 2000);
+            }
+
+            // Get or create session ID for conversation tracking
+            function getOrCreateSessionId() {
+                let sessionId = localStorage.getItem('chat_session_id');
+                
+                if (!sessionId) {
+                    sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                    localStorage.setItem('chat_session_id', sessionId);
+                }
+                
+                return sessionId;
+            }
+
+            // Get default response for fallback scenarios
+            function getDefaultResponse(message) {
+                const lowerMessage = message.toLowerCase();
+                
+                // Find appropriate response from local data
+                for (const [key, value] of Object.entries(aiResponses)) {
+                    if (lowerMessage.includes(key)) {
+                        return value;
+                    }
+                }
+                
+                return aiResponses.default;
+            }
+
+            // UI Helper Functions
+            function showTypingIndicator() {
+                typingIndicator.classList.remove('hidden');
+            }
+
+            function hideTypingIndicator() {
+                typingIndicator.classList.add('hidden');
+            }
+
+            function disableChatInput() {
+                sendButton.disabled = true;
+                chatInput.disabled = true;
+                chatInput.placeholder = 'Menunggu respons...';
+            }
+
+            function enableChatInput() {
+                sendButton.disabled = false;
+                chatInput.disabled = false;
+                chatInput.placeholder = 'Tanyakan tentang layanan AI kami...';
+                chatInput.focus();
+            }
+
+            function showErrorMessage(message) {
+                // Create temporary error display
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'fixed top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg z-50';
+                errorDiv.textContent = message;
+                document.body.appendChild(errorDiv);
+                
+                setTimeout(() => {
+                    errorDiv.remove();
+                }, 3000);
+            }
+
+            function addErrorMessage(message) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'flex space-x-3 animate-fadeIn';
+                messageDiv.innerHTML = `
+                    <div class="flex-1 bg-gradient-to-br from-red-500/10 to-red-600/10 backdrop-blur-sm border border-red-400/20 rounded-2xl rounded-tl-none p-4 shadow-lg">
+                        <p class="text-red-300 text-sm sm:text-base leading-relaxed">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>
+                            ${message}
+                        </p>
+                    </div>
+                `;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // Add suggestion buttons (optional feature)
+            function addSuggestionButtons(suggestions) {
+                if (!suggestions || !Array.isArray(suggestions)) return;
+                
+                const suggestionsDiv = document.createElement('div');
+                suggestionsDiv.className = 'flex flex-wrap gap-2 mt-3 animate-fadeIn';
+                
+                suggestions.forEach(suggestion => {
+                    const button = document.createElement('button');
+                    button.className = 'px-3 py-1 text-xs bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 hover:bg-cyan-500/30 transition-all duration-300';
+                    button.textContent = suggestion;
+                    button.onclick = () => {
+                        chatInput.value = suggestion;
+                        sendMessage();
+                    };
+                    suggestionsDiv.appendChild(button);
+                });
+                
+                chatMessages.appendChild(suggestionsDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // Handle response metadata (optional feature)
+            function handleResponseMetadata(metadata) {
+                // Log analytics, update UI state, etc.
+                if (metadata.responseTime) {
+                    console.log(`Response time: ${metadata.responseTime}ms`);
+                }
+                
+                if (metadata.confidence) {
+                    console.log(`AI Confidence: ${metadata.confidence}%`);
+                }
+                
+                // Store conversation history if needed
+                if (metadata.saveToHistory) {
+                    // Implementation for saving conversation
+                }
             }
             
             // Send message on button click
