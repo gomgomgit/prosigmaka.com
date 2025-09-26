@@ -74,7 +74,7 @@ const initChatFunctionality = () => {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'flex space-x-3 animate-fadeIn';
         messageDiv.innerHTML = `
-            <div class="flex-1 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-cyan-400/20 rounded-2xl rounded-tl-none p-4 shadow-lg">
+            <div class="flex-1 bg-blue-500/10 border border-cyan-400/20 rounded-2xl rounded-tl-none p-4 shadow-lg">
                 <p class="text-gray-200 text-sm sm:text-base leading-relaxed">${message}</p>
             </div>
         `;
@@ -633,45 +633,6 @@ const initChatFunctionality = () => {
         }
         
         return aiResponses.default;
-    }
-
-    // Add suggestion buttons (optional feature)
-    function addSuggestionButtons(suggestions) {
-        if (!suggestions || !Array.isArray(suggestions)) return;
-        
-        const suggestionsDiv = document.createElement('div');
-        suggestionsDiv.className = 'flex flex-wrap gap-2 mt-3 animate-fadeIn';
-        
-        suggestions.forEach(suggestion => {
-            const button = document.createElement('button');
-            button.className = 'px-3 py-1 text-xs bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 hover:bg-cyan-500/30 transition-all duration-300';
-            button.textContent = suggestion;
-            button.onclick = () => {
-                chatInput.value = suggestion;
-                sendMessage();
-            };
-            suggestionsDiv.appendChild(button);
-        });
-        
-        chatMessages.appendChild(suggestionsDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-
-    // Handle response metadata (optional feature)
-    function handleResponseMetadata(metadata) {
-        // Log analytics, update UI state, etc.
-        if (metadata.responseTime) {
-            console.log(`Response time: ${metadata.responseTime}ms`);
-        }
-        
-        if (metadata.confidence) {
-            console.log(`AI Confidence: ${metadata.confidence}%`);
-        }
-        
-        // Store conversation history if needed
-        if (metadata.saveToHistory) {
-            // Implementation for saving conversation
-        }
     }
 
     // Enhanced sendMessage function with API integration
