@@ -3,6 +3,36 @@
  * Advanced chat integration with API authentication and project management
  */
 
+// Configuration for API Integration - Global scope
+const API_CONFIG = {
+    // Server configuration
+    serverAddress: 'https://aivena-assist.prodemy.id',
+    
+    // API endpoints
+    loginEndpoint: 'https://aivena-assist.prodemy.id/api/v1/token',
+    projectsEndpoint: 'https://aivena-assist.prodemy.id/api/v1/projects',
+    baseURL: 'https://aivena-assist.prodemy.id/api/v1',
+    
+    // Login credentials
+    credentials: {
+        email: 'desdrianton@gmail.com',
+        password: '123123'
+    },
+    
+    // Request timeout in milliseconds
+    timeout: 30000,
+    
+    // Maximum retry attempts
+    maxRetries: 3,
+    
+    // Retry delay in milliseconds
+    retryDelay: 1000,
+    
+    // Token configuration
+    tokenKey: 'prosigmaka_chat_token',
+    tokenExpiryKey: 'prosigmaka_token_expiry'
+};
+
 // AI Chat functionality
 const initChatFunctionality = () => {
     const chatInput = document.getElementById('chat-input');
@@ -12,50 +42,9 @@ const initChatFunctionality = () => {
     
     if (!chatInput || !sendButton || !typingIndicator || !chatMessages) return;
     
-    // Sample responses for demo
-    const aiResponses = {
-        'services': 'We offer AI-powered solutions including Machine Learning, Computer Vision, Natural Language Processing, and Process Automation. Which service interests you most?',
-        'ai solutions': 'Our AI solutions include custom ML models, chatbots, recommendation systems, and predictive analytics. We can help transform your business with cutting-edge AI technology.',
-        'quote': 'I\'d be happy to help you get a quote! Please tell me more about your project requirements, timeline, and specific AI needs.',
-        'hello': 'Hello! Welcome to ProSigmaka. I\'m here to help you learn about our AI services and solutions. What would you like to know?',
-        'pricing': 'Our pricing varies based on project complexity and requirements. We offer flexible packages for startups to enterprise clients. Would you like to schedule a consultation?',
-        'contact': 'You can reach us at info@prosigmaka.com or call us directly. We\'re also available on WhatsApp for instant support. How would you prefer to be contacted?',
-        'machine learning': 'Our Machine Learning services include predictive modeling, data analysis, algorithm development, and ML model deployment. We work with various frameworks like TensorFlow and PyTorch.',
-        'computer vision': 'We provide Computer Vision solutions for image recognition, object detection, facial recognition, and video analytics. Perfect for security, quality control, and automation applications.',
-        'nlp': 'Our Natural Language Processing services cover text analysis, sentiment analysis, chatbots, and language translation. We can help you process and understand text data effectively.',
-        'automation': 'Process Automation solutions help streamline your workflows, reduce manual tasks, and increase efficiency. We implement RPA, workflow automation, and intelligent document processing.',
-        'default': 'That\'s an interesting question! Our AI specialists would be happy to provide detailed information. Would you like me to connect you with our team for a personalized consultation?'
-    };
 
-    // Configuration for API Integration
-    const API_CONFIG = {
-        // Server configuration
-        serverAddress: '178.128.22.41:8000',
-        
-        // API endpoints
-        loginEndpoint: 'http://178.128.22.41:8000/api/v1/token',
-        projectsEndpoint: 'http://178.128.22.41:8000/api/v1/projects',
-        baseURL: 'http://178.128.22.41:8000/api/v1',
-        
-        // Login credentials
-        credentials: {
-            email: 'desdrianton@gmail.com',
-            password: '123123'
-        },
-        
-        // Request timeout in milliseconds
-        timeout: 30000,
-        
-        // Maximum retry attempts
-        maxRetries: 3,
-        
-        // Retry delay in milliseconds
-        retryDelay: 1000,
-        
-        // Token configuration
-        tokenKey: 'prosigmaka_chat_token',
-        tokenExpiryKey: 'prosigmaka_token_expiry'
-    };
+
+    // API_CONFIG is now available globally
 
     // UI Helper Functions
     function addUserMessage(message) {
@@ -623,16 +612,7 @@ const initChatFunctionality = () => {
 
     // Get default response for fallback scenarios
     function getDefaultResponse(message) {
-        const lowerMessage = message.toLowerCase();
-        
-        // Find appropriate response from local data
-        for (const [key, value] of Object.entries(aiResponses)) {
-            if (lowerMessage.includes(key)) {
-                return value;
-            }
-        }
-        
-        return aiResponses.default;
+        return 'Maaf, saya sedang mengalami gangguan teknis. Silakan coba lagi nanti atau hubungi tim kami di info@prosigmaka.com untuk bantuan langsung.';
     }
 
     // Enhanced sendMessage function with API integration
@@ -799,23 +779,20 @@ async function testAPIConnection() {
     try {
         console.log('Testing API connection...');
         
-        // Get API config from ChatAI if available, otherwise use default
-        const apiConfig = {
-            loginEndpoint: 'http://178.128.22.41:8000/api/v1/token',
-            credentials: {
-                email: 'desdrianton@gmail.com',
-                password: '123123'
-            }
-        };
+        // Use global API_CONFIG for testing
+        console.log('Using API configuration:', {
+            endpoint: API_CONFIG.loginEndpoint,
+            credentials: API_CONFIG.credentials
+        });
         
         // Test login endpoint
-        const loginResponse = await fetch(apiConfig.loginEndpoint, {
+        const loginResponse = await fetch(API_CONFIG.loginEndpoint, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(apiConfig.credentials)
+            body: JSON.stringify(API_CONFIG.credentials)
         });
         
         if (loginResponse.ok) {
