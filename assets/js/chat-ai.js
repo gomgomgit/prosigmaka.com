@@ -327,11 +327,18 @@ const initChatFunctionality = () => {
                 return null;
             }
             
-            // Select the first project by default
-            // You can modify this logic to select specific project based on criteria
-            const selectedProject = projects[2];
-
-            console.log("kumaha", selectedProject)
+            // First, try to find project with name "AI Agent for www.prosigmaka.com"
+            let selectedProject = projects.find(project => 
+                project.name && project.name === "AI Agent for www.prosigmaka.com"
+            );
+            
+            // If not found, use index 0 (first project)
+            if (!selectedProject) {
+                console.log('Project "AI Agent for www.prosigmaka.com" not found, using first project');
+                selectedProject = projects[0];
+            } else {
+                console.log('Found target project "AI Agent for www.prosigmaka.com"');
+            }
             
             // Extract project ID (adjust based on actual API response structure)
             let selectedProjectId = null;
