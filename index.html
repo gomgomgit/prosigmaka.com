@@ -126,14 +126,6 @@
                 <!-- Dynamic Gradient Overlay -->
                 <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-purple-600/20 animate-pulse z-0"></div>
                 
-                <!-- Enhanced Moving Gradient Orbs -->
-                <div class="absolute inset-0 z-0">
-                    <div class="absolute top-10 left-10 w-48 sm:w-64 lg:w-72 h-48 sm:h-64 lg:h-72 bg-cyan-500/15 rounded-full animate-float-slow"></div>
-                    <div class="absolute top-20 right-20 w-56 sm:w-72 lg:w-96 h-56 sm:h-72 lg:h-96 bg-purple-500/15 rounded-full animate-float-medium"></div>
-                    <div class="absolute bottom-20 left-1/3 w-40 sm:w-52 lg:w-64 h-40 sm:h-52 lg:h-64 bg-blue-500/15 rounded-full animate-float-fast"></div>
-                    <div class="absolute top-1/3 right-1/4 w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 bg-pink-500/10 rounded-full animate-float-medium" style="animation-delay: 2s;"></div>
-                </div>
-                
                 <!-- Interactive Grid Pattern -->
                 <div class="absolute inset-0 opacity-[0.03] z-0 grid-pattern">
                     <div class="absolute inset-0" style="background-image: 
@@ -169,30 +161,6 @@
                                     src="assets/logo-prosigmaka.png" alt="Prosigmaka Logo" />
                             </div>
 
-                            <!-- Desktop Navigation Menu -->
-                            <div class="hidden md:flex items-center space-x-8">
-                                <a href="#home" onclick="scrollToSection('home')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group" aria-label="Navigate to Home section">
-                                    <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Home</span>
-                                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                </a>
-                                <a href="#clients" onclick="scrollToSection('clients')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group" aria-label="Navigate to Clients section">
-                                    <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Clients</span>
-                                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                </a>
-                                <a href="#services" onclick="scrollToSection('services')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group" aria-label="Navigate to Services section">
-                                    <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Services</span>
-                                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                </a>
-                                <a href="#case-study" onclick="scrollToSection('case-study')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group" aria-label="Navigate to Testimonials section">
-                                    <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Testimonials</span>
-                                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                </a>
-                                <a href="#ai-agent" onclick="scrollToSection('ai-agent')" class="nav-link text-gray-200 hover:text-white transition-colors duration-300 relative group" aria-label="Navigate to AI Agents section">
-                                    <span class="font-bold text-base tracking-wide" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">AI Agents</span>
-                                    <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></div>
-                                </a>
-                            </div>
-
                             <!-- Mobile Menu Button -->
                             <div class="md:hidden">
                                 <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none focus:text-white transition-colors duration-300" aria-label="Toggle mobile navigation menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -214,42 +182,6 @@
                                     </div>
                                 </div>
                                 
-                                <!-- Menu Items -->
-                                <div class="p-2">
-                                    <div class="flex flex-col space-y-1">
-                                        <a href="#home" onclick="scrollToSection('home'); toggleMobileMenu()" 
-                                           class="mobile-menu-item text-gray-200 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 px-4 py-3 text-sm font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-xl flex items-center group" 
-                                           style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">
-                                            <div class="w-2 h-2 bg-cyan-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            <span>Home</span>
-                                        </a>
-                                        <a href="#clients" onclick="scrollToSection('clients'); toggleMobileMenu()" 
-                                           class="mobile-menu-item text-gray-200 hover:text-white hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 px-4 py-3 text-sm font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-xl flex items-center group" 
-                                           style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">
-                                            <div class="w-2 h-2 bg-blue-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            <span>Clients</span>
-                                        </a>
-                                        <a href="#services" onclick="scrollToSection('services'); toggleMobileMenu()" 
-                                           class="mobile-menu-item text-gray-200 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 px-4 py-3 text-sm font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-xl flex items-center group" 
-                                           style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">
-                                            <div class="w-2 h-2 bg-purple-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            <span>Services</span>
-                                        </a>
-                                        <a href="#case-study" onclick="scrollToSection('case-study'); toggleMobileMenu()" 
-                                           class="mobile-menu-item text-gray-200 hover:text-white hover:bg-gradient-to-r hover:from-pink-500/20 hover:to-orange-500/20 px-4 py-3 text-sm font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-xl flex items-center group" 
-                                           style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">
-                                            <div class="w-2 h-2 bg-pink-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            <span>Testimonials</span>
-                                        </a>
-                                        <a href="#ai-agent" onclick="scrollToSection('ai-agent'); toggleMobileMenu()" 
-                                           class="mobile-menu-item text-gray-200 hover:text-white hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-red-500/20 px-4 py-3 text-sm font-bold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-xl flex items-center group" 
-                                           style="text-shadow: 0 1px 3px rgba(0,0,0,0.3);">
-                                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            <span>AI Agents</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                
                                 <!-- Menu Footer -->
                                 <div class="bg-gradient-to-r from-gray-800/50 to-gray-700/50 p-3 border-t border-gray-700/30">
                                     <div class="text-center">
@@ -260,7 +192,7 @@
                         </div>
                     </nav>
                     <!-- Hero Robot Image -->
-                    <div class="absolute left-[50%] lg:left-[65%] top-0 bottom-0 z-10 w-[65vw] sm:w-[55vw] md:w-[50vw] lg:w-[45vw] xl:w-[40vw] flex items-center justify-end">
+                    <div class="absolute left-[5%] md:left-[80%] top-0 bottom-0 z-10 w-[v55w] sm:w-[45vw] md:w-[40vw] lg:w-[35vw] xl:w-[30vw] flex items-center justify-end">
                         <img 
                             src="assets/photos/robot-rev.png" 
                             alt="AI Robot - Advanced Technology representing cutting-edge artificial intelligence solutions" 
@@ -295,10 +227,10 @@
                             </h1>
                             
                             <!-- Enhanced Subtitle -->
-                            <p class="font-inter text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-medium tracking-wide hero-subtitle-shadow">
-                                We are a <span class="text-gradient-bold font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">professional IT consulting</span> company that provides 
+                            <p class="font-inter text-sm sm:text-md md:text-lg text-white leading-relaxed font-medium tracking-wide">
+                                We are a <span class="text-gradient-bold font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">professional IT consulting</span> company that provides <br> 
                                 <span class="text-cyan-400 font-semibold">comprehensive technology solutions</span> 
-                                to help businesses optimize their digital infrastructure and achieve sustainable growth.
+                                to help businesses optimize <br> their digital infrastructure and achieve sustainable growth.
                             </p>
                         </div>
                     </div>
@@ -1032,14 +964,6 @@
                 <img class="nav-icon w-6 h-6 filter brightness-0 invert" src="assets/svg-menu/stars.svg" alt="Impact & Testimonials" />
                 <div class="nav-label">Impact & Testimonials</div>
             </div>
-            
-            <!-- AI Agents -->
-            <div class="section-nav-item" onclick="scrollToSection('ai-agent')" data-section="ai-agent">
-                <!-- AI Agent Icon with Simple Design -->
-                <img class="nav-icon w-6 h-6 filter brightness-0 invert" src="assets/svg-menu/bot.svg" alt="AI Agent" />
-                <div class="nav-label">AI Agent</div>
-                </div>
-            </div>
         </div>
         
         <!-- Case Study Section -->
@@ -1367,44 +1291,7 @@
                             </div>
                             
                             <!-- Chat Messages -->
-                            <div class="space-y-4 mb-6 relative z-10 max-h-96 overflow-y-auto" id="chat-messages">
-                                <!-- Welcome Message from AI -->
-                                <div class="flex space-x-3 animate-fadeIn">
-                                    <div class="flex-1 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-cyan-400/20 rounded-3xl rounded-tl-none p-4 shadow-lg">
-                                        <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
-                                            👋 Hello! I'm your ProSigmaka AI Assistant. I can help you learn about our services, answer questions about our solutions, and guide you through our offerings. 
-                                            <span class="text-cyan-400 font-semibold">What would you like to know?</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Sample User Message -->
-                                <div class="flex justify-end animate-fadeIn" style="animation-delay: 0.5s;">
-                                    <div class="flex-1 max-w-xs sm:max-w-sm bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl rounded-br-none p-4 shadow-lg">
-                                        <p class="text-white text-sm sm:text-base">
-                                            Hi! Can you tell me about your AI services?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- AI Response -->
-                                <div class="flex space-x-3 animate-fadeIn" style="animation-delay: 1s;">
-                                    <div class="flex-1 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-cyan-400/20 rounded-3xl rounded-tl-none p-4 shadow-lg">
-                                        <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
-                                            🚀 Great question! We offer comprehensive AI solutions including:
-                                            <br><br>
-                                            <span class="text-cyan-400">• Machine Learning</span> - Custom ML models and predictive analytics
-                                            <br>
-                                            <span class="text-teal-400">• Computer Vision</span> - Image recognition and video analytics
-                                            <br>
-                                            <span class="text-cyan-400">• Natural Language Processing</span> - Text analysis and chatbots
-                                            <br>
-                                            <span class="text-teal-400">• Process Automation</span> - Workflow optimization
-                                            <br><br>
-                                            Which one interests you most? 😊
-                                        </p>
-                                    </div>
-                                </div>
+                            <div class="space-y-4 mb-6 relative z-10 h-96 overflow-y-auto" id="chat-messages">
                             </div>
 
                             <!-- Chat Input Bar -->
@@ -1413,7 +1300,7 @@
                                     <div class="flex-1 relative">
                                         <input 
                                             type="text" 
-                                            placeholder="Type your message here..." 
+                                            placeholder="Mulai chat dengan AI..." 
                                             class="w-full bg-purple-900/50 border-2 border-purple-500/50 rounded-2xl px-4 py-3 text-white placeholder-purple-200 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30 transition-all duration-300 shadow-lg"
                                             id="chat-input"
                                         />
@@ -1556,14 +1443,6 @@
                                     Learning Platform
                                 </a>
                             </li>
-                            <li>
-                                <a href="#services" class="text-gray-400 hover:text-orange-400 transition-colors duration-300 flex items-center group text-sm">
-                                    <svg class="w-3 h-3 mr-2 text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                    </svg>
-                                    Corporate Training
-                                </a>
-                            </li>
                         </ul>
                     </div>
                     
@@ -1617,7 +1496,7 @@
                         </h4>
                         <div class="space-y-4">
                             <div class="flex items-start space-x-3 group">
-                                <div class="w-8 h-8 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center group-hover:from-blue-500/40 group-hover:to-cyan-500/40 transition-all duration-300 mt-1">
+                                <div class="w-8 h-8 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center group-hover:from-blue-500/40 group-hover:to-cyan-500/40 transition-all duration-300 mt-1 shrink-0">
                                     <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -1625,7 +1504,7 @@
                                 </div>
                                 <div>
                                     <p class="text-sm text-gray-500 mb-1">Address</p>
-                                    <p class="text-gray-300 text-sm">Jakarta, Indonesia</p>
+                                    <p class="text-gray-300 text-sm">Trio Building, Jl. Mampang Prpt. Raya No.17 Lt.3, Mampang Prpt., Kec. Mampang Prpt., Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12790</p>
                                 </div>
                             </div>
                             
@@ -1814,7 +1693,7 @@
         }
         
         .text-mega {
-            font-size: clamp(2rem, 7vw, 6rem);
+            font-size: clamp(1rem, 6vw, 4rem);
             line-height: 0.85;
         }
         

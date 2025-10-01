@@ -46,12 +46,51 @@ const initChatFunctionality = () => {
 
     // API_CONFIG is now available globally
 
+    // Markdown parsing utility
+    function parseMarkdown(text) {
+        if (!text) return '';
+        
+        // Convert text to string if it's not already
+        let html = String(text);
+        
+        // Parse bold text (**text** or __text__)
+        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/__(.*?)__/g, '<strong>$1</strong>');
+        
+        // Parse italic text (*text* or _text_)
+        html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+        html = html.replace(/_(.*?)_/g, '<em>$1</em>');
+        
+        // Parse inline code (`code`)
+        html = html.replace(/`(.*?)`/g, '<code class="bg-gray-600 px-1 py-0.5 rounded text-xs">$1</code>');
+        
+        // Parse links [text](url)
+        html = html.replace(/\[([^\]]*)\]\(([^)]*)\)/g, '<a href="$2" class="text-cyan-400 hover:text-cyan-300 underline" target="_blank" rel="noopener noreferrer">$1</a>');
+        
+        // Parse line breaks (double newline = paragraph, single newline = br)
+        html = html.replace(/\n\n/g, '</p><p class="mb-2">');
+        html = html.replace(/\n/g, '<br>');
+        
+        // Wrap in paragraph if not already wrapped
+        if (!html.startsWith('<p')) {
+            html = '<p class="mb-2">' + html + '</p>';
+        }
+        
+        // Parse numbered lists (1. item)
+        html = html.replace(/(\d+)\.\s+(.*?)(?=<br>|\d+\.|$)/g, '<div class="ml-4 mb-1">$1. $2</div>');
+        
+        // Parse bullet points (- item or * item)
+        html = html.replace(/^[-*]\s+(.*?)(?=<br>|[-*]|$)/gm, '<div class="ml-4 mb-1">• $1</div>');
+        
+        return html;
+    }
+
     // UI Helper Functions
     function addUserMessage(message) {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'flex space-x-3 justify-end animate-fadeIn';
         messageDiv.innerHTML = `
-            <div class="flex-1 max-w-xs sm:max-w-sm bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rounded-tr-none p-4 shadow-lg">
+            <div class="flex-1 max-w-xs sm:max-w-sm bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl rounded-br-none p-4 shadow-lg">
                 <p class="text-white text-sm sm:text-base">${message}</p>
             </div>
         `;
@@ -60,11 +99,14 @@ const initChatFunctionality = () => {
     }
 
     function addAIMessage(message) {
+        // Parse markdown first
+        const parsedMessage = parseMarkdown(message);
+        
         const messageDiv = document.createElement('div');
         messageDiv.className = 'flex space-x-3 animate-fadeIn';
         messageDiv.innerHTML = `
             <div class="flex-1 bg-blue-500/10 border border-cyan-400/20 rounded-2xl rounded-tl-none p-4 shadow-lg">
-                <p class="text-gray-200 text-sm sm:text-base leading-relaxed">${message}</p>
+                <div class="text-gray-200 text-sm sm:text-base leading-relaxed">${parsedMessage}</div>
             </div>
         `;
         chatMessages.appendChild(messageDiv);
@@ -88,7 +130,7 @@ const initChatFunctionality = () => {
     function enableChatInput() {
         sendButton.disabled = false;
         chatInput.disabled = false;
-        chatInput.placeholder = 'Tanyakan tentang layanan AI kami...';
+        chatInput.placeholder = 'Mulai chat dengan AI...';
         chatInput.focus();
     }
 
@@ -414,18 +456,6 @@ const initChatFunctionality = () => {
             console.error('Error selecting project:', error);
             return null;
         }
-    }
-
-    // Session and Conversation Management
-    function getOrCreateSessionId() {
-        let sessionId = localStorage.getItem('chat_session_id');
-        
-        if (!sessionId) {
-            sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-            localStorage.setItem('chat_session_id', sessionId);
-        }
-        
-        return sessionId;
     }
 
     // Get or create conversation ID for inference API
@@ -844,16 +874,7 @@ async function initializeChatSystem() {
         
         // Add welcome message indicating API is connected
         setTimeout(() => {
-            window.ChatAI.addAIMessage('Halo! Saya adalah AI Assistant dari ProSigmaka. Saya siap membantu Anda dengan informasi tentang layanan AI kami. Silakan tanyakan apa saja!');
-        }, 1000);
-    } else {
-        console.log('💬 Chat system initialized with local responses (API unavailable)');
-        
-        // Add fallback welcome message
-        setTimeout(() => {
-            if (window.ChatAI) {
-                window.ChatAI.addAIMessage('Halo! Selamat datang di ProSigmaka. Saat ini saya menggunakan mode offline. Silakan tanyakan tentang layanan kami!');
-            }
+            window.ChatAI.addAIMessage('Halo! Saya adalah AI Assistant dari ProSigmaka. Saya siap membantu Anda dengan informasi tentang layanan kami!');
         }, 1000);
     }
 }
