@@ -1,7 +1,9 @@
 /**
  * ProSigmaka AI Chat System
  * Advanced chat integration with API authentication and project management
- */
+ * */
+// Delete all local storage temporarily for testing
+localStorage.clear();
 
 // Configuration for API Integration - Global scope
 const API_CONFIG = {
