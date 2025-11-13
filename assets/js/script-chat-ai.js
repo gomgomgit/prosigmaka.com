@@ -460,26 +460,21 @@ const initChatFunctionality = () => {
         }
     }
 
-    // Get or create conversation ID for inference API
-    function getOrCreateConversationId() {
-        let conversationId = localStorage.getItem('prosigmaka_conversation_id');
-        
-        if (!conversationId) {
-            // Use Date.now() as specified
-            conversationId = Date.now().toString();
-            localStorage.setItem('prosigmaka_conversation_id', conversationId);
-            console.log('New conversation ID created:', conversationId);
-        }
-        
-        return conversationId;
+    // Conversation ID management functions
+    function getStoredConversationId() {
+        return localStorage.getItem('prosigmaka_conversation_id');
     }
 
-    // Reset conversation ID (for new conversation)
-    function resetConversationId() {
-        const newConversationId = Date.now().toString();
-        localStorage.setItem('prosigmaka_conversation_id', newConversationId);
-        console.log('Conversation ID reset to:', newConversationId);
-        return newConversationId;
+    function storeConversationId(conversationId) {
+        if (conversationId) {
+            localStorage.setItem('prosigmaka_conversation_id', conversationId);
+            console.log('Conversation ID stored:', conversationId);
+        }
+    }
+
+    function clearConversationId() {
+        localStorage.removeItem('prosigmaka_conversation_id');
+        console.log('Conversation ID cleared');
     }
 
     // API call function with retry mechanism and token authentication
@@ -497,19 +492,22 @@ const initChatFunctionality = () => {
                 throw new Error('Project ID is required for chat inference');
             }
             
-            // Get conversation ID
-            const conversationId = getOrCreateConversationId();
-            
             // Encode message for URL
             const encodedMessage = encodeURIComponent(message);
             
-            // Build inference URL
-            const inferenceURL = `${API_CONFIG.baseURL}/projects/${projectId}/inference?human_message=${encodedMessage}&conversation_id=${conversationId}`;
+            // Check if we have stored conversation_id
+            const storedConversationId = getStoredConversationId();
+            
+            // Build inference URL - add conversation_id only if it exists
+            let inferenceURL = `${API_CONFIG.baseURL}/projects/${projectId}/inference?human_message=${encodedMessage}`;
+            if (storedConversationId) {
+                inferenceURL += `&conversation_id=${storedConversationId}`;
+            }
             
             console.log('Sending chat request to:', inferenceURL);
             console.log('Request details:', {
                 projectId: projectId,
-                conversationId: conversationId,
+                conversationId: storedConversationId || 'none',
                 message: message,
                 encodedMessage: encodedMessage
             });
@@ -555,6 +553,11 @@ const initChatFunctionality = () => {
             // Validate response structure
             if (!data || typeof data !== 'object') {
                 throw new Error('Invalid response format');
+            }
+            
+            // Store conversation_id from response if available
+            if (data.result && data.result.conversation_id) {
+                storeConversationId(data.result.conversation_id);
             }
             
             return data;
@@ -759,30 +762,35 @@ const initChatFunctionality = () => {
         
         // Conversation management
         getCurrentConversationId: function() {
-            const conversationId = localStorage.getItem('prosigmaka_conversation_id');
+            const conversationId = getStoredConversationId();
             console.log('Current conversation ID:', conversationId);
             return conversationId;
         },
         startNewConversation: function() {
-            const newConversationId = resetConversationId();
-            console.log('Started new conversation with ID:', newConversationId);
-            return newConversationId;
+            clearConversationId();
+            console.log('Started new conversation - conversation ID cleared');
+            return true;
         },
         
         // Utility functions
         clearSession: function() {
             clearStoredToken();
+            clearConversationId();
             localStorage.removeItem('chat_session_id');
             localStorage.removeItem('prosigmaka_project_id');
-            localStorage.removeItem('prosigmaka_conversation_id');
             console.log('Chat session cleared');
         },
         buildInferenceURL: async function(message) {
             try {
                 const projectId = await getProjectId();
-                const conversationId = getOrCreateConversationId();
                 const encodedMessage = encodeURIComponent(message);
-                const url = `${API_CONFIG.baseURL}/projects/${projectId}/inference?human_message=${encodedMessage}&conversation_id=${conversationId}`;
+                const storedConversationId = getStoredConversationId();
+                
+                let url = `${API_CONFIG.baseURL}/projects/${projectId}/inference?human_message=${encodedMessage}`;
+                if (storedConversationId) {
+                    url += `&conversation_id=${storedConversationId}`;
+                }
+                
                 console.log('Inference URL:', url);
                 return url;
             } catch (error) {
