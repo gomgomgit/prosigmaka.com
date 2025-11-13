@@ -48,6 +48,17 @@ const initChatFunctionality = () => {
 
     // API_CONFIG is now available globally
 
+    // Function to clean chunk references from AI response
+    function removeChunkReferences(text) {
+        if (!text) return '';
+        
+        // Remove chunk references like [1](#CHUNK-ed3824bf-7547-48d9-b8f5-e256b40cca52)
+        // Pattern: [number](#CHUNK-uuid)
+        const chunkPattern = /\[\d+\]\(#CHUNK-[a-f0-9-]+\)/g;
+        
+        return text.replace(chunkPattern, '').trim();
+    }
+
     // Markdown parsing utility
     function parseMarkdown(text) {
         if (!text) return '';
@@ -101,8 +112,9 @@ const initChatFunctionality = () => {
     }
 
     function addAIMessage(message) {
-        // Parse markdown first
-        const parsedMessage = parseMarkdown(message);
+        // Remove chunk references first, then parse markdown
+        const cleanedMessage = removeChunkReferences(message);
+        const parsedMessage = parseMarkdown(cleanedMessage);
         
         const messageDiv = document.createElement('div');
         messageDiv.className = 'flex space-x-3 animate-fadeIn';
