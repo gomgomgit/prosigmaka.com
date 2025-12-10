@@ -404,10 +404,10 @@ const initChatFunctionality = () => {
             
             if (selectedProjectId) {
                 // console.log('Selected project:', {
-                    id: selectedProjectId,
-                    name: selectedProject.name || selectedProject.title || 'Unknown',
-                    project: selectedProject
-                });
+                //     id: selectedProjectId,
+                //     name: selectedProject.name || selectedProject.title || 'Unknown',
+                //     project: selectedProject
+                // });
                 
                 // Store the project ID for future use
                 storeProjectId(selectedProjectId);
@@ -518,11 +518,11 @@ const initChatFunctionality = () => {
             
             // console.log('Sending chat request to:', inferenceURL);
             // console.log('Request details:', {
-                projectId: projectId,
-                conversationId: storedConversationId || 'none',
-                message: message,
-                encodedMessage: encodedMessage
-            });
+            //     projectId: projectId,
+            //     conversationId: storedConversationId || 'none',
+            //     message: message,
+            //     encodedMessage: encodedMessage
+            // });
             
             const response = await fetch(inferenceURL, {
                 method: 'GET',
@@ -648,10 +648,10 @@ const initChatFunctionality = () => {
         
         // Log error for debugging
         // console.error('Chat Error Details:', {
-            error: error.message,
-            originalMessage: originalMessage,
-            timestamp: new Date().toISOString()
-        });
+        //     error: error.message,
+        //     originalMessage: originalMessage,
+        //     timestamp: new Date().toISOString()
+        // });
         
         // Show error message to user
         addErrorMessage(errorMessage);
@@ -840,9 +840,9 @@ async function testAPIConnection() {
         
         // Use global API_CONFIG for testing
         // console.log('Using API configuration:', {
-            endpoint: API_CONFIG.loginEndpoint,
-            credentials: API_CONFIG.credentials
-        });
+        //     endpoint: API_CONFIG.loginEndpoint,
+        //     credentials: API_CONFIG.credentials
+        // });
         
         // Test login endpoint
         const loginResponse = await fetch(API_CONFIG.loginEndpoint, {
