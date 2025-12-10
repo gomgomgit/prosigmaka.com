@@ -93,7 +93,7 @@ const initChatFunctionality = () => {
         html = html.replace(/(\d+)\.\s+(.*?)(?=<br>|\d+\.|$)/g, '<div class="ml-4 mb-1">$1. $2</div>');
         
         // Parse bullet points (- item or * item)
-        html = html.replace(/^[-*]\s+(.*?)(?=<br>|[-*]|$)/gm, '<div class="ml-4 mb-1">• $1</div>');
+        html = html.replace(/^[-*]\s+(.*?)(?=<br>|[-*]|$)/gm, '<div class="ml-4 mb-1">â€¢ $1</div>');
         
         return html;
     }
@@ -206,18 +206,18 @@ const initChatFunctionality = () => {
         localStorage.setItem(API_CONFIG.tokenKey, token);
         localStorage.setItem(API_CONFIG.tokenExpiryKey, expiryDate.toISOString());
         
-        // console.log('Token stored successfully, expires at:', expiryDate.toISOString());
+        // // console.log(// // console.log('Token stored successfully, expires at:', expiryDate.toISOString());
     }
 
     function clearStoredToken() {
         localStorage.removeItem(API_CONFIG.tokenKey);
         localStorage.removeItem(API_CONFIG.tokenExpiryKey);
-        // console.log('Token cleared from storage');
+        // // console.log(// // console.log('Token cleared from storage');
     }
 
     // Login function to get authentication token
     async function loginAndGetToken() {
-        // console.log('Attempting to login and get token...');
+        // // console.log(// // console.log('Attempting to login and get token...');
         
         try {
             const controller = new AbortController();
@@ -240,7 +240,7 @@ const initChatFunctionality = () => {
             }
             
             const data = await response.json();
-            // console.log('Login response:', data);
+            // // console.log(// // console.log('Login response:', data);
             
             // Extract token from response - adjust based on actual API response structure
             let token = null;
@@ -261,7 +261,7 @@ const initChatFunctionality = () => {
             return token;
             
         } catch (error) {
-            // console.error('Login error:', error);
+            // // console.error(// // console.error('Login error:', error);
             
             if (error.name === 'AbortError') {
                 throw new Error('Login request timed out');
@@ -281,12 +281,12 @@ const initChatFunctionality = () => {
         let token = getStoredToken();
         
         if (token) {
-            // console.log('Using stored token');
+            // // console.log(// // console.log('Using stored token');
             return token;
         }
         
         // If no valid stored token, login to get new one
-        // console.log('No valid stored token, logging in...');
+        // // console.log(// // console.log('No valid stored token, logging in...');
         token = await loginAndGetToken();
         
         return token;
@@ -299,12 +299,12 @@ const initChatFunctionality = () => {
 
     function storeProjectId(projectId) {
         localStorage.setItem('prosigmaka_project_id', projectId);
-        // console.log('Project ID stored:', projectId);
+        // // console.log(// // console.log('Project ID stored:', projectId);
     }
 
     // Fetch projects from API
     async function fetchProjects() {
-        // console.log('Fetching projects from API...');
+        // // console.log(// // console.log('Fetching projects from API...');
         
         try {
             const token = await getValidToken();
@@ -329,12 +329,12 @@ const initChatFunctionality = () => {
             }
             
             const data = await response.json();
-            // console.log('Projects API response:', data);
+            // // console.log(// // console.log('Projects API response:', data);
             
             return data;
             
         } catch (error) {
-            // console.error('Error fetching projects:', error);
+            // // console.error(// // console.error('Error fetching projects:', error);
             
             if (error.name === 'AbortError') {
                 throw new Error('Projects request timed out');
@@ -354,7 +354,7 @@ const initChatFunctionality = () => {
         let projectId = getStoredProjectId();
         
         if (projectId) {
-            // console.log('Using stored project ID:', projectId);
+            // // console.log(// // console.log('Using stored project ID:', projectId);
             return projectId;
         }
         
@@ -362,24 +362,24 @@ const initChatFunctionality = () => {
             // Fetch projects from API
             const projectsData = await fetchProjects();
 
-            // console.log('Projects data received:', projectsData)
+            // console.log(// // console.log('Projects data received:', projectsData)
             
             // Extract projects array from response
             let projects = [];
 
-            // console.log("juragan", projects)
+            // console.log(// // console.log("juragan", projects)
             
             if (Array.isArray(projectsData.result)) {
                 projects = projectsData.result;
-                // console.log('Projects found as root array, count:', projects.length);
+                // // console.log(// // console.log('Projects found as root array, count:', projects.length);
             } else {
-                // console.warn('Unexpected projects API response structure:', projectsData);
+                // // console.warn(// // console.warn('Unexpected projects API response structure:', projectsData);
             }
             
-            // console.log("juragan2", projects)
+            // console.log(// // console.log("juragan2", projects)
 
             if (projects.length === 0) {
-                // console.warn('No projects found in API response');
+                // // console.warn(// // console.warn('No projects found in API response');
                 return null;
             }
             
@@ -390,10 +390,10 @@ const initChatFunctionality = () => {
             
             // If not found, use index 0 (first project)
             if (!selectedProject) {
-                // console.log('Project "AI Agent for www.prosigmaka.com" not found, using first project');
+                // // console.log(// // console.log('Project "AI Agent for www.prosigmaka.com" not found, using first project');
                 selectedProject = projects[0];
             } else {
-                // console.log('Found target project "AI Agent for www.prosigmaka.com"');
+                // // console.log(// // console.log('Found target project "AI Agent for www.prosigmaka.com"');
             }
             
             // Extract project ID (adjust based on actual API response structure)
@@ -403,7 +403,7 @@ const initChatFunctionality = () => {
             }
             
             if (selectedProjectId) {
-                // console.log('Selected project:', {
+                // console.log(// // console.log('Selected project:', {
                     id: selectedProjectId,
                     name: selectedProject.name || selectedProject.title || 'Unknown',
                     project: selectedProject
@@ -414,12 +414,12 @@ const initChatFunctionality = () => {
                 
                 return selectedProjectId;
             } else {
-                // console.warn('Could not extract project ID from project data:', selectedProject);
+                // // console.warn(// // console.warn('Could not extract project ID from project data:', selectedProject);
                 return null;
             }
             
         } catch (error) {
-            // console.error('Failed to get project ID:', error);
+            // // console.error(// // console.error('Failed to get project ID:', error);
             return null;
         }
     }
@@ -429,7 +429,7 @@ const initChatFunctionality = () => {
         try {
             const projectsData = await fetchProjects();
 
-            // console.log('Select project data:', projectsData)
+            // console.log(// // console.log('Select project data:', projectsData)
             
             let projects = [];
             if (Array.isArray(projectsData)) {
@@ -459,15 +459,15 @@ const initChatFunctionality = () => {
             if (selectedProject) {
                 const projectId = selectedProject.id || selectedProject.project_id || selectedProject._id;
                 storeProjectId(projectId);
-                // console.log('Project selected:', selectedProject);
+                // // console.log(// // console.log('Project selected:', selectedProject);
                 return projectId;
             } else {
-                // console.warn('Project not found with identifier:', identifier);
+                // // console.warn(// // console.warn('Project not found with identifier:', identifier);
                 return null;
             }
             
         } catch (error) {
-            // console.error('Error selecting project:', error);
+            // // console.error(// // console.error('Error selecting project:', error);
             return null;
         }
     }
@@ -480,13 +480,13 @@ const initChatFunctionality = () => {
     function storeConversationId(conversationId) {
         if (conversationId) {
             localStorage.setItem('prosigmaka_conversation_id', conversationId);
-            // console.log('Conversation ID stored:', conversationId);
+            // // console.log(// // console.log('Conversation ID stored:', conversationId);
         }
     }
 
     function clearConversationId() {
         localStorage.removeItem('prosigmaka_conversation_id');
-        // console.log('Conversation ID cleared');
+        // // console.log(// // console.log('Conversation ID cleared');
     }
 
     // API call function with retry mechanism and token authentication
@@ -516,8 +516,8 @@ const initChatFunctionality = () => {
                 inferenceURL += `&conversation_id=${storedConversationId}`;
             }
             
-            // console.log('Sending chat request to:', inferenceURL);
-            // console.log('Request details:', {
+            // // console.log(// // console.log('Sending chat request to:', inferenceURL);
+            // console.log(// // console.log('Request details:', {
                 projectId: projectId,
                 conversationId: storedConversationId || 'none',
                 message: message,
@@ -536,11 +536,11 @@ const initChatFunctionality = () => {
             
             clearTimeout(timeoutId);
             
-            // console.log('Chat API response status:', response.status);
+            // // console.log(// // console.log('Chat API response status:', response.status);
             
             // Handle authentication errors
             if (response.status === 401) {
-                // console.log('Authentication failed, clearing token and retrying...');
+                // // console.log(// // console.log('Authentication failed, clearing token and retrying...');
                 clearStoredToken();
                 
                 // Retry once with fresh token
@@ -554,13 +554,13 @@ const initChatFunctionality = () => {
             // Check if response is ok
             if (!response.ok) {
                 const errorText = await response.text();
-                // console.error('API Error Response:', errorText);
+                // // console.error(// // console.error('API Error Response:', errorText);
                 throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             }
             
             // Parse JSON response
             const data = await response.json();
-            // console.log('Chat API response data:', data);
+            // // console.log(// // console.log('Chat API response data:', data);
             
             // Validate response structure
             if (!data || typeof data !== 'object') {
@@ -576,7 +576,7 @@ const initChatFunctionality = () => {
             
         } catch (error) {
             clearTimeout(timeoutId);
-            // console.error('Chat API call error:', error);
+            // // console.error(// // console.error('Chat API call error:', error);
             
             // Handle different error types
             if (error.name === 'AbortError') {
@@ -596,7 +596,7 @@ const initChatFunctionality = () => {
             
             // Retry mechanism for recoverable errors
             if (retryCount < API_CONFIG.maxRetries && isRetryableError(error)) {
-                // console.warn(`API call failed, retrying... (${retryCount + 1}/${API_CONFIG.maxRetries})`);
+                // // console.warn(// // console.warn(`API call failed, retrying... (${retryCount + 1}/${API_CONFIG.maxRetries})`);
                 await new Promise(resolve => setTimeout(resolve, API_CONFIG.retryDelay));
                 return await callChatAPI(message, retryCount + 1);
             }
@@ -647,7 +647,7 @@ const initChatFunctionality = () => {
         }
         
         // Log error for debugging
-        // console.error('Chat Error Details:', {
+        // console.error(// // console.error('Chat Error Details:', {
             error: error.message,
             originalMessage: originalMessage,
             timestamp: new Date().toISOString()
@@ -710,7 +710,7 @@ const initChatFunctionality = () => {
             }
             
         } catch (error) {
-            // console.error('Chat API Error:', error);
+            // // console.error(// // console.error('Chat API Error:', error);
             handleChatError(error, message);
         } finally {
             // Always clean up UI state
@@ -733,10 +733,10 @@ const initChatFunctionality = () => {
             try {
                 clearStoredToken();
                 const token = await getValidToken();
-                // console.log('Token refreshed successfully');
+                // // console.log(// // console.log('Token refreshed successfully');
                 return token;
             } catch (error) {
-                // console.error('Failed to refresh token:', error);
+                // // console.error(// // console.error('Failed to refresh token:', error);
                 return null;
             }
         },
@@ -746,28 +746,28 @@ const initChatFunctionality = () => {
         selectProjectById,
         getCurrentProjectId: function() {
             const projectId = getStoredProjectId();
-            // console.log('Current project ID:', projectId);
+            // // console.log(// // console.log('Current project ID:', projectId);
             return projectId;
         },
         refreshProjectId: async function() {
             try {
                 localStorage.removeItem('prosigmaka_project_id');
                 const projectId = await getProjectId();
-                // console.log('Refreshed project ID:', projectId);
+                // // console.log(// // console.log('Refreshed project ID:', projectId);
                 return projectId;
             } catch (error) {
-                // console.error('Failed to refresh project ID:', error);
+                // // console.error(// // console.error('Failed to refresh project ID:', error);
                 return null;
             }
         },
         getProjects: async function() {
             try {
-                // console.log('Fetching projects list...');
+                // // console.log(// // console.log('Fetching projects list...');
                 const projects = await fetchProjects();
-                // console.log('Projects:', projects);
+                // // console.log(// // console.log('Projects:', projects);
                 return projects;
             } catch (error) {
-                // console.error('Failed to get projects:', error);
+                // // console.error(// // console.error('Failed to get projects:', error);
                 return null;
             }
         },
@@ -775,12 +775,12 @@ const initChatFunctionality = () => {
         // Conversation management
         getCurrentConversationId: function() {
             const conversationId = getStoredConversationId();
-            // console.log('Current conversation ID:', conversationId);
+            // // console.log(// // console.log('Current conversation ID:', conversationId);
             return conversationId;
         },
         startNewConversation: function() {
             clearConversationId();
-            // console.log('Started new conversation - conversation ID cleared');
+            // // console.log(// // console.log('Started new conversation - conversation ID cleared');
             return true;
         },
         
@@ -790,7 +790,7 @@ const initChatFunctionality = () => {
             clearConversationId();
             localStorage.removeItem('chat_session_id');
             localStorage.removeItem('prosigmaka_project_id');
-            // console.log('Chat session cleared');
+            // // console.log(// // console.log('Chat session cleared');
         },
         buildInferenceURL: async function(message) {
             try {
@@ -803,21 +803,21 @@ const initChatFunctionality = () => {
                     url += `&conversation_id=${storedConversationId}`;
                 }
                 
-                // console.log('Inference URL:', url);
+                // // console.log(// // console.log('Inference URL:', url);
                 return url;
             } catch (error) {
-                // console.error('Failed to build inference URL:', error);
+                // // console.error(// // console.error('Failed to build inference URL:', error);
                 return null;
             }
         },
         testAPI: async function(testMessage = 'Hello, this is a test message') {
             try {
-                // console.log('Testing chat API with message:', testMessage);
+                // // console.log(// // console.log('Testing chat API with message:', testMessage);
                 const response = await callChatAPI(testMessage);
-                // console.log('Chat API test successful:', response);
+                // // console.log(// // console.log('Chat API test successful:', response);
                 return response;
             } catch (error) {
-                // console.error('Chat API test failed:', error);
+                // // console.error(// // console.error('Chat API test failed:', error);
                 return null;
             }
         }
@@ -836,10 +836,10 @@ const initChatFunctionality = () => {
 // API Connection Test and Initialization
 async function testAPIConnection() {
     try {
-        // console.log('Testing API connection...');
+        // // console.log(// // console.log('Testing API connection...');
         
         // Use global API_CONFIG for testing
-        // console.log('Using API configuration:', {
+        // console.log(// // console.log('Using API configuration:', {
             endpoint: API_CONFIG.loginEndpoint,
             credentials: API_CONFIG.credentials
         });
@@ -855,30 +855,30 @@ async function testAPIConnection() {
         });
         
         if (loginResponse.ok) {
-            // console.log('✅ API connection successful');
-            // console.log('Login endpoint is reachable and credentials are valid');
+            // // console.log(// // console.log('âœ… API connection successful');
+            // // console.log(// // console.log('Login endpoint is reachable and credentials are valid');
             
             // Auto-login to get initial token and project ID if ChatAI is available
             if (window.ChatAI) {
                 await window.ChatAI.getValidToken();
-                // console.log('✅ Initial token obtained successfully');
+                // // console.log(// // console.log('âœ… Initial token obtained successfully');
                 
                 const projectId = await window.ChatAI.getProjectId();
                 if (projectId) {
-                    // console.log('✅ Project ID obtained successfully:', projectId);
+                    // // console.log(// // console.log('âœ… Project ID obtained successfully:', projectId);
                 } else {
-                    // console.warn('⚠️ Could not obtain project ID, chat will work without project context');
+                    // // console.warn(// // console.warn('âš ï¸ Could not obtain project ID, chat will work without project context');
                 }
             }
             
             return true;
         } else {
-            // console.warn('⚠️ API connection test failed:', loginResponse.status, loginResponse.statusText);
+            // // console.warn(// // console.warn('âš ï¸ API connection test failed:', loginResponse.status, loginResponse.statusText);
             return false;
         }
         
     } catch (error) {
-        // console.error('❌ API connection test error:', error.message);
+        // // console.error(// // console.error('âŒ API connection test error:', error.message);
         return false;
     }
 }
@@ -892,7 +892,7 @@ async function initializeChatSystem() {
     const isConnected = await testAPIConnection();
     
     if (isConnected && window.ChatAI) {
-        // console.log('💬 Chat system initialized with API integration');
+        // // console.log(// // console.log('ðŸ’¬ Chat system initialized with API integration');
         
         // Add welcome message indicating API is connected
         setTimeout(() => {
